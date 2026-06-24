@@ -8,6 +8,8 @@ This repository is the full, reproducible record of a live experiment that answe
 
 This is a result about **hard exact-answer math**, not a universal claim. See [Limitations](#limitations) — coding and open-ended/agentic tasks (where orchestration is actually pitched) are explicitly **not** tested here.
 
+> 📝 **The essay:** [**The Committee and the Expert**](the-committee-and-the-expert.md) — the argument behind these numbers: why a coordinated crowd of cheaper models can't out-think one expert on a single hard problem, why their *disagreement* is the real signal, and where multi-model coordination might actually win (hint: not prompts — projects).
+
 ---
 
 ## The result
@@ -104,6 +106,7 @@ Because evaluation is offline, the published run scored **3,000+ combinations** 
 
 | Path | What it is |
 |---|---|
+| [`the-committee-and-the-expert.md`](the-committee-and-the-expert.md) | The essay — the argument and the reframe (prompts vs. projects) |
 | [`METHODOLOGY.md`](METHODOLOGY.md) | Experimental design, grading, cost model, combination strategies, corrections |
 | [`bench/`](bench/) | The benchmark framework + the published report (`Model-Routing-vs-Fugu.{md,pdf}`) and raw data (`matrix_superhard.json`, `leaderboard_superhard.md`, `results_superhard.json`) |
 | [`harness/`](harness/) | Multi-provider chat substrate: `providers.py`, `pricing.py`, `judge.py`, `metrics.py`, `router_base.py` |
