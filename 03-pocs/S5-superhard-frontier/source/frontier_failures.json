@@ -1,0 +1,229 @@
+{
+ "failures": [
+  "sh002",
+  "sh016",
+  "sh017",
+  "sh018",
+  "sh019",
+  "sh020",
+  "sh021",
+  "sh022",
+  "sh023",
+  "sh024",
+  "sh025"
+ ],
+ "results": {
+  "gpt-5.5-solo": {
+   "ok": 0,
+   "usd": 0.975315
+  },
+  "fugu-ultra": {
+   "ok": 1,
+   "usd": 1.371195
+  },
+  "ensemble-vote": {
+   "ok": 0,
+   "usd": 1.8433086499999998
+  }
+ },
+ "per_task": [
+  {
+   "id": "sh002",
+   "gold": 22101,
+   "gpt55": 21,
+   "fugu_ultra": [
+    22101,
+    true
+   ],
+   "ensemble": {
+    "votes": [
+     null,
+     21101,
+     21
+    ],
+    "winner": 21101,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh016",
+   "gold": 242,
+   "gpt55": 530,
+   "fugu_ultra": [
+    530,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     530,
+     530,
+     530
+    ],
+    "winner": 530,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh017",
+   "gold": 1748,
+   "gpt55": 148,
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     null,
+     9252,
+     148
+    ],
+    "winner": 9252,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh018",
+   "gold": 523,
+   "gpt55": 932,
+   "fugu_ultra": [
+    932,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     1973703,
+     932,
+     932
+    ],
+    "winner": 932,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh019",
+   "gold": 137,
+   "gpt55": 615,
+   "fugu_ultra": [
+    615,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     3,
+     43,
+     615
+    ],
+    "winner": 3,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh020",
+   "gold": 8991,
+   "gpt55": 4588,
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     null,
+     null,
+     4588
+    ],
+    "winner": 4588,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh021",
+   "gold": 818,
+   "gpt55": 176,
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     689,
+     2,
+     176
+    ],
+    "winner": 689,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh022",
+   "gold": 833,
+   "gpt55": 817,
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     817,
+     857,
+     817
+    ],
+    "winner": 817,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh023",
+   "gold": 3913,
+   "gpt55": 4968,
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     null,
+     8328,
+     4968
+    ],
+    "winner": 8328,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh024",
+   "gold": 686,
+   "gpt55": 605,
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     605,
+     null,
+     605
+    ],
+    "winner": 605,
+    "ok": false
+   }
+  },
+  {
+   "id": "sh025",
+   "gold": 612,
+   "gpt55": 39,
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": {
+    "votes": [
+     null,
+     null,
+     39
+    ],
+    "winner": 39,
+    "ok": false
+   }
+  }
+ ]
+}

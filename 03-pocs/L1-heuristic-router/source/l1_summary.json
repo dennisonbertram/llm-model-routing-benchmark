@@ -1,0 +1,41 @@
+{
+  "router": "heuristic",
+  "threshold": 0.4,
+  "baselines": {
+    "always_cheap": {
+      "acc": 0.8444,
+      "usd": 0.001662
+    },
+    "always_strong": {
+      "acc": 0.9778,
+      "usd": 0.021482
+    },
+    "oracle": {
+      "acc": 0.9778,
+      "usd": 0.001765
+    }
+  },
+  "heuristic_result": {
+    "threshold": 0.4,
+    "accuracy": 0.9556,
+    "cost_usd": 0.009018,
+    "items_routed_to_strong": 11
+  },
+  "oracle_target_items": [
+    "m9",
+    "m10",
+    "m12",
+    "m13",
+    "m14",
+    "m15"
+  ],
+  "sweep_thresholds": [
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8
+  ]
+}

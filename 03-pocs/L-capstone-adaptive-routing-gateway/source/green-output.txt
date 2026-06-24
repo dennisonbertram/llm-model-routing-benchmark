@@ -1,0 +1,38 @@
+== (1) Adaptive router — honest 5-fold CV benchmark over 45 tasks ==
+  always-cheap : acc=0.844  $0.00166
+  always-strong: acc=0.978  $0.02148
+  oracle ceil  : acc=0.978  $0.00214
+  adaptive(thr=0.5): acc=0.844  $0.00176  pct_cheap=98%
+  adaptive(thr=0.6): acc=0.844  $0.00176  pct_cheap=98%
+  adaptive(thr=0.7): acc=0.956  $0.00227  pct_cheap=82%
+  adaptive(thr=0.8): acc=0.978  $0.00257  pct_cheap=71%  <- matches strong accuracy
+  adaptive(thr=0.9): acc=0.978  $0.00275  pct_cheap=64%
+
+  BEST adaptive @ strong-accuracy: thr=0.8  acc=0.978  $0.00257  = 8.4x cheaper than always-strong, 1.20x the oracle cost
+
+== (2a) LIVE budget guard (cap chosen just above ~2 strong calls) ==
+  req1: served=gpt-4.1     decision=classifier(p_cheap=0.32,thr=0.6)         spent=$0.0001
+  req2: served=gpt-4.1     decision=classifier(p_cheap=0.32,thr=0.6)         spent=$0.0002
+  req3: served=gpt-4.1     decision=classifier(p_cheap=0.32,thr=0.6)         spent=$0.0002
+  req4: served=gpt-4.1     decision=classifier(p_cheap=0.32,thr=0.6)         spent=$0.0003
+  req5: served=gpt-4o-mini decision=budget_guard(spent=$0.0003>=cap)         spent=$0.0003
+  req6: served=gpt-4o-mini decision=budget_guard(spent=$0.0003>=cap)         spent=$0.0003
+  -> budget guard engaged on 2 request(s) after the $0.00025 cap
+
+== (2b) LIVE provider fallback (bad primary -> fallback) ==
+  served=gpt-4o-mini  fallback_from=yes  answer='292.'
+
+DONE
+
+
+===== LIVE OpenAI-compatible HTTP gateway smoke =====
+### curl 1: auto + easy QA (expect cheap) ###
+served: gpt-4o-mini | decision: classifier(p_cheap=0.97,thr=0.6) | answer: Paris.
+### curl 2: auto + hard math (expect strong) ###
+served: gpt-4.1 | decision: classifier(p_cheap=0.38,thr=0.6) | answer: 1260
+### curl 3: forced model (drop-in OpenAI client style) ###
+served: gpt-4o-mini | decision: forced
+### persisted ledger (gateway-ledger.jsonl) ###
+{"ts": "2026-06-22T03:57:57Z", "decision": "classifier(p_cheap=0.97,thr=0.6)", "served_model": "gpt-4o-mini", "usd": 4e-06, "latency_ms": 1094, "fallback_from": null, "escalated": false, "total_spent": 4e-06}
+{"ts": "2026-06-22T03:57:59Z", "decision": "classifier(p_cheap=0.38,thr=0.6)", "served_model": "gpt-4.1", "usd": 6.8e-05, "latency_ms": 1214, "fallback_from": null, "escalated": false, "total_spent": 7.2e-05}
+{"decision": "forced", "served_model": "gpt-4o-mini", "usd": 3e-06}

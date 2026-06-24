@@ -1,0 +1,1198 @@
+{
+ "n": 56,
+ "agg": {
+  "gpt-5.5": {
+   "ok": 45,
+   "usd": 1.6767050000000008,
+   "lat": 1157943
+  },
+  "fugu-ultra": {
+   "ok": 34,
+   "usd": 7.17018,
+   "lat": 2694318
+  },
+  "ensemble": {
+   "ok": 45,
+   "usd": 1.9556025000000004,
+   "lat": 2571546
+  }
+ },
+ "per_task": [
+  {
+   "id": "sh000",
+   "gold": 10774,
+   "gpt5.5": [
+    10774,
+    true
+   ],
+   "fugu_ultra": [
+    10774,
+    true
+   ],
+   "ensemble": [
+    [
+     10774,
+     null,
+     1
+    ],
+    10774,
+    true
+   ]
+  },
+  {
+   "id": "sh001",
+   "gold": 2762,
+   "gpt5.5": [
+    2762,
+    true
+   ],
+   "fugu_ultra": [
+    2762,
+    true
+   ],
+   "ensemble": [
+    [
+     2762,
+     null,
+     2676
+    ],
+    2762,
+    true
+   ]
+  },
+  {
+   "id": "sh002",
+   "gold": 22101,
+   "gpt5.5": [
+    21,
+    false
+   ],
+   "fugu_ultra": [
+    22101,
+    true
+   ],
+   "ensemble": [
+    [
+     21,
+     null,
+     22101
+    ],
+    21,
+    false
+   ]
+  },
+  {
+   "id": "sh003",
+   "gold": 2993,
+   "gpt5.5": [
+    2993,
+    true
+   ],
+   "fugu_ultra": [
+    2993,
+    true
+   ],
+   "ensemble": [
+    [
+     2993,
+     null,
+     330
+    ],
+    2993,
+    true
+   ]
+  },
+  {
+   "id": "sh004",
+   "gold": 21099,
+   "gpt5.5": [
+    21099,
+    true
+   ],
+   "fugu_ultra": [
+    21099,
+    true
+   ],
+   "ensemble": [
+    [
+     21099,
+     null,
+     1
+    ],
+    21099,
+    true
+   ]
+  },
+  {
+   "id": "sh005",
+   "gold": 7735,
+   "gpt5.5": [
+    7735,
+    true
+   ],
+   "fugu_ultra": [
+    7735,
+    true
+   ],
+   "ensemble": [
+    [
+     7735,
+     null,
+     7741
+    ],
+    7735,
+    true
+   ]
+  },
+  {
+   "id": "sh006",
+   "gold": 25974,
+   "gpt5.5": [
+    25974,
+    true
+   ],
+   "fugu_ultra": [
+    25974,
+    true
+   ],
+   "ensemble": [
+    [
+     25974,
+     null,
+     11
+    ],
+    25974,
+    true
+   ]
+  },
+  {
+   "id": "sh007",
+   "gold": 3206,
+   "gpt5.5": [
+    3206,
+    true
+   ],
+   "fugu_ultra": [
+    3206,
+    true
+   ],
+   "ensemble": [
+    [
+     3206,
+     null,
+     3206
+    ],
+    3206,
+    true
+   ]
+  },
+  {
+   "id": "sh008",
+   "gold": 909,
+   "gpt5.5": [
+    909,
+    true
+   ],
+   "fugu_ultra": [
+    909,
+    true
+   ],
+   "ensemble": [
+    [
+     909,
+     null,
+     909
+    ],
+    909,
+    true
+   ]
+  },
+  {
+   "id": "sh009",
+   "gold": 1601,
+   "gpt5.5": [
+    1601,
+    true
+   ],
+   "fugu_ultra": [
+    1601,
+    true
+   ],
+   "ensemble": [
+    [
+     1601,
+     null,
+     1601
+    ],
+    1601,
+    true
+   ]
+  },
+  {
+   "id": "sh010",
+   "gold": 343,
+   "gpt5.5": [
+    343,
+    true
+   ],
+   "fugu_ultra": [
+    343,
+    true
+   ],
+   "ensemble": [
+    [
+     343,
+     null,
+     343
+    ],
+    343,
+    true
+   ]
+  },
+  {
+   "id": "sh011",
+   "gold": 163,
+   "gpt5.5": [
+    163,
+    true
+   ],
+   "fugu_ultra": [
+    163,
+    true
+   ],
+   "ensemble": [
+    [
+     163,
+     null,
+     4
+    ],
+    163,
+    true
+   ]
+  },
+  {
+   "id": "sh012",
+   "gold": 364,
+   "gpt5.5": [
+    364,
+    true
+   ],
+   "fugu_ultra": [
+    364,
+    true
+   ],
+   "ensemble": [
+    [
+     364,
+     null,
+     364
+    ],
+    364,
+    true
+   ]
+  },
+  {
+   "id": "sh013",
+   "gold": 2400,
+   "gpt5.5": [
+    2400,
+    true
+   ],
+   "fugu_ultra": [
+    2400,
+    true
+   ],
+   "ensemble": [
+    [
+     2400,
+     null,
+     2400
+    ],
+    2400,
+    true
+   ]
+  },
+  {
+   "id": "sh014",
+   "gold": 432,
+   "gpt5.5": [
+    432,
+    true
+   ],
+   "fugu_ultra": [
+    432,
+    true
+   ],
+   "ensemble": [
+    [
+     432,
+     null,
+     432
+    ],
+    432,
+    true
+   ]
+  },
+  {
+   "id": "sh015",
+   "gold": 2133,
+   "gpt5.5": [
+    2133,
+    true
+   ],
+   "fugu_ultra": [
+    2133,
+    true
+   ],
+   "ensemble": [
+    [
+     2133,
+     null,
+     2133
+    ],
+    2133,
+    true
+   ]
+  },
+  {
+   "id": "sh016",
+   "gold": 242,
+   "gpt5.5": [
+    530,
+    false
+   ],
+   "fugu_ultra": [
+    530,
+    false
+   ],
+   "ensemble": [
+    [
+     530,
+     null,
+     530
+    ],
+    530,
+    false
+   ]
+  },
+  {
+   "id": "sh017",
+   "gold": 1748,
+   "gpt5.5": [
+    148,
+    false
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     148,
+     null,
+     2268
+    ],
+    148,
+    false
+   ]
+  },
+  {
+   "id": "sh018",
+   "gold": 523,
+   "gpt5.5": [
+    932,
+    false
+   ],
+   "fugu_ultra": [
+    932,
+    false
+   ],
+   "ensemble": [
+    [
+     932,
+     null,
+     932
+    ],
+    932,
+    false
+   ]
+  },
+  {
+   "id": "sh019",
+   "gold": 137,
+   "gpt5.5": [
+    615,
+    false
+   ],
+   "fugu_ultra": [
+    615,
+    false
+   ],
+   "ensemble": [
+    [
+     615,
+     null,
+     615
+    ],
+    615,
+    false
+   ]
+  },
+  {
+   "id": "sh020",
+   "gold": 8991,
+   "gpt5.5": [
+    4588,
+    false
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     4588,
+     null,
+     625
+    ],
+    4588,
+    false
+   ]
+  },
+  {
+   "id": "sh021",
+   "gold": 818,
+   "gpt5.5": [
+    176,
+    false
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     176,
+     null,
+     463
+    ],
+    176,
+    false
+   ]
+  },
+  {
+   "id": "sh022",
+   "gold": 833,
+   "gpt5.5": [
+    817,
+    false
+   ],
+   "fugu_ultra": [
+    817,
+    false
+   ],
+   "ensemble": [
+    [
+     817,
+     null,
+     817
+    ],
+    817,
+    false
+   ]
+  },
+  {
+   "id": "sh023",
+   "gold": 3913,
+   "gpt5.5": [
+    4968,
+    false
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     4968,
+     null,
+     4225
+    ],
+    4968,
+    false
+   ]
+  },
+  {
+   "id": "sh024",
+   "gold": 686,
+   "gpt5.5": [
+    605,
+    false
+   ],
+   "fugu_ultra": [
+    605,
+    false
+   ],
+   "ensemble": [
+    [
+     605,
+     null,
+     2
+    ],
+    605,
+    false
+   ]
+  },
+  {
+   "id": "sh025",
+   "gold": 612,
+   "gpt5.5": [
+    39,
+    false
+   ],
+   "fugu_ultra": [
+    39,
+    false
+   ],
+   "ensemble": [
+    [
+     39,
+     null,
+     39
+    ],
+    39,
+    false
+   ]
+  },
+  {
+   "id": "sh026",
+   "gold": 149800,
+   "gpt5.5": [
+    149800,
+    true
+   ],
+   "fugu_ultra": [
+    149800,
+    true
+   ],
+   "ensemble": [
+    [
+     149800,
+     null,
+     149800
+    ],
+    149800,
+    true
+   ]
+  },
+  {
+   "id": "sh027",
+   "gold": 9364,
+   "gpt5.5": [
+    9364,
+    true
+   ],
+   "fugu_ultra": [
+    9364,
+    true
+   ],
+   "ensemble": [
+    [
+     9364,
+     null,
+     9364
+    ],
+    9364,
+    true
+   ]
+  },
+  {
+   "id": "sh028",
+   "gold": 599184,
+   "gpt5.5": [
+    599184,
+    true
+   ],
+   "fugu_ultra": [
+    599184,
+    true
+   ],
+   "ensemble": [
+    [
+     599184,
+     null,
+     599184
+    ],
+    599184,
+    true
+   ]
+  },
+  {
+   "id": "sh029",
+   "gold": 13112,
+   "gpt5.5": [
+    13112,
+    true
+   ],
+   "fugu_ultra": [
+    13112,
+    true
+   ],
+   "ensemble": [
+    [
+     13112,
+     null,
+     13112
+    ],
+    13112,
+    true
+   ]
+  },
+  {
+   "id": "sh030",
+   "gold": 131072,
+   "gpt5.5": [
+    131072,
+    true
+   ],
+   "fugu_ultra": [
+    131072,
+    true
+   ],
+   "ensemble": [
+    [
+     131072,
+     null,
+     131072
+    ],
+    131072,
+    true
+   ]
+  },
+  {
+   "id": "sh031",
+   "gold": 524288,
+   "gpt5.5": [
+    524288,
+    true
+   ],
+   "fugu_ultra": [
+    524288,
+    true
+   ],
+   "ensemble": [
+    [
+     524288,
+     null,
+     524288
+    ],
+    524288,
+    true
+   ]
+  },
+  {
+   "id": "sh032",
+   "gold": 13104,
+   "gpt5.5": [
+    13104,
+    true
+   ],
+   "fugu_ultra": [
+    13104,
+    true
+   ],
+   "ensemble": [
+    [
+     13104,
+     null,
+     13104
+    ],
+    13104,
+    true
+   ]
+  },
+  {
+   "id": "sh033",
+   "gold": 209712,
+   "gpt5.5": [
+    209712,
+    true
+   ],
+   "fugu_ultra": [
+    209712,
+    true
+   ],
+   "ensemble": [
+    [
+     209712,
+     null,
+     209712
+    ],
+    209712,
+    true
+   ]
+  },
+  {
+   "id": "sh034",
+   "gold": 2208,
+   "gpt5.5": [
+    2208,
+    true
+   ],
+   "fugu_ultra": [
+    2208,
+    true
+   ],
+   "ensemble": [
+    [
+     2208,
+     null,
+     2208
+    ],
+    2208,
+    true
+   ]
+  },
+  {
+   "id": "sh035",
+   "gold": 25200,
+   "gpt5.5": [
+    25200,
+    true
+   ],
+   "fugu_ultra": [
+    25200,
+    true
+   ],
+   "ensemble": [
+    [
+     25200,
+     null,
+     25200
+    ],
+    25200,
+    true
+   ]
+  },
+  {
+   "id": "sh036",
+   "gold": 2364,
+   "gpt5.5": [
+    2364,
+    true
+   ],
+   "fugu_ultra": [
+    2364,
+    true
+   ],
+   "ensemble": [
+    [
+     2364,
+     null,
+     2364
+    ],
+    2364,
+    true
+   ]
+  },
+  {
+   "id": "sh037",
+   "gold": 21600,
+   "gpt5.5": [
+    21600,
+    true
+   ],
+   "fugu_ultra": [
+    21600,
+    true
+   ],
+   "ensemble": [
+    [
+     21600,
+     null,
+     21600
+    ],
+    21600,
+    true
+   ]
+  },
+  {
+   "id": "sh038",
+   "gold": 20400,
+   "gpt5.5": [
+    20400,
+    true
+   ],
+   "fugu_ultra": [
+    20400,
+    true
+   ],
+   "ensemble": [
+    [
+     20400,
+     null,
+     20400
+    ],
+    20400,
+    true
+   ]
+  },
+  {
+   "id": "sh039",
+   "gold": 26640,
+   "gpt5.5": [
+    26640,
+    true
+   ],
+   "fugu_ultra": [
+    26640,
+    true
+   ],
+   "ensemble": [
+    [
+     26640,
+     null,
+     26640
+    ],
+    26640,
+    true
+   ]
+  },
+  {
+   "id": "sh040",
+   "gold": 92,
+   "gpt5.5": [
+    92,
+    true
+   ],
+   "fugu_ultra": [
+    92,
+    true
+   ],
+   "ensemble": [
+    [
+     92,
+     null,
+     92
+    ],
+    92,
+    true
+   ]
+  },
+  {
+   "id": "sh041",
+   "gold": 219,
+   "gpt5.5": [
+    219,
+    true
+   ],
+   "fugu_ultra": [
+    219,
+    true
+   ],
+   "ensemble": [
+    [
+     219,
+     null,
+     219
+    ],
+    219,
+    true
+   ]
+  },
+  {
+   "id": "sh042",
+   "gold": 126,
+   "gpt5.5": [
+    126,
+    true
+   ],
+   "fugu_ultra": [
+    126,
+    true
+   ],
+   "ensemble": [
+    [
+     126,
+     null,
+     126
+    ],
+    126,
+    true
+   ]
+  },
+  {
+   "id": "sh043",
+   "gold": 87,
+   "gpt5.5": [
+    87,
+    true
+   ],
+   "fugu_ultra": [
+    87,
+    true
+   ],
+   "ensemble": [
+    [
+     87,
+     null,
+     87
+    ],
+    87,
+    true
+   ]
+  },
+  {
+   "id": "sh044",
+   "gold": 365,
+   "gpt5.5": [
+    365,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     365,
+     null,
+     365
+    ],
+    365,
+    true
+   ]
+  },
+  {
+   "id": "sh045",
+   "gold": 61,
+   "gpt5.5": [
+    61,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     61,
+     null,
+     61
+    ],
+    61,
+    true
+   ]
+  },
+  {
+   "id": "sh046",
+   "gold": 198,
+   "gpt5.5": [
+    198,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     198,
+     null,
+     198
+    ],
+    198,
+    true
+   ]
+  },
+  {
+   "id": "sh047",
+   "gold": 13,
+   "gpt5.5": [
+    13,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     13,
+     null,
+     13
+    ],
+    13,
+    true
+   ]
+  },
+  {
+   "id": "sh048",
+   "gold": 13,
+   "gpt5.5": [
+    13,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     13,
+     null,
+     13
+    ],
+    13,
+    true
+   ]
+  },
+  {
+   "id": "sh049",
+   "gold": 18,
+   "gpt5.5": [
+    18,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     18,
+     null,
+     18
+    ],
+    18,
+    true
+   ]
+  },
+  {
+   "id": "sh050",
+   "gold": 92,
+   "gpt5.5": [
+    92,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     92,
+     null,
+     92
+    ],
+    92,
+    true
+   ]
+  },
+  {
+   "id": "sh051",
+   "gold": 0,
+   "gpt5.5": [
+    0,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     0,
+     null,
+     0
+    ],
+    0,
+    true
+   ]
+  },
+  {
+   "id": "sh052",
+   "gold": 1,
+   "gpt5.5": [
+    1,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     1,
+     null,
+     1
+    ],
+    1,
+    true
+   ]
+  },
+  {
+   "id": "sh053",
+   "gold": 1,
+   "gpt5.5": [
+    1,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     1,
+     null,
+     1
+    ],
+    1,
+    true
+   ]
+  },
+  {
+   "id": "sh054",
+   "gold": 2,
+   "gpt5.5": [
+    2,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     2,
+     null,
+     2
+    ],
+    2,
+    true
+   ]
+  },
+  {
+   "id": "sh055",
+   "gold": 2,
+   "gpt5.5": [
+    2,
+    true
+   ],
+   "fugu_ultra": [
+    null,
+    false
+   ],
+   "ensemble": [
+    [
+     2,
+     null,
+     2
+    ],
+    2,
+    true
+   ]
+  }
+ ]
+}

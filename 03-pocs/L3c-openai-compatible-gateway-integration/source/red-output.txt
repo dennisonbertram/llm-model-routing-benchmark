@@ -1,0 +1,9 @@
+Gateway listening on http://127.0.0.1:8766/v1/chat/completions
+  cheap model : gpt-4o-mini
+  strong model: gpt-4.1
+  [heuristic] 'auto' -> 'gpt-4o-mini'  msg_len=30
+  [passthrough] 'gpt-4.1-nano' -> 'gpt-4.1-nano'  msg_len=34
+  [heuristic] 'auto' -> 'gpt-4o-mini'  msg_len=4
+  [heuristic] 'auto' -> 'gpt-4o-mini'  msg_len=27
+  [heuristic] 'auto' -> 'gpt-4o-mini'  msg_len=12
+  [heuristic] 'auto' -> 'gpt-4.1'  msg_len=117

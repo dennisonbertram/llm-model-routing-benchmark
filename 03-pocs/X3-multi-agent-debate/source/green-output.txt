@@ -1,0 +1,15 @@
+test_debate_cost_scales_with_calls (__main__.X3DebateTests)
+Debate cost should be roughly N_debaters × (1+N_ROUNDS) × single cheap cost per item. ... ok
+test_debate_produces_answer (__main__.X3DebateTests)
+Debate on an easy math item produces a non-empty final text and positive cost. ... ok
+test_debate_transcript_produced (__main__.X3DebateTests)
+Debate on a single easy math item produces a transcript with 1+N_ROUNDS answers each. ... ok
+test_full_subset_debate_accuracy (__main__.X3DebateTests)
+Debate on SUBSET should produce meaningful accuracy (>= 0.60) and positive cost. ... ok
+test_no_oracle_leakage (__main__.X3DebateTests)
+DebateRouter.answer() must not read item['difficulty'] or item['discipline']. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.025s
+
+OK

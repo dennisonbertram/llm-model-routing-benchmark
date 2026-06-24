@@ -1,0 +1,34 @@
+== running frontier models live over 45 tasks (cached after first run) ==
+  gpt-5.4 ...
+  gpt-5.5 ...
+
+| model | accuracy | hard-math(7) | coding | cost(45) | vs gpt-4.1 cost | mean latency |
+|---|---|---|---|---|---|---|
+| gpt-4o-mini (cheap) | 0.844 | 0.000 | 1.000 | $0.00166 | 0.1x | — |
+| gpt-4.1 (prev strong) | 0.978 | 0.857 | 1.000 | $0.02148 | 1.0x | — |
+| gpt-5.4 | 0.978 | 0.857 | 1.000 | $0.03958 | 1.8x | 1367ms |
+| gpt-5.5 | 1.000 | 1.000 | 1.000 | $0.11943 | 5.6x | 2753ms |
+
+m8 (neither cheap nor gpt-4.1 solved, gold=14):
+  gpt-4o-mini=False  gpt-4.1=False  gpt-5.4=True  gpt-5.5=True
+
+Oracle ceilings (cheapest-correct):
+  2-tier {cheap, gpt-4.1}:          acc=0.978  $0.00214
+  3-tier {cheap, gpt-4.1, gpt-5.5}:  acc=1.000  $0.00372
+
+wrote x6_summary.json | cache: {'hits': 45, 'misses': 90, 'entries': 90}
+== references ==
+  always gpt-4o-mini : acc=0.844  $0.00166
+  always gpt-4.1     : acc=0.978  $0.02148
+  always gpt-5.5     : acc=1.000  $0.11943
+  3-tier ORACLE      : acc=1.000  $0.00372  (unrealizable ceiling)
+
+== realizable 3-tier router (CV logistic; hi/lo thresholds) ==
+  hi=0.6 lo=0.3: acc=0.844  $0.00176  route[cheap=44,gpt4.1=1,gpt5.5=0]
+  hi=0.7 lo=0.4: acc=0.956  $0.00227  route[cheap=37,gpt4.1=8,gpt5.5=0]
+  hi=0.8 lo=0.5: acc=1.000  $0.00405  route[cheap=32,gpt4.1=12,gpt5.5=1]
+  hi=0.7 lo=0.5: acc=0.978  $0.00374  route[cheap=37,gpt4.1=7,gpt5.5=1]
+  hi=0.8 lo=0.4: acc=0.978  $0.00257  route[cheap=32,gpt4.1=13,gpt5.5=0]
+
+  BEST realizable 3-tier: hi=0.8,lo=0.5  acc=1.000  $0.00405 = 30x cheaper than always-gpt-5.5, 1.09x the 3-tier oracle
+wrote x6_3tier_summary.json | cache: {'hits': 45, 'misses': 0, 'entries': 90}

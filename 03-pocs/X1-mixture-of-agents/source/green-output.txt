@@ -1,0 +1,95 @@
+======================================================================
+X1 — Mixture-of-Agents (Wang et al.)
+======================================================================
+
+Suite: 45 tasks (math=15, qa=12, coding=18)
+
+--- Baselines (from labelset cache, no re-billing) ---
+  always-cheap  (gpt-4o-mini): acc=0.844  cost=$0.00166
+  always-strong (gpt-4.1): acc=0.978  cost=$0.02148  (12.9x cheap)
+
+--- MoA: 3 cheap proposers → gpt-4o aggregator (full 45-task suite) ---
+  [  m1|easy] MoA(proposers=3,agg=gpt-4o) OK  $3.28e-04 -> moa_agg:gpt-4o
+  [  m2|easy] MoA(proposers=3,agg=gpt-4o) OK  $3.28e-04 -> moa_agg:gpt-4o
+  [  m3|easy] MoA(proposers=3,agg=gpt-4o) OK  $3.77e-04 -> moa_agg:gpt-4o
+  [  m4|easy] MoA(proposers=3,agg=gpt-4o) OK  $3.28e-04 -> moa_agg:gpt-4o
+  [  m5|med ] MoA(proposers=3,agg=gpt-4o) OK  $4.03e-04 -> moa_agg:gpt-4o
+  [  m6|med ] MoA(proposers=3,agg=gpt-4o) OK  $3.57e-04 -> moa_agg:gpt-4o
+  [  m7|med ] MoA(proposers=3,agg=gpt-4o) OK  $3.62e-04 -> moa_agg:gpt-4o
+  [  m8|hard] MoA(proposers=3,agg=gpt-4o) XX  $5.26e-04 -> moa_agg:gpt-4o
+  [  m9|hard] MoA(proposers=3,agg=gpt-4o) OK  $3.88e-04 -> moa_agg:gpt-4o
+  [ m10|hard] MoA(proposers=3,agg=gpt-4o) OK  $4.09e-04 -> moa_agg:gpt-4o
+  [ m11|hard] MoA(proposers=3,agg=gpt-4o) OK  $3.49e-04 -> moa_agg:gpt-4o
+  [ m12|hard] MoA(proposers=3,agg=gpt-4o) OK  $3.68e-04 -> moa_agg:gpt-4o
+  [ m13|hard] MoA(proposers=3,agg=gpt-4o) XX  $4.36e-04 -> moa_agg:gpt-4o
+  [ m14|hard] MoA(proposers=3,agg=gpt-4o) OK  $4.32e-04 -> moa_agg:gpt-4o
+  [ m15|hard] MoA(proposers=3,agg=gpt-4o) OK  $3.93e-04 -> moa_agg:gpt-4o
+  [  q1|easy] MoA(proposers=3,agg=gpt-4o) OK  $3.22e-04 -> moa_agg:gpt-4o
+  [  q2|easy] MoA(proposers=3,agg=gpt-4o) OK  $3.50e-04 -> moa_agg:gpt-4o
+  [  q3|easy] MoA(proposers=3,agg=gpt-4o) OK  $3.28e-04 -> moa_agg:gpt-4o
+  [  q4|easy] MoA(proposers=3,agg=gpt-4o) OK  $3.15e-04 -> moa_agg:gpt-4o
+  [  q5|med ] MoA(proposers=3,agg=gpt-4o) OK  $3.60e-04 -> moa_agg:gpt-4o
+  [  q6|med ] MoA(proposers=3,agg=gpt-4o) OK  $3.77e-04 -> moa_agg:gpt-4o
+  [  q7|med ] MoA(proposers=3,agg=gpt-4o) OK  $3.55e-04 -> moa_agg:gpt-4o
+  [  q8|hard] MoA(proposers=3,agg=gpt-4o) OK  $7.15e-04 -> moa_agg:gpt-4o
+  [  q9|hard] MoA(proposers=3,agg=gpt-4o) OK  $3.49e-04 -> moa_agg:gpt-4o
+  [ q10|hard] MoA(proposers=3,agg=gpt-4o) OK  $3.56e-04 -> moa_agg:gpt-4o
+  [ q11|hard] MoA(proposers=3,agg=gpt-4o) OK  $3.25e-04 -> moa_agg:gpt-4o
+  [ q12|hard] MoA(proposers=3,agg=gpt-4o) OK  $4.42e-04 -> moa_agg:gpt-4o
+  [  c1|easy] MoA(proposers=3,agg=gpt-4o) OK  $1.01e-03 -> moa_agg:gpt-4o
+  [  c2|easy] MoA(proposers=3,agg=gpt-4o) OK  $2.45e-03 -> moa_agg:gpt-4o
+  [  c3|easy] MoA(proposers=3,agg=gpt-4o) OK  $2.64e-03 -> moa_agg:gpt-4o
+  [  c4|easy] MoA(proposers=3,agg=gpt-4o) OK  $1.42e-03 -> moa_agg:gpt-4o
+  [  c5|med ] MoA(proposers=3,agg=gpt-4o) OK  $2.56e-03 -> moa_agg:gpt-4o
+  [  c6|med ] MoA(proposers=3,agg=gpt-4o) OK  $7.44e-03 -> moa_agg:gpt-4o
+  [  c7|med ] MoA(proposers=3,agg=gpt-4o) OK  $4.63e-03 -> moa_agg:gpt-4o
+  [  c8|hard] MoA(proposers=3,agg=gpt-4o) OK  $4.64e-03 -> moa_agg:gpt-4o
+  [  c9|hard] MoA(proposers=3,agg=gpt-4o) OK  $5.11e-03 -> moa_agg:gpt-4o
+  [ c10|hard] MoA(proposers=3,agg=gpt-4o) OK  $4.13e-03 -> moa_agg:gpt-4o
+  [ c11|hard] MoA(proposers=3,agg=gpt-4o) OK  $3.65e-03 -> moa_agg:gpt-4o
+  [ c12|hard] MoA(proposers=3,agg=gpt-4o) OK  $4.34e-03 -> moa_agg:gpt-4o
+  [ c13|hard] MoA(proposers=3,agg=gpt-4o) OK  $9.79e-03 -> moa_agg:gpt-4o
+  [ c14|hard] MoA(proposers=3,agg=gpt-4o) OK  $8.74e-03 -> moa_agg:gpt-4o
+  [ c15|hard] MoA(proposers=3,agg=gpt-4o) OK  $7.38e-03 -> moa_agg:gpt-4o
+  [ c16|hard] MoA(proposers=3,agg=gpt-4o) OK  $8.26e-03 -> moa_agg:gpt-4o
+  [ c17|hard] MoA(proposers=3,agg=gpt-4o) OK  $6.10e-03 -> moa_agg:gpt-4o
+  [ c18|hard] MoA(proposers=3,agg=gpt-4o) OK  $4.98e-03 -> moa_agg:gpt-4o
+
+  MoA result: acc=0.956  cost=$0.09966  (60.0x cheap)
+
+--- Per-discipline accuracy ---
+  math  : MoA=0.867  cheap=0.533  strong=0.933
+  qa    : MoA=1.000  cheap=1.000  strong=1.000
+  coding: MoA=1.000  cheap=1.000  strong=1.000
+
+--- 2-layer MoA on 8 hard math items (m8-m15) ---
+  [  m8|hard] MoA2L(l1=gpt-4o,l2=gpt-4.1) XX  $8.56e-04 -> moa2l_agg:gpt-4.1
+  [  m9|hard] MoA2L(l1=gpt-4o,l2=gpt-4.1) OK  $6.44e-04 -> moa2l_agg:gpt-4.1
+  [ m10|hard] MoA2L(l1=gpt-4o,l2=gpt-4.1) OK  $6.77e-04 -> moa2l_agg:gpt-4.1
+  [ m11|hard] MoA2L(l1=gpt-4o,l2=gpt-4.1) OK  $5.88e-04 -> moa2l_agg:gpt-4.1
+  [ m12|hard] MoA2L(l1=gpt-4o,l2=gpt-4.1) OK  $6.16e-04 -> moa2l_agg:gpt-4.1
+  [ m13|hard] MoA2L(l1=gpt-4o,l2=gpt-4.1) XX  $7.16e-04 -> moa2l_agg:gpt-4.1
+  [ m14|hard] MoA2L(l1=gpt-4o,l2=gpt-4.1) OK  $7.10e-04 -> moa2l_agg:gpt-4.1
+  [ m15|hard] MoA2L(l1=gpt-4o,l2=gpt-4.1) OK  $6.57e-04 -> moa2l_agg:gpt-4.1
+
+  Hard math (n=8):
+    single cheap  (gpt-4o-mini): acc=0.125
+    single strong (gpt-4.1): acc=0.875
+    MoA-1L (3 cheap + gpt-4o agg):    acc=0.956 (full suite)
+    MoA-2L (3 cheap + gpt-4o + gpt-4.1 agg): acc=0.750  cost=$0.00546
+
+--- Results table (all 45 tasks) ---
+| router | n | accuracy | total_usd | usd_per_correct | mean_latency_ms |
+| --- | --- | --- | --- | --- | --- |
+| always:gpt-4o-mini | 45 | 0.8444 | 0.001662 | 4.4e-05 | 1369 |
+| MoA(proposers=3,agg=gpt-4o) | 45 | 0.9556 | 0.099661 | 0.002318 | 4936 |
+| always:gpt-4.1 | 45 | 0.9778 | 0.021482 | 0.000488 | 1021 |
+
+wrote /Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/x1_summary.json
+cache stats: {'hits': 220, 'misses': 0, 'entries': 190}
+
+--- Honest verdict ---
+  MoA acc=0.956  vs strong acc=0.978  (delta=-0.022)
+  MoA cost=$0.09966  vs strong cost=$0.02148  (4.64x strong cost)
+  MoA cost multiplier over single cheap: 60.0x
+  VERDICT: MoA improves over cheap but does NOT match strong; cost is higher

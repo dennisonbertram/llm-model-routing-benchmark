@@ -1,0 +1,78 @@
+$ set -a; . .agent-university/secrets.local.env; set +a
+$ python3 run_l3a.py
+
+== L3a FrugalGPT Cascade ==
+Cheap model : gpt-4o-mini
+Strong model: gpt-4.1
+
+== Baselines (from labelset, no re-bill) ==
+  always-cheap  (gpt-4o-mini): acc=0.844  $0.00166
+  always-strong (gpt-4.1): acc=0.978  $0.02148  (12.9x cheap)
+  oracle                   : acc=0.978  $0.00225
+
+== Cascade sweep (live calls for gate + escalated strong) ==
+  (coding items use verifier gate regardless of threshold)
+
+  Running threshold=0.1 ...
+    acc=0.844 (Δ+0.000 vs cheap)  cost=$0.00391 (18% of strong)  escalation=9%
+  Running threshold=0.3 ...
+    acc=0.844 (Δ+0.000 vs cheap)  cost=$0.00391 (18% of strong)  escalation=9%
+  Running threshold=0.5 ...
+    acc=0.844 (Δ+0.000 vs cheap)  cost=$0.00391 (18% of strong)  escalation=9%
+  Running threshold=0.7 ...
+    acc=0.844 (Δ+0.000 vs cheap)  cost=$0.00391 (18% of strong)  escalation=9%
+  Running threshold=0.9 ...
+    acc=0.844 (Δ+0.000 vs cheap)  cost=$0.00391 (18% of strong)  escalation=9%
+
+== Results table ==
+| strategy             | acc   | cost ($)  | esc-rate | cost-vs-strong |
+| -------------------- | ----- | --------- | -------- | -------------- |
+| always-cheap         | 0.844 | 0.00166 | -        | 8%            |
+| cascade thr=0.1     | 0.844 | 0.00391 | 9%      | 18%             |
+| cascade thr=0.3     | 0.844 | 0.00391 | 9%      | 18%             |
+| cascade thr=0.5     | 0.844 | 0.00391 | 9%      | 18%             |
+| cascade thr=0.7     | 0.844 | 0.00391 | 9%      | 18%             |
+| cascade thr=0.9     | 0.844 | 0.00391 | 9%      | 18%             |
+| always-strong        | 0.978 | 0.02148 | 100%     | 100%           |
+| oracle               | 0.978 | 0.00225 | (n/a)    | 10%            |
+
+== Best cascade (thr=0.1) ==
+  accuracy:        0.844
+  cost:            $0.00391
+  cost vs strong:  18% of always-strong  (82% savings)
+  escalation rate: 9%
+
+== Verifier / gate error analysis ==
+  False accepts (gate said OK, cheap was wrong): 6
+    - m10 (math/hard)
+    - m12 (math/hard)
+    - m13 (math/hard)
+    - m14 (math/hard)
+    - m15 (math/hard)
+    - m9 (math/hard)
+  Correct escalations (escalated, strong got it right): 3
+  Wrong escalations (escalated, strong also wrong): 1
+
+== Per-discipline breakdown (best threshold) ==
+  coding  : acc=18/18=1.00  esc=1/18  cost=$0.00315
+  math    : acc=8/15=0.53  esc=3/15  cost=$0.00054
+  qa      : acc=12/12=1.00  esc=0/12  cost=$0.00022
+
+wrote .../source/l3a_summary.json
+== done ==
+
+---
+Confidence probe for hard-math items (live calls, cached):
+  m9   hard  conf=0.9    answer='67'     (WRONG — correct is 47)
+  m10  hard  conf=0.9    answer='13'     (WRONG — correct is 16)
+  m11  hard  conf=0.9    answer='6'      (CORRECT)
+  m12  hard  conf=0.9    answer='26'     (WRONG — correct is 28)
+  m13  hard  conf=0.9    answer='28'     (WRONG — correct is 35)
+  m14  hard  conf=0.9    answer='292.'   (WRONG — correct is 242)
+  m15  hard  conf=0.9    answer='420'    (WRONG — correct is 1260)
+  m1   easy  conf=0.0    answer='42'     (CORRECT — false escalation)
+  m3   easy  conf=0.0    answer='15'     (CORRECT — false escalation)
+  m8   hard  conf=0.0    answer='...'    (WRONG — both models wrong; escalation wasted)
+
+Summary: gpt-4o-mini returns 0.9 confidence for ALL hard-math wrong answers.
+Threshold sweep 0.1–0.9 makes no difference — the overconfident gate collapses to identical results.

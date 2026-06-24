@@ -1,0 +1,32 @@
+== embedding 45 prompts (live) ==
+== Mixture-of-Agents (live, full suite) ==
+== self-consistency@5 on MATH (live) ==
+  [math subset] self-consistency@5(cheap)=9/15 cheap-1=8/15 strong-1=14/15 sc_cost=$0.00044
+
+| router | accuracy | total_usd | usd_per_correct |
+| --- | --- | --- | --- |
+| always-cheap | 0.8444 | 0.001662 | 4.4e-05 |
+| always-strong | 0.9778 | 0.021482 | 0.000488 |
+| random-50% | 0.9089 | 0.011765 | 0.000288 |
+| oracle (cheapest-correct) | 0.9778 | 0.002143 | 4.9e-05 |
+| heuristic (prompt cues) | 0.9333 | 0.0052 | 0.000124 |
+| kNN(k=3) cv | 0.9333 | 0.002211 | 5.3e-05 |
+| kNN(k=5) cv | 0.8889 | 0.002035 | 5.1e-05 |
+| logistic(thr=0.3) | 0.8444 | 0.001662 | 4.4e-05 |
+| logistic(thr=0.5) | 0.8444 | 0.001765 | 4.6e-05 |
+| logistic(thr=0.7) | 0.9556 | 0.002335 | 5.4e-05 |
+| logistic(thr=0.9) | 0.9778 | 0.002905 | 6.6e-05 |
+| MoA(3 cheap)+agg | 0.9556 | 0.101588 | 0.002363 |
+
+Realizable Pareto frontier (cost-quality non-dominated, excludes the oracle ceiling):
+  always-cheap                 acc=0.844  $0.00166
+  logistic(thr=0.3)            acc=0.844  $0.00166
+  kNN(k=5) cv                  acc=0.889  $0.00203
+  kNN(k=3) cv                  acc=0.933  $0.00221
+  logistic(thr=0.7)            acc=0.956  $0.00233
+  logistic(thr=0.9)            acc=0.978  $0.00291
+
+  ceiling  oracle                      acc=0.978  $0.00214  (unrealizable)
+  best realizable @ strong-accuracy: logistic(thr=0.9) (0.978 acc, $0.00291 = 7.4x cheaper than always-strong)
+
+wrote benchmark_results.json  | cache: {'hits': 255, 'misses': 0, 'entries': 255}

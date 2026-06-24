@@ -1,0 +1,90 @@
+Running L3b harness routing on 18 coding tasks.
+Cheap model: gpt-4o-mini
+Strong model: gpt-4.1
+Max repairs: 2
+
+============================================================
+Harness: all-cheap
+============================================================
+  [  c1|easy] OK  $2.10e-05  attempts=1
+  [  c2|easy] OK  $5.46e-05  attempts=1
+  [  c3|easy] OK  $4.43e-05  attempts=1
+  [  c4|easy] OK  $3.06e-05  attempts=1
+  [  c5|med ] OK  $5.76e-05  attempts=1
+  [  c6|med ] OK  $8.25e-05  attempts=1
+  [  c7|med ] OK  $8.82e-05  attempts=1
+  [  c8|hard] OK  $7.10e-05  attempts=1
+  [  c9|hard] OK  $5.72e-05  attempts=1
+  [ c10|hard] OK  $6.53e-05  attempts=1
+  [ c11|hard] OK  $7.34e-05  attempts=1
+  [ c12|hard] OK  $7.94e-05  attempts=1
+  [ c13|hard] OK  $1.81e-04  attempts=1
+  [ c14|hard] OK  $1.53e-04  attempts=1
+  [ c15|hard] OK  $1.41e-04  attempts=1
+  [ c16|hard] OK  $1.10e-04  attempts=1
+  [ c17|hard] OK  $1.26e-04  attempts=1
+  [ c18|hard] OK  $4.78e-05  attempts=1
+
+============================================================
+Harness: all-strong
+============================================================
+  [  c1|easy] OK  $2.80e-04  attempts=1
+  [  c2|easy] OK  $6.64e-04  attempts=1
+  [  c3|easy] OK  $6.22e-04  attempts=1
+  [  c4|easy] OK  $3.60e-04  attempts=1
+  [  c5|med ] OK  $9.52e-04  attempts=1
+  [  c6|med ] OK  $9.80e-04  attempts=1
+  [  c7|med ] OK  $1.01e-03  attempts=1
+  [  c8|hard] OK  $8.66e-04  attempts=1
+  [  c9|hard] OK  $7.22e-04  attempts=1
+  [ c10|hard] OK  $8.62e-04  attempts=1
+  [ c11|hard] OK  $9.38e-04  attempts=1
+  [ c12|hard] OK  $1.07e-03  attempts=1
+  [ c13|hard] OK  $2.60e-03  attempts=1
+  [ c14|hard] OK  $2.13e-03  attempts=1
+  [ c15|hard] OK  $1.82e-03  attempts=1
+  [ c16|hard] OK  $1.21e-03  attempts=1
+  [ c17|hard] OK  $1.33e-03  attempts=1
+  [ c18|hard] OK  $1.25e-03  attempts=1
+
+============================================================
+Harness: routed (cheap-first+escalate)
+============================================================
+  [  c1|easy] OK  $2.10e-05  attempts=1
+  [  c2|easy] OK  $5.46e-05  attempts=1
+  [  c3|easy] OK  $4.43e-05  attempts=1
+  [  c4|easy] OK  $3.06e-05  attempts=1
+  [  c5|med ] OK  $5.76e-05  attempts=1
+  [  c6|med ] OK  $8.25e-05  attempts=1
+  [  c7|med ] OK  $8.82e-05  attempts=1
+  [  c8|hard] OK  $7.10e-05  attempts=1
+  [  c9|hard] OK  $5.72e-05  attempts=1
+  [ c10|hard] OK  $6.53e-05  attempts=1
+  [ c11|hard] OK  $7.34e-05  attempts=1
+  [ c12|hard] OK  $7.94e-05  attempts=1
+  [ c13|hard] OK  $1.81e-04  attempts=1
+  [ c14|hard] OK  $1.53e-04  attempts=1
+  [ c15|hard] OK  $1.41e-04  attempts=1
+  [ c16|hard] OK  $1.10e-04  attempts=1
+  [ c17|hard] OK  $1.26e-04  attempts=1
+  [ c18|hard] OK  $4.78e-05  attempts=1
+
+============================================================
+RESULTS SUMMARY
+============================================================
+Router                            acc       cost   vs cheap  escalations
+------------------------------------------------------------------------
+  all-cheap                     1.000    0.00148      1.00x            0
+  all-strong                    1.000    0.01967     13.25x            0
+  routed                        1.000    0.00148      1.00x            0
+
+No tasks required escalation (cheap succeeded on all first attempts).
+
+Elapsed wall time: 0.8s
+Cache stats: {'hits': 54, 'misses': 0, 'entries': 37}
+
+== Pareto insight ==
+Routed harness cost = 7.5% of all-strong cost
+Routed harness accuracy = 1.000 (vs cheap 1.000, strong 1.000)
+
+Wrote /Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L3b-harness-routing-coding-agent/source/l3b_summary.json

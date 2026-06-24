@@ -1,0 +1,34 @@
+test_debate_cost_scales_with_calls (__main__.X3DebateTests)
+Debate cost should be roughly N_debaters × (1+N_ROUNDS) × single cheap cost per item. ... ERROR
+test_debate_produces_answer (__main__.X3DebateTests)
+Debate on an easy math item produces a non-empty final text and positive cost. ... ERROR
+test_debate_transcript_produced (__main__.X3DebateTests)
+Debate on a single easy math item produces a transcript with 1+N_ROUNDS answers each. ... ERROR
+test_full_subset_debate_accuracy (__main__.X3DebateTests)
+Debate on SUBSET should produce meaningful accuracy (>= 0.60) and positive cost. ... ERROR
+test_no_oracle_leakage (__main__.X3DebateTests)
+DebateRouter.answer() must not read item['difficulty'] or item['discipline']. ... ok
+
+======================================================================
+ERROR: test_debate_cost_scales_with_calls (__main__.X3DebateTests)
+Debate cost should be roughly N_debaters × (1+N_ROUNDS) × single cheap cost per item.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_x3.py", line 73, in test_debate_cost_scales_with_calls
+    cheap_r = self.cache.chat(config.CHEAP_DEFAULT, ...)
+  File "harness/cache.py", line 52, in chat
+    r = _live_chat(...)
+  File "harness/providers.py", line 66, in _env
+    raise ProviderError(...)
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+(same ProviderError for test_debate_produces_answer, test_debate_transcript_produced,
+test_full_subset_debate_accuracy — all require live API access on cache-cold runs)
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+FAILED (errors=4)
+
+NOTE: Captured on the first run (cache empty) with keys unset. Once .cache.json is populated,
+tests serve from disk cache and pass without keys — this is the cache-cold blocker state.

@@ -1,0 +1,104 @@
+{
+  "rows": [
+    {
+      "router": "always-cheap",
+      "accuracy": 0.8444,
+      "total_usd": 0.001662,
+      "usd_per_correct": 4.4e-05,
+      "pct_cheap": 1.0
+    },
+    {
+      "router": "always-strong",
+      "accuracy": 0.9778,
+      "total_usd": 0.021482,
+      "usd_per_correct": 0.000488,
+      "pct_cheap": 0.0
+    },
+    {
+      "router": "random-50%",
+      "accuracy": 0.9089,
+      "total_usd": 0.011765,
+      "usd_per_correct": 0.000288,
+      "pct_cheap": 0.5,
+      "note": "mean of 10 seeds"
+    },
+    {
+      "router": "oracle (cheapest-correct)",
+      "accuracy": 0.9778,
+      "total_usd": 0.002143,
+      "usd_per_correct": 4.9e-05,
+      "pct_cheap": 0.867
+    },
+    {
+      "router": "heuristic (prompt cues)",
+      "accuracy": 0.9333,
+      "total_usd": 0.0052,
+      "usd_per_correct": 0.000124,
+      "pct_cheap": 0.8
+    },
+    {
+      "router": "kNN(k=3) cv",
+      "accuracy": 0.9333,
+      "total_usd": 0.002211,
+      "usd_per_correct": 5.3e-05,
+      "pct_cheap": 0.844
+    },
+    {
+      "router": "kNN(k=5) cv",
+      "accuracy": 0.8889,
+      "total_usd": 0.002035,
+      "usd_per_correct": 5.1e-05,
+      "pct_cheap": 0.889
+    },
+    {
+      "router": "logistic(thr=0.3)",
+      "accuracy": 0.8444,
+      "total_usd": 0.001662,
+      "usd_per_correct": 4.4e-05,
+      "pct_cheap": 1.0
+    },
+    {
+      "router": "logistic(thr=0.5)",
+      "accuracy": 0.8444,
+      "total_usd": 0.001765,
+      "usd_per_correct": 4.6e-05,
+      "pct_cheap": 0.978
+    },
+    {
+      "router": "logistic(thr=0.7)",
+      "accuracy": 0.9556,
+      "total_usd": 0.002335,
+      "usd_per_correct": 5.4e-05,
+      "pct_cheap": 0.8
+    },
+    {
+      "router": "logistic(thr=0.9)",
+      "accuracy": 0.9778,
+      "total_usd": 0.002905,
+      "usd_per_correct": 6.6e-05,
+      "pct_cheap": 0.578
+    },
+    {
+      "router": "MoA(3 cheap)+agg",
+      "accuracy": 0.9556,
+      "total_usd": 0.101588,
+      "usd_per_correct": 0.002363,
+      "note": "ensemble; layer=1"
+    }
+  ],
+  "frontier": [
+    "always-cheap",
+    "kNN(k=3) cv",
+    "kNN(k=5) cv",
+    "logistic(thr=0.3)",
+    "logistic(thr=0.7)",
+    "logistic(thr=0.9)"
+  ],
+  "self_consistency_math": {
+    "sc5": 9,
+    "cheap1": 8,
+    "strong1": 14,
+    "n": 15,
+    "usd": 0.000439
+  }
+}

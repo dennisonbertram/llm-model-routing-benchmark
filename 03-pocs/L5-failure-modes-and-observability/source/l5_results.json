@@ -1,0 +1,252 @@
+{
+  "failure_modes": {
+    "fm1_invalid_slug": {
+      "bad_model": "gpt-9000-doesnt-exist",
+      "real_error": "openai HTTP 404 for gpt-9000-doesnt-exist: {\n    \"error\": {\n        \"message\": \"The model `gpt-9000-doesnt-exist` does not exist or you do not have access to it.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}\n",
+      "fallback_model": "gpt-4o-mini",
+      "fallback_answer": "4",
+      "fallback_usd": 3.75e-06,
+      "status": "PASS"
+    },
+    "fm2_timeout_fallback": {
+      "tiny_timeout_s": 0.001,
+      "first_attempt_error": "openai network error for gpt-4o-mini: <urlopen error timed out>",
+      "second_attempt_model": "gpt-4o-mini",
+      "second_attempt_usd": 3.75e-06,
+      "answer": "4",
+      "status": "PASS"
+    },
+    "fm3_overlimit": {
+      "requested_max_tokens": 999999,
+      "real_error": "openai HTTP 400 for gpt-4o-mini: {\n  \"error\": {\n    \"message\": \"max_tokens is too large: 999999. This model supports at most 16384 completion tokens, whereas you provided 999999.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"max_tokens\",\n    \"code\": \"invalid_value\"\n  }\n}",
+      "fallback_max_tokens": 64,
+      "fallback_answer": "4",
+      "status": "PASS"
+    },
+    "fm4_budget_guard": {
+      "budget_usd": 1.5e-05,
+      "total_spent_usd": 1.14e-05,
+      "calls": [
+        {
+          "task": "b1",
+          "refused": false,
+          "model": "gpt-4o-mini",
+          "usd": 4.05e-06,
+          "decision": "accepted",
+          "answer": "Paris."
+        },
+        {
+          "task": "b2",
+          "refused": false,
+          "model": "gpt-4o-mini",
+          "usd": 3.7499999999999997e-06,
+          "decision": "accepted",
+          "answer": "56"
+        },
+        {
+          "task": "b3",
+          "refused": false,
+          "model": "gpt-4o-mini",
+          "usd": 3.6000000000000003e-06,
+          "decision": "accepted",
+          "answer": "Mars"
+        },
+        {
+          "task": "b4",
+          "refused": true,
+          "model": null,
+          "usd": 0.0,
+          "decision": "no_model_fits_budget",
+          "answer": ""
+        }
+      ],
+      "accepted": 3,
+      "refused": 1,
+      "ledger": [
+        {
+          "task": "b1",
+          "decision": "accepted",
+          "model": "gpt-4o-mini",
+          "usd": 4.05e-06,
+          "spent_total": 4.05e-06,
+          "budget_usd": 1.5e-05
+        },
+        {
+          "task": "b2",
+          "decision": "accepted",
+          "model": "gpt-4o-mini",
+          "usd": 3.75e-06,
+          "spent_total": 7.8e-06,
+          "budget_usd": 1.5e-05
+        },
+        {
+          "task": "b3",
+          "decision": "accepted",
+          "model": "gpt-4o-mini",
+          "usd": 3.6e-06,
+          "spent_total": 1.14e-05,
+          "budget_usd": 1.5e-05
+        },
+        {
+          "task": "b4",
+          "decision": "downgraded",
+          "reason": "would_exceed_budget",
+          "attempted_model": "gpt-4o-mini",
+          "attempted_usd": 3.75e-06,
+          "remaining_usd": 3.6e-06
+        },
+        {
+          "task": "b4",
+          "decision": "downgraded",
+          "reason": "would_exceed_budget",
+          "attempted_model": "gpt-4.1",
+          "attempted_usd": 5e-05,
+          "remaining_usd": 3.6e-06
+        },
+        {
+          "task": "b4",
+          "decision": "refused",
+          "reason": "no_model_fits_budget",
+          "budget_usd": 1.5e-05,
+          "spent_usd": 1.14e-05,
+          "remaining_usd": 3.6e-06
+        }
+      ],
+      "status": "PASS"
+    },
+    "fm5_verifier_escalation": {
+      "math_prompt": "What is 17 * 23? Reply with just the number, nothing else.",
+      "gold": 391,
+      "cheap_model": "gpt-4o-mini",
+      "cheap_answer": "391",
+      "cheap_correct": true,
+      "escalated": false,
+      "final_model": "gpt-4o-mini",
+      "final_answer": "391",
+      "status": "PASS"
+    }
+  },
+  "observability_log": [
+    {
+      "ts": "23:49:37",
+      "event": "fm1_invalid_slug",
+      "model": "gpt-9000-doesnt-exist",
+      "outcome": "failure",
+      "error": "openai HTTP 404 for gpt-9000-doesnt-exist: {\n    \"error\": {\n        \"message\": \"The model `gpt-9000-doesnt-exist` does not exist or you do not have access to it.\",\n        \"type\": \"invalid_request_err"
+    },
+    {
+      "ts": "23:49:38",
+      "event": "fm1_fallback_success",
+      "model": "gpt-4o-mini",
+      "outcome": "success",
+      "usd": 3.75e-06,
+      "latency_ms": 444,
+      "answer": "4"
+    },
+    {
+      "ts": "23:49:43",
+      "event": "fm2_attempt",
+      "attempt": "tiny-timeout",
+      "model": "gpt-4o-mini",
+      "outcome": "failure",
+      "error": "openai network error for gpt-4o-mini: <urlopen error timed out>"
+    },
+    {
+      "ts": "23:49:43",
+      "event": "fm2_attempt",
+      "attempt": "normal-timeout",
+      "model": "gpt-4o-mini",
+      "outcome": "success",
+      "tokens_prompt": 21,
+      "tokens_completion": 1,
+      "usd": 3.75e-06,
+      "latency_ms": 641
+    },
+    {
+      "ts": "23:49:43",
+      "event": "fm3_overlimit",
+      "model": "gpt-4o-mini",
+      "max_tokens": 999999,
+      "outcome": "failure",
+      "error": "openai HTTP 400 for gpt-4o-mini: {\n  \"error\": {\n    \"message\": \"max_tokens is too large: 999999. This model supports at most 16384 completion tokens, whereas you provided 999999.\",\n    \"type\": \"invalid_request_error\",\n    \"param\": \"max_tokens\",\n    \"code\": \"invalid_value\"\n  }\n}"
+    },
+    {
+      "ts": "23:49:44",
+      "event": "fm3_fallback",
+      "model": "gpt-4o-mini",
+      "max_tokens": 64,
+      "outcome": "success",
+      "usd": 3.75e-06,
+      "answer": "4"
+    },
+    {
+      "ts": "23:49:45",
+      "event": "budget_router_accepted",
+      "task": "b1",
+      "decision": "accepted",
+      "model": "gpt-4o-mini",
+      "usd": 4.05e-06,
+      "spent_total": 4.05e-06,
+      "budget_usd": 1.5e-05
+    },
+    {
+      "ts": "23:49:46",
+      "event": "budget_router_accepted",
+      "task": "b2",
+      "decision": "accepted",
+      "model": "gpt-4o-mini",
+      "usd": 3.75e-06,
+      "spent_total": 7.8e-06,
+      "budget_usd": 1.5e-05
+    },
+    {
+      "ts": "23:49:46",
+      "event": "budget_router_accepted",
+      "task": "b3",
+      "decision": "accepted",
+      "model": "gpt-4o-mini",
+      "usd": 3.6e-06,
+      "spent_total": 1.14e-05,
+      "budget_usd": 1.5e-05
+    },
+    {
+      "ts": "23:49:47",
+      "event": "budget_guard",
+      "task": "b4",
+      "decision": "downgraded",
+      "reason": "would_exceed_budget",
+      "attempted_model": "gpt-4o-mini",
+      "attempted_usd": 3.75e-06,
+      "remaining_usd": 3.6e-06
+    },
+    {
+      "ts": "23:49:48",
+      "event": "budget_guard",
+      "task": "b4",
+      "decision": "downgraded",
+      "reason": "would_exceed_budget",
+      "attempted_model": "gpt-4.1",
+      "attempted_usd": 5e-05,
+      "remaining_usd": 3.6e-06
+    },
+    {
+      "ts": "23:49:48",
+      "event": "budget_guard",
+      "task": "b4",
+      "decision": "refused",
+      "reason": "no_model_fits_budget",
+      "budget_usd": 1.5e-05,
+      "spent_usd": 1.14e-05,
+      "remaining_usd": 3.6e-06
+    },
+    {
+      "ts": "23:49:48",
+      "event": "fm5_cheap_call",
+      "model": "gpt-4o-mini",
+      "answer": "391",
+      "correct": true,
+      "usd": 4.2e-06
+    }
+  ],
+  "all_pass": true
+}

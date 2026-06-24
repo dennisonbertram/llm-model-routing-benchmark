@@ -1,0 +1,78 @@
+{
+  "baselines": {
+    "always_cheap": {
+      "accuracy": 0.8444444444444444,
+      "total_usd": 0.0016615499999999995
+    },
+    "always_strong": {
+      "accuracy": 0.9777777777777777,
+      "total_usd": 0.021482
+    },
+    "oracle": {
+      "accuracy": 0.9777777777777777,
+      "total_usd": 0.0022457999999999996
+    }
+  },
+  "cascade_results": [
+    {
+      "threshold": 0.1,
+      "accuracy": 0.8444444444444444,
+      "total_usd": 0.003911599999999998,
+      "n": 45,
+      "n_escalated": 4,
+      "escalation_rate": 0.08888888888888889
+    },
+    {
+      "threshold": 0.3,
+      "accuracy": 0.8444444444444444,
+      "total_usd": 0.003911599999999998,
+      "n": 45,
+      "n_escalated": 4,
+      "escalation_rate": 0.08888888888888889
+    },
+    {
+      "threshold": 0.5,
+      "accuracy": 0.8444444444444444,
+      "total_usd": 0.003911599999999998,
+      "n": 45,
+      "n_escalated": 4,
+      "escalation_rate": 0.08888888888888889
+    },
+    {
+      "threshold": 0.7,
+      "accuracy": 0.8444444444444444,
+      "total_usd": 0.003911599999999998,
+      "n": 45,
+      "n_escalated": 4,
+      "escalation_rate": 0.08888888888888889
+    },
+    {
+      "threshold": 0.9,
+      "accuracy": 0.8444444444444444,
+      "total_usd": 0.003911599999999998,
+      "n": 45,
+      "n_escalated": 4,
+      "escalation_rate": 0.08888888888888889
+    }
+  ],
+  "best_threshold": 0.1,
+  "best_accuracy": 0.8444444444444444,
+  "best_cost": 0.003911599999999998,
+  "best_escalation_rate": 0.08888888888888889,
+  "false_accept_count": 6,
+  "false_accept_ids": [
+    "m10",
+    "m12",
+    "m13",
+    "m14",
+    "m15",
+    "m9"
+  ],
+  "cache_stats": {
+    "hits": 245,
+    "misses": 0,
+    "entries": 52
+  },
+  "cheap_model": "gpt-4o-mini",
+  "strong_model": "gpt-4.1"
+}

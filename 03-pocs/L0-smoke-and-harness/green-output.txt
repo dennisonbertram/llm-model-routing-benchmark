@@ -1,0 +1,8 @@
+test_oracle_headroom (__main__.L0) ... ok
+test_providers_live (__main__.L0) ... ok
+test_real_cost_quality_gap (__main__.L0) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 5.385s
+
+OK

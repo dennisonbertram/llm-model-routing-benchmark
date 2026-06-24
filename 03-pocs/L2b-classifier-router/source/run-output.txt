@@ -1,0 +1,106 @@
+L2b — Logistic-Regression Classifier Router
+======================================================================
+Loaded 45 items from labelset_export.json
+  cheap_correct=True  (38/45 = 84.4%)
+  cheap_correct=False (7/45 — need strong)
+
+-- Embedding all prompts via text-embedding-3-small (live API or cache) --
+  loaded 45 cached embeddings
+  all embeddings already cached, $0.00 live spend
+
+-- Data split --
+  Train: 32 items  (27 cheap-correct)
+  Test : 13 items  (11 cheap-correct)
+
+-- Training logistic regression (numpy-free gradient descent) --
+    epoch   0  loss=0.6926  train_acc=0.844
+    epoch  50  loss=0.4333  train_acc=0.844
+    epoch 100  loss=0.3878  train_acc=0.844
+    epoch 150  loss=0.3615  train_acc=0.844
+    epoch 200  loss=0.3398  train_acc=0.844
+    epoch 250  loss=0.3206  train_acc=0.844
+    epoch 299  loss=0.3037  train_acc=0.844
+
+  Train accuracy (threshold=0.5): 0.844
+  Test  accuracy (threshold=0.5): 0.846
+
+-- Baselines on test set (from labelset matrix, no new API calls) --
+  always-cheap  (gpt-4o-mini): acc=0.846  cost=$0.00037
+  always-strong (gpt-4.1)    : acc=1.000  cost=$0.00487  (13.0x cheap)
+  ORACLE (cheapest-correct)  : acc=1.000  cost=$0.00054
+
+-- Threshold sweep: Pareto curve (test set) --
+
+  P(cheap_correct) distribution on test set:
+    min=0.7377  max=0.9067  mean=0.8204
+    items with P<0.5: 0 / 13
+    Effective threshold range (non-collapsing): [0.75, 0.90]
+
+  Collapse notes (outside effective range — expected behaviour):
+    τ=0.05: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.10: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.15: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.20: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.25: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.30: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.35: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.40: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.45: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.50: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.55: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.60: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.65: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.70: routing collapsed (n_cheap=13, n_strong=0) — outside effective range [0.75,0.90], expected
+    τ=0.95: routing collapsed (n_cheap=0, n_strong=13) — outside effective range [0.75,0.90], expected
+
+  threshold     acc      cost $   %cheap
+  ---------------------------------------------
+  τ=0.05  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.10  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.15  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.20  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.25  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.30  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.35  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.40  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.45  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.50  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.55  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.60  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.65  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.70  acc=0.846  cost=$0.00037  %cheap=100%  <-- beats cheap, cheaper than strong
+  τ=0.75  acc=0.923  cost=$0.00047  %cheap=92%  <-- beats cheap, cheaper than strong
+  τ=0.80  acc=1.000  cost=$0.00077  %cheap=54%  <-- beats cheap, cheaper than strong
+  τ=0.85  acc=1.000  cost=$0.00092  %cheap=31%  <-- beats cheap, cheaper than strong
+  τ=0.90  acc=1.000  cost=$0.00461  %cheap=8%
+  τ=0.95  acc=1.000  cost=$0.00487  %cheap=0%
+
+  Pareto-front routers: ['classifier(τ=0.05)', 'classifier(τ=0.10)', 'classifier(τ=0.15)', 'classifier(τ=0.20)', 'classifier(τ=0.25)', 'classifier(τ=0.30)', 'classifier(τ=0.35)', 'classifier(τ=0.40)', 'classifier(τ=0.45)', 'classifier(τ=0.50)', 'classifier(τ=0.55)', 'classifier(τ=0.60)', 'classifier(τ=0.65)', 'classifier(τ=0.70)', 'classifier(τ=0.75)', 'oracle']
+
+  Best classifier point at oracle accuracy (1.000): τ=0.80  cost=$0.00077  %cheap=54%
+
+-- Live confirmation (embed a new prompt and route it) --
+  prompt: 'What is the derivative of x^3 + 2x? Reply with just the expression.'
+  embed cost: $3.80e-07
+  P(cheap_correct) = 0.8159 -> route to: cheap (gpt-4o-mini)
+  (A well-known calculus derivative — cheap should suffice)
+
+  Total embedding spend this run: $3.8000e-07
+
+== Summary results table ==
+
+  router                          acc        cost   %cheap
+  ------------------------------------------------------------
+    always-cheap                0.846  $0.00037  100%
+    always-strong               1.000  $0.00487  0%
+  * oracle                      1.000  $0.00054    --
+  * classifier(τ=0.30)          0.846  $0.00037  100%
+  * classifier(τ=0.40)          0.846  $0.00037  100%
+  * classifier(τ=0.50)          0.846  $0.00037  100%
+  * classifier(τ=0.60)          0.846  $0.00037  100%
+  * classifier(τ=0.70)          0.846  $0.00037  100%
+    classifier(τ=0.80)          1.000  $0.00077  54%
+    classifier(τ=0.90)          1.000  $0.00461  8%
+
+wrote /Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L2b-classifier-router/source/l2b_summary.json
+Done.

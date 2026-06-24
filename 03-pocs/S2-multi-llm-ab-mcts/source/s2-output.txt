@@ -1,0 +1,29 @@
+validation OK (math golds computed; coding refs pass 1.0)
+== S2: 4 hard coding tasks; pool=['deepseek-chat-v3.1', 'qwen-2.5-72b-instr', 'gemini-2.5-flash-l'] ==
+   public/hidden test split per item: [('hc1', 7, 5), ('hc2', 6, 4), ('hc3', 6, 4), ('hc5', 6, 4)]
+
+reference gpt-5.5 solo: hidden mean=1.000  $0.0301
+
+  solo done deepseek-chat-v3.1: hidden=0.950
+  solo done qwen-2.5-72b-instr: hidden=0.950
+  solo done gemini-2.5-flash-l: hidden=0.950
+solo baselines (hidden):
+  solo:deepseek-chat-v3.1      hidden=0.950  solved=3/4  $0.0011
+  solo:qwen-2.5-72b-instr      hidden=0.950  solved=3/4  $0.0004
+  solo:gemini-2.5-flash-l      hidden=0.950  solved=3/4  $0.0015
+  best single = solo:deepseek-chat-v3.1
+
+  budget 1 done: repeated hidden=0.887 ab-mcts hidden=0.950
+  budget 8 done: repeated hidden=0.950 ab-mcts hidden=0.950
+== budget sweep (HIDDEN pass-fraction; solved = hidden==1.0) ==
+  method                        hidden   solved  calls      cost
+  gpt-5.5 solo (ref ceiling)     1.000     4/4      4    0.0301
+  solo:deepseek-chat-v3.1 (best single)   0.950     3/4      4    0.0011
+  repeated@1:deepseek-chat-v3.1   0.887     2/4      4    0.0014
+  ab-mcts@1                      0.950     3/4      4    0.0004
+      ab-mcts@1 per-arm pulls: {'deepseek-chat-v3.1': 0, 'qwen-2.5-72b-instr': 4, 'gemini-2.5-flash-l': 0}
+  repeated@8:deepseek-chat-v3.1   0.950     3/4     32    0.0085
+  ab-mcts@8                      0.950     3/4      4    0.0004
+      ab-mcts@8 per-arm pulls: {'deepseek-chat-v3.1': 0, 'qwen-2.5-72b-instr': 4, 'gemini-2.5-flash-l': 0}
+
+wrote s2_results.json | cache: {'hits': 60, 'misses': 0, 'entries': 60}

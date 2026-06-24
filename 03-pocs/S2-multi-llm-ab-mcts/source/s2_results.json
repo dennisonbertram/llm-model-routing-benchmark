@@ -1,0 +1,69 @@
+{
+ "items": [
+  "hc1",
+  "hc2",
+  "hc3",
+  "hc5"
+ ],
+ "pool": [
+  "openrouter/deepseek/deepseek-chat-v3.1",
+  "openrouter/qwen/qwen-2.5-72b-instruct",
+  "openrouter/google/gemini-2.5-flash-lite-preview-09-2025"
+ ],
+ "best_solo": "solo:deepseek-chat-v3.1",
+ "ref_gpt55_hidden": 1.0,
+ "results": {
+  "solo:deepseek-chat-v3.1": {
+   "hidden": 0.95,
+   "solved": 3,
+   "cost": 0.0011346,
+   "calls": 4
+  },
+  "solo:qwen-2.5-72b-instr": {
+   "hidden": 0.95,
+   "solved": 3,
+   "cost": 0.00041664,
+   "calls": 4
+  },
+  "solo:gemini-2.5-flash-l": {
+   "hidden": 0.95,
+   "solved": 3,
+   "cost": 0.0014554,
+   "calls": 4
+  },
+  "repeated@1:deepseek-chat-v3.1": {
+   "hidden": 0.8875,
+   "solved": 2,
+   "cost": 0.00137729,
+   "calls": 4
+  },
+  "ab-mcts@1": {
+   "hidden": 0.95,
+   "solved": 3,
+   "cost": 0.00037584,
+   "calls": 4,
+   "pulls": {
+    "deepseek-chat-v3.1": 0,
+    "qwen-2.5-72b-instr": 4,
+    "gemini-2.5-flash-l": 0
+   }
+  },
+  "repeated@8:deepseek-chat-v3.1": {
+   "hidden": 0.95,
+   "solved": 3,
+   "cost": 0.008540300000000002,
+   "calls": 32
+  },
+  "ab-mcts@8": {
+   "hidden": 0.95,
+   "solved": 3,
+   "cost": 0.00040264,
+   "calls": 4,
+   "pulls": {
+    "deepseek-chat-v3.1": 0,
+    "qwen-2.5-72b-instr": 4,
+    "gemini-2.5-flash-l": 0
+   }
+  }
+ }
+}

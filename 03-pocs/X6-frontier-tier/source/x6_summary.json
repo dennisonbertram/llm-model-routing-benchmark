@@ -1,0 +1,42 @@
+{
+  "models": {
+    "gpt-5.4": {
+      "acc": 0.9777777777777777,
+      "hard_math": 0.8571428571428571,
+      "coding": 1.0,
+      "usd": 0.03958,
+      "x_vs_gpt41": 1.84,
+      "mean_latency_ms": 1367,
+      "out_tokens": 2357,
+      "m8": true
+    },
+    "gpt-5.5": {
+      "acc": 1.0,
+      "hard_math": 1.0,
+      "coding": 1.0,
+      "usd": 0.11943,
+      "x_vs_gpt41": 5.56,
+      "mean_latency_ms": 2753,
+      "out_tokens": 3699,
+      "m8": true
+    }
+  },
+  "baselines": {
+    "cheap": {
+      "acc": 0.8444444444444444,
+      "usd": 0.00166
+    },
+    "gpt-4.1": {
+      "acc": 0.9777777777777777,
+      "usd": 0.02148
+    }
+  },
+  "oracle_2tier": {
+    "acc": 0.978,
+    "usd": 0.00214
+  },
+  "oracle_3tier_with_gpt55": {
+    "acc": 1.0,
+    "usd": 0.00372
+  }
+}

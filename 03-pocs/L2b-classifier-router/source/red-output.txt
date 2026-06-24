@@ -1,0 +1,43 @@
+test_classifier_beats_always_cheap_on_accuracy (test_l2b.L2b)
+At a conservative threshold the classifier should achieve higher acc than cheap alone. ... ok
+test_embeddings_live (test_l2b.L2b)
+text-embedding-3-small returns a real vector of expected dimension. ... ERROR
+test_live_embed_and_predict (test_l2b.L2b)
+Fresh prompt embeds live and gets a probability in [0,1]. ... ERROR
+test_model_trains_non_trivially (test_l2b.L2b)
+Trained model must not be perfectly degenerate: it must produce varying probabilities. ... ok
+test_pareto_threshold_sweep (test_l2b.L2b)
+Threshold sweep traces a curve where higher threshold -> more strong routing. ... ok
+test_routing_collapse_guard (test_l2b.L2b)
+Within the effective probability range, the router must split (not collapse). ... ok
+
+======================================================================
+ERROR: test_embeddings_live (test_l2b.L2b)
+text-embedding-3-small returns a real vector of expected dimension.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L2b-classifier-router/source/test_l2b.py", line 124, in test_embeddings_live
+    vecs, usd = embed(["What is 2+2?"])
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L2b-classifier-router/source/../../../harness/providers.py", line 191, in embed
+    headers = {"Authorization": f"Bearer {_env('OPENAI_API_KEY')}", "Content-Type": "application/json"}
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L2b-classifier-router/source/../../../harness/providers.py", line 66, in _env
+    raise ProviderError(f"Missing env var {name}; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+======================================================================
+ERROR: test_live_embed_and_predict (test_l2b.L2b)
+Fresh prompt embeds live and gets a probability in [0,1].
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L2b-classifier-router/source/test_l2b.py", line 204, in test_live_embed_and_predict
+    vecs, _ = embed([prompt])
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L2b-classifier-router/source/../../../harness/providers.py", line 191, in embed
+    headers = {"Authorization": f"Bearer {_env('OPENAI_API_KEY')}", "Content-Type": "application/json"}
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L2b-classifier-router/source/../../../harness/providers.py", line 66, in _env
+    raise ProviderError(f"Missing env var {name}; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.752s
+
+FAILED (errors=2)

@@ -1,0 +1,34 @@
+  v_e1   math    gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_e2   math    gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_e3   math    gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_m1   math    gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_m2   math    gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_h1   math    gpt-4o-min=0  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_h2   math    gpt-4o-min=0  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_h3   math    gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_h4   math    gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_h5   math    gpt-4o-min=0  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_h6   math    gpt-4o-min=0  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_q1   qa      gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_q2   qa      gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_c1   coding  gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+  v_c2   coding  gpt-4o-min=1  gpt-5.5=1  fugu=1  fugu-ultra=1
+
+== HEAD-TO-HEAD on 15 identical tasks ==
+  system                        acc    total$    $/task  mean_lat
+  always gpt-4o-mini (cheap)  0.733    0.0005   0.00003    1635ms
+  always gpt-5.5 (frontier)   1.000    0.0287   0.00191    2484ms
+  fugu (mini)                 1.000    0.2246   0.01497    5923ms
+  fugu-ultra (conductor)      1.000    0.6392   0.04261   20221ms
+  router: heuristic           1.000    0.0202   0.00135    2074ms
+  router: classifier(old-suite)  1.000    0.0217   0.00145    2152ms
+
+== FALSIFICATION CHECKS ==
+  tasks where fugu-ultra is cheaper than one gpt-5.5 call: 0/15 []
+  tasks where fugu-ultra MORE accurate than gpt-5.5: 0 []
+  tasks where gpt-5.5 MORE accurate than fugu-ultra: 0 []
+  frontier acc=1.000 | heuristic-router acc=1.000 (chose {'gpt-4o-mini': 7, 'gpt-5.5': 8}) | classifier-router acc=1.000 (chose {'gpt-4o-mini': 5, 'gpt-5.5': 10})
+  fugu-ultra / gpt-5.5 cost ratio per task: min=6.1x median=19.7x max=264.0x
+  fugu-ultra / classifier-router cost ratio per task: min=13x median=40x max=15489x
+
+wrote headtohead_results.json | cache: {'hits': 60, 'misses': 0, 'entries': 60}

@@ -1,0 +1,7 @@
+### RED: run with keys unset ###
+    r = chat(self.fallback, [{"role": "user", "content": prompt}], max_tokens=512)
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L-capstone-adaptive-routing-gateway/source/../../../harness/providers.py", line 94, in chat
+    out = _chat_openai_compatible(OPENAI_BASE, _env("OPENAI_API_KEY"), model, messages,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L-capstone-adaptive-routing-gateway/source/../../../harness/providers.py", line 66, in _env
+    raise ProviderError(f"Missing env var {name}; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env

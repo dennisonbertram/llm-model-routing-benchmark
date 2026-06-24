@@ -1,0 +1,140 @@
+=== L4 Routing Gateway Runtime — GREEN run (2026-06-22, live credentials) ===
+
+--- Unit tests (5/5 pass) ---
+
+test_01_health (test_l4.L4GatewayTests)
+Gateway health endpoint returns status ok. ... ok
+test_02_auto_simple_routes_cheap (test_l4.L4GatewayTests)
+Auto-routing of a simple factual question picks the cheap model. ... ok
+test_03_auto_hard_math_routes_strong (test_l4.L4GatewayTests)
+Auto-routing of a combinatorics question picks the strong model. ... ok
+test_04_forced_model_bypasses_routing (test_l4.L4GatewayTests)
+A forced model= request ignores routing and uses the specified model. ... ok
+test_05_ledger_written (test_l4.L4GatewayTests)
+The main ledger file has entries with required fields. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.895s
+
+OK
+
+--- run_l4.sh demo (real curl responses + ledger) ---
+
+=== L4 Routing Gateway Runtime Demo ===
+
+[1/6] Starting gateway on port 8765...
+      PID=11932
+Gateway listening on http://127.0.0.1:8765
+Ledger: .../source/cost-ledger.jsonl
+      Server ready.
+
+[2/6] Health check:
+{
+    "status": "ok",
+    "ledger": ".../source/cost-ledger.jsonl"
+}
+
+[3/6] AUTO request — simple factual question (expect cheap: gpt-4o-mini):
+{
+    "id": "chatcmpl-7e9301e338a3",
+    "object": "chat.completion",
+    "created": 1782100137,
+    "model": "gpt-4o-mini",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "The capital of France is Paris."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 7,
+        "total_tokens": 21
+    },
+    "x_routing": {
+        "decision": "default_cheap",
+        "chosen_model": "gpt-4o-mini",
+        "usd": 6.3e-06,
+        "latency_ms": 763
+    }
+}
+
+[4/6] AUTO request — hard combinatorics question (expect strong: gpt-4.1):
+{
+    "id": "chatcmpl-fb6d11d31989",
+    "object": "chat.completion",
+    "created": 1782100139,
+    "model": "gpt-4.1",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Let's break down the problem:\n\n**Question:**  \nHow many ways can you arrange 5 items chosen from 8 distinct items?\n\nThis means:  \n- You have 8 distinct items.\n- You want to **choose 5** of them.\n- Then, you want to **arrange** those 5 (i.e., order matters).\n\nThis is a **permutation** problem, not a combination, because order matters.\n\n---\n\n## Step 1: Number of ways to choose and arrange 5 out of 8\n\nThe number of ways to **arrange** 5 items out of 8 is given by the **P(8,5) = 8!/(8-5)! = 6720**."
+        },
+        "finish_reason": "length"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 27,
+        "completion_tokens": 128,
+        "total_tokens": 155
+    },
+    "x_routing": {
+        "decision": "keyword:combinatorics",
+        "chosen_model": "gpt-4.1",
+        "usd": 0.001078,
+        "latency_ms": 1700
+    }
+}
+
+[5/6] FORCED request — model=gpt-4o-mini (no routing):
+{
+    "id": "chatcmpl-b7330804fe45",
+    "object": "chat.completion",
+    "created": 1782100139,
+    "model": "gpt-4o-mini",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Hello!"
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 11,
+        "completion_tokens": 2,
+        "total_tokens": 13
+    },
+    "x_routing": {
+        "decision": "forced",
+        "chosen_model": "gpt-4o-mini",
+        "usd": 2.85e-06,
+        "latency_ms": 608
+    }
+}
+
+[6/6] Cost ledger (all 3 requests):
+  ts                        decision              chosen_model           pt     ct         usd       ms
+  ----------------------------------------------------------------------------------------------------
+  2026-06-22T03:48:57Z      default_cheap         gpt-4o-mini            14      7   $0.000006    763ms
+  2026-06-22T03:48:59Z      keyword:combinatorics  gpt-4.1                27    128   $0.001078   1700ms
+  2026-06-22T03:48:59Z      forced                gpt-4o-mini            11      2   $0.000003    608ms
+                            TOTAL                                                    $0.001087
+
+Stopping gateway (PID=11932)...
+Done.
+
+=== ROUTING SUMMARY ===
+Request 1 (auto, simple):     gpt-4o-mini  decision=default_cheap     $0.000006   763ms
+Request 2 (auto, hard math):  gpt-4.1      decision=keyword:combinator $0.001078  1700ms
+Request 3 (forced):           gpt-4o-mini  decision=forced             $0.000003   608ms
+Total spend: $0.001087 across 3 live requests
+Strong-model cost share: $0.001078 / $0.001087 = 99.2% (1 of 3 requests)

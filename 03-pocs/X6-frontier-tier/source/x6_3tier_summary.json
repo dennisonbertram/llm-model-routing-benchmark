@@ -1,0 +1,14 @@
+{
+  "best": {
+    "cfg": "hi=0.8,lo=0.5",
+    "acc": 1.0,
+    "usd": 0.00405,
+    "route": [
+      32,
+      12,
+      1
+    ]
+  },
+  "always_gpt55_usd": 0.11943,
+  "oracle_3tier_usd": 0.00372
+}

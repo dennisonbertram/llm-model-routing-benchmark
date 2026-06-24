@@ -1,0 +1,75 @@
+test_fm1_fallback_to_valid_model_succeeds (test_l5.L5FailureModes)
+After an invalid-model failure the fallback to a valid model succeeds. ... FAIL
+test_fm1_invalid_model_slug_fails (test_l5.L5FailureModes)
+Calling a nonexistent model must raise ProviderError with HTTP error info. ... FAIL
+test_fm2_normal_timeout_succeeds (test_l5.L5FailureModes)
+The same model with a normal timeout must succeed. ... FAIL
+test_fm2_tiny_timeout_fails (test_l5.L5FailureModes)
+A 0.001s timeout must fail (no TCP connection completes in 1 ms). ... FAIL
+test_fm3_overlimit_handled (test_l5.L5FailureModes)
+max_tokens=999999 must either produce a real error OR be silently capped — never crash. ... ok
+test_fm4_budget_guard_refuses_when_exhausted (test_l5.L5FailureModes)
+After budget is spent the router must refuse further calls. ... ok
+test_fm5_cheap_model_answers_simple_math (test_l5.L5FailureModes)
+The cheap model answers simple math correctly (no escalation needed). ... FAIL
+test_fm5_verifier_escalation_logic (test_l5.L5FailureModes)
+Verifier correctly identifies correct vs wrong answers. ... ok
+test_observability_log_schema (test_l5.L5FailureModes)
+Every log entry must have ts, event, and must not contain raw API key material. ... ok
+
+======================================================================
+FAIL: test_fm1_fallback_to_valid_model_succeeds (test_l5.L5FailureModes)
+After an invalid-model failure the fallback to a valid model succeeds.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L5-failure-modes-and-observability/source/test_l5.py", line 54, in test_fm1_fallback_to_valid_model_succeeds
+    self.assertIsNone(err, f"Fallback model {good!r} failed unexpectedly: {err}")
+AssertionError: 'Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env' is not None : Fallback model 'gpt-4o-mini' failed unexpectedly: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+======================================================================
+FAIL: test_fm1_invalid_model_slug_fails (test_l5.L5FailureModes)
+Calling a nonexistent model must raise ProviderError with HTTP error info.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L5-failure-modes-and-observability/source/test_l5.py", line 45, in test_fm1_invalid_model_slug_fails
+    self.assertTrue(
+AssertionError: False is not true : Expected an HTTP error message, got: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+======================================================================
+FAIL: test_fm2_normal_timeout_succeeds (test_l5.L5FailureModes)
+The same model with a normal timeout must succeed.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L5-failure-modes-and-observability/source/test_l5.py", line 77, in test_fm2_normal_timeout_succeeds
+    self.assertIsNone(err, f"Normal-timeout call failed: {err}")
+AssertionError: 'Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env' is not None : Normal-timeout call failed: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+======================================================================
+FAIL: test_fm2_tiny_timeout_fails (test_l5.L5FailureModes)
+A 0.001s timeout must fail (no TCP connection completes in 1 ms).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L5-failure-modes-and-observability/source/test_l5.py", line 69, in test_fm2_tiny_timeout_fails
+    self.assertTrue(
+AssertionError: False is not true : Expected timeout error, got: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+======================================================================
+FAIL: test_fm5_cheap_model_answers_simple_math (test_l5.L5FailureModes)
+The cheap model answers simple math correctly (no escalation needed).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L5-failure-modes-and-observability/source/test_l5.py", line 154, in test_fm5_cheap_model_answers_simple_math
+    self.assertIsNone(err, f"Cheap model failed: {err}")
+AssertionError: 'Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env' is not None : Cheap model failed: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+FAILED (failures=5)
+  LOG {"ts": "23:52:15", "event": "budget_router_call_failed", "task": "t0", "model": "gpt-4o-mini", "error": "Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env"}
+  LOG {"ts": "23:52:15", "event": "budget_guard", "task": "t0", "decision": "refused", "reason": "no_model_fits_budget", "budget_usd": 5e-06, "spent_usd": 0.0, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:15", "event": "budget_router_call_failed", "task": "t1", "model": "gpt-4o-mini", "error": "Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env"}
+  LOG {"ts": "23:52:15", "event": "budget_guard", "task": "t1", "decision": "refused", "reason": "no_model_fits_budget", "budget_usd": 5e-06, "spent_usd": 0.0, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:15", "event": "budget_router_call_failed", "task": "t2", "model": "gpt-4o-mini", "error": "Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env"}
+  LOG {"ts": "23:52:15", "event": "budget_guard", "task": "t2", "decision": "refused", "reason": "no_model_fits_budget", "budget_usd": 5e-06, "spent_usd": 0.0, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:15", "event": "test_event", "model": "gpt-4o-mini", "outcome": "ok"}

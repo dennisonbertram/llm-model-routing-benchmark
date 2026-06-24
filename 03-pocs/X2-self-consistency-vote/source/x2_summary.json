@@ -1,0 +1,80 @@
+{
+  "test_suite": "MATH (15 items, 7 hard)",
+  "baseline_cheap": {
+    "router": "always:gpt-4o-mini",
+    "n": 15,
+    "accuracy": 0.5333,
+    "total_usd": 9.5e-05,
+    "usd_per_correct": 1.2e-05,
+    "mean_latency_ms": 674
+  },
+  "baseline_strong": {
+    "router": "always:gpt-4.1",
+    "n": 15,
+    "accuracy": 0.9333,
+    "total_usd": 0.001142,
+    "usd_per_correct": 8.2e-05,
+    "mean_latency_ms": 694
+  },
+  "self_consistency": {
+    "1": {
+      "router": "self-consistency:gpt-4o-mini@k1",
+      "n": 15,
+      "accuracy": 0.6,
+      "total_usd": 8.6e-05,
+      "usd_per_correct": 1e-05,
+      "mean_latency_ms": 0
+    },
+    "3": {
+      "router": "self-consistency:gpt-4o-mini@k3",
+      "n": 15,
+      "accuracy": 0.6,
+      "total_usd": 0.000267,
+      "usd_per_correct": 3e-05,
+      "mean_latency_ms": 0
+    },
+    "5": {
+      "router": "self-consistency:gpt-4o-mini@k5",
+      "n": 15,
+      "accuracy": 0.6,
+      "total_usd": 0.000448,
+      "usd_per_correct": 5e-05,
+      "mean_latency_ms": 0
+    }
+  },
+  "hard_math": {
+    "cheap": {
+      "router": "always:gpt-4o-mini",
+      "n": 7,
+      "accuracy": 0.0,
+      "total_usd": 5.8e-05,
+      "usd_per_correct": Infinity,
+      "mean_latency_ms": 766
+    },
+    "strong": {
+      "router": "always:gpt-4.1",
+      "n": 7,
+      "accuracy": 0.8571,
+      "total_usd": 0.000642,
+      "usd_per_correct": 0.000107,
+      "mean_latency_ms": 726
+    },
+    "sc_k3": {
+      "router": "self-consistency:gpt-4o-mini@k3",
+      "n": 7,
+      "accuracy": 0.1429,
+      "total_usd": 0.000155,
+      "usd_per_correct": 0.000155,
+      "mean_latency_ms": 0
+    },
+    "sc_k5": {
+      "router": "self-consistency:gpt-4o-mini@k5",
+      "n": 7,
+      "accuracy": 0.1429,
+      "total_usd": 0.000261,
+      "usd_per_correct": 0.000261,
+      "mean_latency_ms": 0
+    }
+  },
+  "key_finding": "Self-consistency voting DOES NOT close the hard-math gap and is strictly dominated. At k=3 (23% of strong cost), full-suite accuracy=0.600 vs strong 0.933; hard-math accuracy=0.143 vs strong 0.857 (only 17% of gap closed). SC@k>=3 costs more than the cheap baseline while providing zero accuracy improvement — strictly dominated by both the cheap and strong baselines."
+}

@@ -1,0 +1,419 @@
+{
+ "n": 56,
+ "gpt5.5": {
+  "acc": 0.8035714285714286,
+  "usd_task": 0.02994116071428573
+ },
+ "solo": {
+  "qwen3-235b-think": {
+   "acc": 0.19642857142857142,
+   "usd_task": 0.0005580125
+  },
+  "deepseek-v3.2": {
+   "acc": 0.7678571428571429,
+   "usd_task": 0.0007432280178571426
+  },
+  "minimax-m2.5": {
+   "acc": 0.4107142857142857,
+   "usd_task": 0.0035965794642857157
+  }
+ },
+ "ensemble": {
+  "acc": 0.7678571428571429,
+  "usd_task": 0.0048978199821428595
+ },
+ "per_task": {
+  "sh000": {
+   "gold": 10774,
+   "gpt5.5": 10774,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 10774,
+   "minimax-m2.5": 10774
+  },
+  "sh001": {
+   "gold": 2762,
+   "gpt5.5": 2762,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 2762,
+   "minimax-m2.5": null
+  },
+  "sh002": {
+   "gold": 22101,
+   "gpt5.5": 21,
+   "qwen3-235b-think": 22101,
+   "deepseek-v3.2": 22101,
+   "minimax-m2.5": null
+  },
+  "sh003": {
+   "gold": 2993,
+   "gpt5.5": 2993,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 2993,
+   "minimax-m2.5": 2993
+  },
+  "sh004": {
+   "gold": 21099,
+   "gpt5.5": 21099,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 21099,
+   "minimax-m2.5": null
+  },
+  "sh005": {
+   "gold": 7735,
+   "gpt5.5": 7735,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 7735,
+   "minimax-m2.5": null
+  },
+  "sh006": {
+   "gold": 25974,
+   "gpt5.5": 25974,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 25974,
+   "minimax-m2.5": 25974
+  },
+  "sh007": {
+   "gold": 3206,
+   "gpt5.5": 3206,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 3206,
+   "minimax-m2.5": 3206
+  },
+  "sh008": {
+   "gold": 909,
+   "gpt5.5": 909,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 909,
+   "minimax-m2.5": 909
+  },
+  "sh009": {
+   "gold": 1601,
+   "gpt5.5": 1601,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 1601,
+   "minimax-m2.5": 1601
+  },
+  "sh010": {
+   "gold": 343,
+   "gpt5.5": 343,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 343,
+   "minimax-m2.5": 435
+  },
+  "sh011": {
+   "gold": 163,
+   "gpt5.5": 163,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 163,
+   "minimax-m2.5": 163
+  },
+  "sh012": {
+   "gold": 364,
+   "gpt5.5": 364,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 364,
+   "minimax-m2.5": null
+  },
+  "sh013": {
+   "gold": 2400,
+   "gpt5.5": 2400,
+   "qwen3-235b-think": 2400,
+   "deepseek-v3.2": 2400,
+   "minimax-m2.5": 2400
+  },
+  "sh014": {
+   "gold": 432,
+   "gpt5.5": 432,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 432,
+   "minimax-m2.5": 432
+  },
+  "sh015": {
+   "gold": 2133,
+   "gpt5.5": 2133,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 2133,
+   "minimax-m2.5": 2133
+  },
+  "sh016": {
+   "gold": 242,
+   "gpt5.5": 530,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 530,
+   "minimax-m2.5": null
+  },
+  "sh017": {
+   "gold": 1748,
+   "gpt5.5": 148,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 60,
+   "minimax-m2.5": null
+  },
+  "sh018": {
+   "gold": 523,
+   "gpt5.5": 932,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 932,
+   "minimax-m2.5": null
+  },
+  "sh019": {
+   "gold": 137,
+   "gpt5.5": 615,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 37,
+   "minimax-m2.5": null
+  },
+  "sh020": {
+   "gold": 8991,
+   "gpt5.5": 4588,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 631,
+   "minimax-m2.5": null
+  },
+  "sh021": {
+   "gold": 818,
+   "gpt5.5": 176,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 269,
+   "minimax-m2.5": 689
+  },
+  "sh022": {
+   "gold": 833,
+   "gpt5.5": 817,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 817,
+   "minimax-m2.5": null
+  },
+  "sh023": {
+   "gold": 3913,
+   "gpt5.5": 4968,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 279558,
+   "minimax-m2.5": null
+  },
+  "sh024": {
+   "gold": 686,
+   "gpt5.5": 605,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 605,
+   "minimax-m2.5": null
+  },
+  "sh025": {
+   "gold": 612,
+   "gpt5.5": 39,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 811,
+   "minimax-m2.5": null
+  },
+  "sh026": {
+   "gold": 149800,
+   "gpt5.5": 149800,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 149800,
+   "minimax-m2.5": null
+  },
+  "sh027": {
+   "gold": 9364,
+   "gpt5.5": 9364,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 7,
+   "minimax-m2.5": null
+  },
+  "sh028": {
+   "gold": 599184,
+   "gpt5.5": 599184,
+   "qwen3-235b-think": 599184,
+   "deepseek-v3.2": 599184,
+   "minimax-m2.5": null
+  },
+  "sh029": {
+   "gold": 13112,
+   "gpt5.5": 13112,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 13112,
+   "minimax-m2.5": null
+  },
+  "sh030": {
+   "gold": 131072,
+   "gpt5.5": 131072,
+   "qwen3-235b-think": 131072,
+   "deepseek-v3.2": 131072,
+   "minimax-m2.5": null
+  },
+  "sh031": {
+   "gold": 524288,
+   "gpt5.5": 524288,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": -2,
+   "minimax-m2.5": null
+  },
+  "sh032": {
+   "gold": 13104,
+   "gpt5.5": 13104,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 2,
+   "minimax-m2.5": null
+  },
+  "sh033": {
+   "gold": 209712,
+   "gpt5.5": 209712,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 209712,
+   "minimax-m2.5": 209712
+  },
+  "sh034": {
+   "gold": 2208,
+   "gpt5.5": 2208,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 2208,
+   "minimax-m2.5": null
+  },
+  "sh035": {
+   "gold": 25200,
+   "gpt5.5": 25200,
+   "qwen3-235b-think": 25200,
+   "deepseek-v3.2": 25200,
+   "minimax-m2.5": 25200
+  },
+  "sh036": {
+   "gold": 2364,
+   "gpt5.5": 2364,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 2364,
+   "minimax-m2.5": null
+  },
+  "sh037": {
+   "gold": 21600,
+   "gpt5.5": 21600,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 21600,
+   "minimax-m2.5": 21600
+  },
+  "sh038": {
+   "gold": 20400,
+   "gpt5.5": 20400,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 20400,
+   "minimax-m2.5": 20880
+  },
+  "sh039": {
+   "gold": 26640,
+   "gpt5.5": 26640,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 26640,
+   "minimax-m2.5": 26640
+  },
+  "sh040": {
+   "gold": 92,
+   "gpt5.5": 92,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 92,
+   "minimax-m2.5": 92
+  },
+  "sh041": {
+   "gold": 219,
+   "gpt5.5": 219,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 219,
+   "minimax-m2.5": null
+  },
+  "sh042": {
+   "gold": 126,
+   "gpt5.5": 126,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 126,
+   "minimax-m2.5": null
+  },
+  "sh043": {
+   "gold": 87,
+   "gpt5.5": 87,
+   "qwen3-235b-think": 87,
+   "deepseek-v3.2": 87,
+   "minimax-m2.5": null
+  },
+  "sh044": {
+   "gold": 365,
+   "gpt5.5": 365,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 365,
+   "minimax-m2.5": null
+  },
+  "sh045": {
+   "gold": 61,
+   "gpt5.5": 61,
+   "qwen3-235b-think": 61,
+   "deepseek-v3.2": 61,
+   "minimax-m2.5": null
+  },
+  "sh046": {
+   "gold": 198,
+   "gpt5.5": 198,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 198,
+   "minimax-m2.5": 198
+  },
+  "sh047": {
+   "gold": 13,
+   "gpt5.5": 13,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 13,
+   "minimax-m2.5": 13
+  },
+  "sh048": {
+   "gold": 13,
+   "gpt5.5": 13,
+   "qwen3-235b-think": 13,
+   "deepseek-v3.2": 13,
+   "minimax-m2.5": 13
+  },
+  "sh049": {
+   "gold": 18,
+   "gpt5.5": 18,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 18,
+   "minimax-m2.5": 18
+  },
+  "sh050": {
+   "gold": 92,
+   "gpt5.5": 92,
+   "qwen3-235b-think": 92,
+   "deepseek-v3.2": 92,
+   "minimax-m2.5": 92
+  },
+  "sh051": {
+   "gold": 0,
+   "gpt5.5": 0,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 0,
+   "minimax-m2.5": null
+  },
+  "sh052": {
+   "gold": 1,
+   "gpt5.5": 1,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 1,
+   "minimax-m2.5": 1
+  },
+  "sh053": {
+   "gold": 1,
+   "gpt5.5": 1,
+   "qwen3-235b-think": 1,
+   "deepseek-v3.2": 1,
+   "minimax-m2.5": 1
+  },
+  "sh054": {
+   "gold": 2,
+   "gpt5.5": 2,
+   "qwen3-235b-think": null,
+   "deepseek-v3.2": 2,
+   "minimax-m2.5": null
+  },
+  "sh055": {
+   "gold": 2,
+   "gpt5.5": 2,
+   "qwen3-235b-think": 2,
+   "deepseek-v3.2": 2,
+   "minimax-m2.5": 2
+  }
+ }
+}

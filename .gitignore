@@ -1,0 +1,17 @@
+# Secrets — never commit. Keys are read from the environment at runtime (see README).
+*.env
+secrets*
+.agent-university/
+
+# Python cruft
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Live-run intermediates (regenerable). The published data + report ARE committed:
+#   bench/matrix_superhard.json, bench/results_superhard.json,
+#   bench/leaderboard_superhard.md, bench/Model-Routing-vs-Fugu.{md,pdf}
+*.log
+**/report_*.html
+**/report_*.png

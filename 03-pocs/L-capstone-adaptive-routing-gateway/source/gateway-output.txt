@@ -1,0 +1,10 @@
+### curl 1: auto + easy QA (expect cheap) ###
+served: gpt-4o-mini | decision: classifier(p_cheap=0.97,thr=0.6) | answer: Paris.
+### curl 2: auto + hard math (expect strong) ###
+served: gpt-4.1 | decision: classifier(p_cheap=0.38,thr=0.6) | answer: 1260
+### curl 3: forced model (drop-in OpenAI client style) ###
+served: gpt-4o-mini | decision: forced
+### persisted ledger (gateway-ledger.jsonl) ###
+{"ts": "2026-06-22T03:57:57Z", "decision": "classifier(p_cheap=0.97,thr=0.6)", "served_model": "gpt-4o-mini", "usd": 4e-06, "latency_ms": 1094, "fallback_from": null, "escalated": false, "total_spent": 4e-06}
+{"ts": "2026-06-22T03:57:59Z", "decision": "classifier(p_cheap=0.38,thr=0.6)", "served_model": "gpt-4.1", "usd": 6.8e-05, "latency_ms": 1214, "fallback_from": null, "escalated": false, "total_spent": 7.2e-05}
+{"decision": "forced", "served_model": "gpt-4o-mini", "usd": 3e-06}

@@ -1,0 +1,19 @@
+test_classifier_beats_always_cheap_on_accuracy (test_l2b.L2b)
+At a conservative threshold the classifier should achieve higher acc than cheap alone. ... ok
+test_embeddings_live (test_l2b.L2b)
+text-embedding-3-small returns a real vector of expected dimension. ... ok
+test_live_embed_and_predict (test_l2b.L2b)
+Fresh prompt embeds live and gets a probability in [0,1]. ... ok
+test_model_trains_non_trivially (test_l2b.L2b)
+Trained model must not be perfectly degenerate: it must produce varying probabilities. ... ok
+test_pareto_threshold_sweep (test_l2b.L2b)
+Threshold sweep traces a curve where higher threshold -> more strong routing. ... ok
+test_routing_collapse_guard (test_l2b.L2b)
+Within the effective probability range, the router must split (not collapse). ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.601s
+
+OK
+
+  live confirm: P(cheap_correct)=0.7939 for quadratic eq. -> cheap

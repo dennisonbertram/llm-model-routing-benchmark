@@ -1,0 +1,31 @@
+validation OK (math golds computed; coding refs pass 1.0)
+  hm1   math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hm2   math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hm3   math    gpt-5.5=1.0  fugu=0.0  fugu-ultra=1.0
+  hm4   math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hm5   math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hm6   math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hm7   math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hm8   math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hm9   math    gpt-5.5=1.0  fugu=0.0  fugu-ultra=1.0
+  hm10  math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hm11  math    gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hc1   coding  gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hc2   coding  gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hc3   coding  gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hc5   coding  gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hq1   qa      gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hq2   qa      gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hq3   qa      gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hq4   qa      gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hq5   qa      gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+  hq6   qa      gpt-5.5=1.0  fugu=1.0  fugu-ultra=1.0
+
+== REAL Fugu vs GPT-5.5 on 21 authored hard tasks (same graders) ==
+  model         accuracy    total$    $/task  mean_lat  orch_tok/task
+  gpt-5.5          1.000    0.2046   0.00974     8118ms              0
+  fugu             0.905    0.8179   0.03895    12687ms              0
+  fugu-ultra       1.000    2.5011   0.11910    45383ms           7719
+
+  fugu-ultra costs 12.2x a single gpt-5.5 call per task (same accuracy region); fugu(mini) 4.0x.
+wrote fugu_results.json | cache: {'hits': 61, 'misses': 2, 'entries': 63}

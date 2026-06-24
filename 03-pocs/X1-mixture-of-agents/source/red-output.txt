@@ -1,0 +1,60 @@
+test_moa_aggregator_returns_text (__main__.X1Tests)
+aggregate_moa makes a real call and returns non-empty text. ... ERROR
+test_moa_costs_more_than_single_cheap (__main__.X1Tests)
+MoA (3 proposals + 1 agg) costs more than a single cheap call. ... ERROR
+test_moa_grades_easy_item_correctly (__main__.X1Tests)
+MoA should get simple factual questions right (e.g. m1: 17+25=42). ... ERROR
+
+======================================================================
+ERROR: test_moa_aggregator_returns_text (__main__.X1Tests)
+aggregate_moa makes a real call and returns non-empty text.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/test_x1.py", line 35, in test_moa_aggregator_returns_text
+    result = judge.aggregate_moa(question, proposals, model=config.MID_DEFAULT, cache=cache)
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/judge.py", line 30, in aggregate_moa
+    r = _chat(cache, model, prompt, max_tokens=max_tokens, system=system)
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/judge.py", line 14, in _chat
+    return cache.chat(model, [{"role": "user", "content": prompt}], max_tokens=max_tokens,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/cache.py", line 52, in chat
+    r = _live_chat(model, messages, max_tokens=max_tokens, temperature=temperature,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/providers.py", line 94, in chat
+    out = _chat_openai_compatible(OPENAI_BASE, _env("OPENAI_API_KEY"), model, messages,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/providers.py", line 66, in _env
+    raise ProviderError(f"Missing env var {name}; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+======================================================================
+ERROR: test_moa_costs_more_than_single_cheap (__main__.X1Tests)
+MoA (3 proposals + 1 agg) costs more than a single cheap call.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/test_x1.py", line 49, in test_moa_costs_more_than_single_cheap
+    cheap_r = cache.chat(config.CHEAP_DEFAULT,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/cache.py", line 52, in chat
+    r = _live_chat(model, messages, max_tokens=max_tokens, temperature=temperature,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/providers.py", line 94, in chat
+    out = _chat_openai_compatible(OPENAI_BASE, _env("OPENAI_API_KEY"), model, messages,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/providers.py", line 66, in _env
+    raise ProviderError(f"Missing env var {name}; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+======================================================================
+ERROR: test_moa_grades_easy_item_correctly (__main__.X1Tests)
+MoA should get simple factual questions right (e.g. m1: 17+25=42).
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/test_x1.py", line 79, in test_moa_grades_easy_item_correctly
+    r = cache.chat(model, [{"role": "user", "content": item["prompt"]}],
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/cache.py", line 52, in chat
+    r = _live_chat(model, messages, max_tokens=max_tokens, temperature=temperature,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/providers.py", line 94, in chat
+    out = _chat_openai_compatible(OPENAI_BASE, _env("OPENAI_API_KEY"), model, messages,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X1-mixture-of-agents/source/../../../harness/providers.py", line 66, in _env
+    raise ProviderError(f"Missing env var {name}; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (errors=3)

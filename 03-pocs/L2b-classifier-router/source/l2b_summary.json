@@ -1,0 +1,209 @@
+{
+  "n_items_total": 45,
+  "n_train": 32,
+  "n_test": 13,
+  "train_label_acc": 0.8438,
+  "test_label_acc": 0.8462,
+  "embed_model": "text-embedding-3-small",
+  "embed_dim": 1536,
+  "total_embed_usd": 0.0,
+  "baselines_test": {
+    "always_cheap": {
+      "acc": 0.8462,
+      "usd": 0.000373
+    },
+    "always_strong": {
+      "acc": 1.0,
+      "usd": 0.004868
+    },
+    "oracle": {
+      "acc": 1.0,
+      "usd": 0.00054
+    }
+  },
+  "pareto_curve": [
+    {
+      "router": "classifier(\u03c4=0.05)",
+      "threshold": 0.05,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.10)",
+      "threshold": 0.1,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.15)",
+      "threshold": 0.15,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.20)",
+      "threshold": 0.2,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.25)",
+      "threshold": 0.25,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.30)",
+      "threshold": 0.3,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.35)",
+      "threshold": 0.35,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.40)",
+      "threshold": 0.4,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.45)",
+      "threshold": 0.45,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.50)",
+      "threshold": 0.5,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.55)",
+      "threshold": 0.55,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.60)",
+      "threshold": 0.6,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.65)",
+      "threshold": 0.65,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.70)",
+      "threshold": 0.7,
+      "accuracy": 0.8462,
+      "total_usd": 0.000373,
+      "pct_cheap": 1.0,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.75)",
+      "threshold": 0.75,
+      "accuracy": 0.9231,
+      "total_usd": 0.000468,
+      "pct_cheap": 0.923,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.80)",
+      "threshold": 0.8,
+      "accuracy": 1.0,
+      "total_usd": 0.000773,
+      "pct_cheap": 0.538,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.85)",
+      "threshold": 0.85,
+      "accuracy": 1.0,
+      "total_usd": 0.000922,
+      "pct_cheap": 0.308,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.90)",
+      "threshold": 0.9,
+      "accuracy": 1.0,
+      "total_usd": 0.004609,
+      "pct_cheap": 0.077,
+      "n": 13
+    },
+    {
+      "router": "classifier(\u03c4=0.95)",
+      "threshold": 0.95,
+      "accuracy": 1.0,
+      "total_usd": 0.004868,
+      "pct_cheap": 0.0,
+      "n": 13
+    }
+  ],
+  "pareto_front_members": [
+    "classifier(\u03c4=0.05)",
+    "classifier(\u03c4=0.10)",
+    "classifier(\u03c4=0.15)",
+    "classifier(\u03c4=0.20)",
+    "classifier(\u03c4=0.25)",
+    "classifier(\u03c4=0.30)",
+    "classifier(\u03c4=0.35)",
+    "classifier(\u03c4=0.40)",
+    "classifier(\u03c4=0.45)",
+    "classifier(\u03c4=0.50)",
+    "classifier(\u03c4=0.55)",
+    "classifier(\u03c4=0.60)",
+    "classifier(\u03c4=0.65)",
+    "classifier(\u03c4=0.70)",
+    "classifier(\u03c4=0.75)",
+    "oracle"
+  ],
+  "best_at_oracle_acc": {
+    "router": "classifier(\u03c4=0.80)",
+    "threshold": 0.8,
+    "accuracy": 1.0,
+    "total_usd": 0.000773,
+    "pct_cheap": 0.538,
+    "n": 13
+  },
+  "live_confirmation": {
+    "prompt": "What is the derivative of x^3 + 2x? Reply with just the expression.",
+    "p_cheap": 0.8159,
+    "decision": "cheap (gpt-4o-mini)"
+  }
+}

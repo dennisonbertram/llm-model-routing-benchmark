@@ -1,0 +1,22 @@
+numpy available: 2.0.2
+  Embedding 45 uncached prompts (text-embedding-3-small, LIVE)...
+ERROR
+
+======================================================================
+ERROR: setUpClass (__main__.L2Test)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File ".../source/test_l2.py", line 44, in setUpClass
+    cls.all_vecs, cls.embed_usd = embed_all_prompts(cls.rows, cls.ecache)
+  File ".../source/run_l2.py", line 148, in embed_all_prompts
+    vecs_new, usd = embed(uncached_prompts)
+  File ".../harness/providers.py", line 191, in embed
+    headers = {"Authorization": f"Bearer {_env('OPENAI_API_KEY')}", ...}
+  File ".../harness/providers.py", line 66, in _env
+    raise ProviderError(f"Missing env var {name}; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.002s
+
+FAILED (errors=1)

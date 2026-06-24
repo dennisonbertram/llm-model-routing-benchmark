@@ -1,0 +1,96 @@
+{
+  "config": {
+    "debaters": [
+      "gpt-4o-mini",
+      "gpt-4.1-mini",
+      "claude-haiku-4-5-20251001"
+    ],
+    "n_rounds": 1,
+    "n_items": 23,
+    "calls_per_item": 6
+  },
+  "baseline_cheap": {
+    "router": "always:gpt-4o-mini",
+    "n": 23,
+    "accuracy": 0.6957,
+    "total_usd": 0.000147,
+    "usd_per_correct": 9e-06,
+    "mean_latency_ms": 670
+  },
+  "baseline_strong": {
+    "router": "always:gpt-4.1",
+    "n": 23,
+    "accuracy": 0.9565,
+    "total_usd": 0.001634,
+    "usd_per_correct": 7.4e-05,
+    "mean_latency_ms": 709
+  },
+  "debate": {
+    "router": "debate:3x1r",
+    "n": 23,
+    "accuracy": 0.9565,
+    "total_usd": 0.006278,
+    "usd_per_correct": 0.000285,
+    "mean_latency_ms": 0
+  },
+  "hard_math": {
+    "cheap": {
+      "router": "always:gpt-4o-mini",
+      "n": 6,
+      "accuracy": 0.0,
+      "total_usd": 3.9e-05,
+      "usd_per_correct": Infinity,
+      "mean_latency_ms": 651
+    },
+    "strong": {
+      "router": "always:gpt-4.1",
+      "n": 6,
+      "accuracy": 1.0,
+      "total_usd": 0.00052,
+      "usd_per_correct": 8.7e-05,
+      "mean_latency_ms": 634
+    },
+    "debate": {
+      "router": "debate:3x1r",
+      "n": 6,
+      "accuracy": 1.0,
+      "total_usd": 0.00159,
+      "usd_per_correct": 0.000265,
+      "mean_latency_ms": 0
+    }
+  },
+  "cost_multipliers": {
+    "vs_cheap": 42.66,
+    "vs_strong": 3.84
+  },
+  "transcript_sample": {
+    "item_id": "m1",
+    "prompt": "What is 17 + 25? Reply with just the number.",
+    "history": [
+      [
+        "42",
+        "42"
+      ],
+      [
+        "42",
+        "42"
+      ],
+      [
+        "42",
+        "42"
+      ]
+    ],
+    "final_answers": [
+      "42",
+      "42",
+      "42"
+    ],
+    "final_text": "42",
+    "agg_method": "majority_numeric"
+  },
+  "cache_stats": {
+    "hits": 48,
+    "misses": 190,
+    "entries": 190
+  }
+}

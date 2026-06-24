@@ -1,0 +1,29 @@
+$ cd source && unset OPENAI_API_KEY ANTHROPIC_API_KEY XAI_API_KEY && python3 test_l3b.py
+
+test_cheap_model_answers_coding_task (__main__.L3bTests)
+Cheap model produces code that passes the grader for an easy task. ... ERROR
+test_repair_prompt_elicits_code (__main__.L3bTests)
+Strong model given a failing-code repair prompt returns code with a function def. ... ERROR
+test_result_shape (__main__.L3bTests)
+run_l3b item result has the expected keys. ... ERROR
+test_strong_model_answers_coding_task (__main__.L3bTests)
+Strong model produces code that passes the grader for a hard task. ... ERROR
+
+======================================================================
+ERROR: test_cheap_model_answers_coding_task (__main__.L3bTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_l3b.py", line 33, in test_cheap_model_answers_coding_task
+    r = cache.chat(CHEAP, [{"role": "user", "content": c1["prompt"]}], max_tokens=700)
+  ...
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+[... same error for remaining 3 tests ...]
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+FAILED (errors=4)
+
+RED: All 4 tests fail with ProviderError because OPENAI_API_KEY is not set.
+This is the expected blocking error before credentials are loaded.

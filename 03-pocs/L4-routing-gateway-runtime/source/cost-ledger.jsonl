@@ -1,0 +1,9 @@
+{"ts": "2026-06-22T03:48:57Z", "decision": "default_cheap", "chosen_model": "gpt-4o-mini", "prompt_tokens": 14, "completion_tokens": 7, "usd": 6.3e-06, "latency_ms": 763}
+{"ts": "2026-06-22T03:48:59Z", "decision": "keyword:combinatorics", "chosen_model": "gpt-4.1", "prompt_tokens": 27, "completion_tokens": 128, "usd": 0.001078, "latency_ms": 1700}
+{"ts": "2026-06-22T03:48:59Z", "decision": "forced", "chosen_model": "gpt-4o-mini", "prompt_tokens": 11, "completion_tokens": 2, "usd": 2.85e-06, "latency_ms": 608}
+{"ts": "2026-06-22T03:49:07Z", "decision": "default_cheap", "chosen_model": "gpt-4o-mini", "prompt_tokens": 14, "completion_tokens": 7, "usd": 6.3e-06, "latency_ms": 692}
+{"ts": "2026-06-22T03:49:08Z", "decision": "keyword:combination", "chosen_model": "gpt-4.1", "prompt_tokens": 25, "completion_tokens": 128, "usd": 0.001074, "latency_ms": 1089}
+{"ts": "2026-06-22T03:49:09Z", "decision": "forced", "chosen_model": "gpt-4o-mini", "prompt_tokens": 10, "completion_tokens": 9, "usd": 6.9e-06, "latency_ms": 601}
+{"ts": "2026-06-22T03:51:43Z", "decision": "default_cheap", "chosen_model": "gpt-4o-mini", "prompt_tokens": 14, "completion_tokens": 7, "usd": 6.3e-06, "latency_ms": 707}
+{"ts": "2026-06-22T03:51:44Z", "decision": "keyword:how many ways", "chosen_model": "gpt-4.1", "prompt_tokens": 25, "completion_tokens": 128, "usd": 0.001074, "latency_ms": 1153}
+{"ts": "2026-06-22T03:51:45Z", "decision": "forced", "chosen_model": "gpt-4o-mini", "prompt_tokens": 10, "completion_tokens": 9, "usd": 6.9e-06, "latency_ms": 801}

@@ -1,0 +1,65 @@
+{
+  "baselines": {
+    "cheap": {
+      "router": "always:gpt-4o-mini",
+      "n": 45,
+      "accuracy": 0.8444,
+      "total_usd": 0.001662,
+      "usd_per_correct": 4.4e-05,
+      "mean_latency_ms": 1369
+    },
+    "strong": {
+      "router": "always:gpt-4.1",
+      "n": 45,
+      "accuracy": 0.9778,
+      "total_usd": 0.021482,
+      "usd_per_correct": 0.000488,
+      "mean_latency_ms": 1021
+    }
+  },
+  "moa": {
+    "router": "MoA(proposers=3,agg=gpt-4o)",
+    "n": 45,
+    "accuracy": 0.9556,
+    "total_usd": 0.099661,
+    "usd_per_correct": 0.002318,
+    "mean_latency_ms": 4936
+  },
+  "moa2l_hard_math": {
+    "router": "MoA2L(l1=gpt-4o,l2=gpt-4.1)",
+    "n": 8,
+    "accuracy": 0.75,
+    "total_usd": 0.005464,
+    "usd_per_correct": 0.000911,
+    "mean_latency_ms": 3636
+  },
+  "hard_math_breakdown": {
+    "n": 8,
+    "cheap_acc": 0.125,
+    "strong_acc": 0.875,
+    "moa_1l_acc": 0.75,
+    "moa_2l_acc": 0.75
+  },
+  "per_discipline": {
+    "math": {
+      "n": 15,
+      "acc": 0.8667,
+      "usd": 0.005785
+    },
+    "qa": {
+      "n": 12,
+      "acc": 1.0,
+      "usd": 0.004594
+    },
+    "coding": {
+      "n": 18,
+      "acc": 1.0,
+      "usd": 0.089283
+    }
+  },
+  "cache_stats": {
+    "hits": 220,
+    "misses": 0,
+    "entries": 190
+  }
+}

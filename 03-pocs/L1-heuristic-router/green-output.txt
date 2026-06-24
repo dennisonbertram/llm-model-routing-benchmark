@@ -1,0 +1,56 @@
+L1 — Heuristic Router (prompt-text-only features)
+======================================================================
+
+== Baseline (from L0, measured live) ==
+  always-cheap  (gpt-4o-mini): acc=0.844  cost=$0.00166
+  always-strong (gpt-4.1     ): acc=0.978  cost=$0.02148  (12.9x cheap)
+  ORACLE (cheapest-correct)  : acc=0.978  cost=$0.00176  (8% of strong cost)
+  Items only strong solves (6): ['m9', 'm10', 'm12', 'm13', 'm14', 'm15']
+
+== Threshold sweep: cost-quality tradeoff ==
+  τ=0.200  acc=0.978  cost=$0.02002  cheap%=0%
+  τ=0.300  acc=0.956  cost=$0.01402  cheap%=1%
+  τ=0.400  acc=0.956  cost=$0.00902  cheap%=1%
+  τ=0.500  acc=0.889  cost=$0.00317  cheap%=1%
+  τ=0.600  acc=0.844  cost=$0.00298  cheap%=1%
+  τ=0.700  acc=0.844  cost=$0.00177  cheap%=1%
+  τ=0.800  acc=0.844  cost=$0.00166  cheap%=1%
+
+== Operating point selection ==
+  τ=0.2  acc=0.978  cost=$0.02002  (11.3× oracle)
+  τ=0.3  acc=0.956  cost=$0.01402  (7.9× oracle)
+  τ=0.4  acc=0.956  cost=$0.00902  (5.1× oracle)
+  τ=0.5  acc=0.889  cost=$0.00317  (1.8× oracle)
+  τ=0.6  acc=0.844  cost=$0.00298  (1.7× oracle)
+  τ=0.7  acc=0.844  cost=$0.00177  (1.0× oracle)
+  τ=0.8  acc=0.844  cost=$0.00167  (0.9× oracle)
+
+  Selected threshold: τ=0.40
+  Rationale: achieves 0.956 accuracy (vs 0.844 for always-cheap, 0.978 oracle)
+             by routing high-complexity math items to strong model,
+             at 5.1× oracle cost vs 12.9× for always-strong.
+
+== Items routed to strong at τ=0.40 (11 items) ==
+    m8 (math   hard) score=0.784  There are 5 red, 3 blue and 2 green balls. You draw 2 without replacement. In ho...
+   c18 (coding hard) score=0.637  Write a Python function `is_number(s: str) -> bool` returning True iff s is a va...
+   m13 (math   hard) score=0.538  At a party every pair of the 9 guests shakes hands exactly once, EXCEPT two spec...
+   m14 (math   hard) score=0.513  How many ways are there to make 100 cents using any number of pennies(1), nickel...
+   c13 (coding hard) score=0.490  Write a Python function `is_match(s: str, p: str) -> bool` implementing regular-...
+    m9 (math   hard) score=0.490  Find the number of integers from 1 to 100 inclusive that are divisible by 3 or 5...
+    c2 (coding easy) score=0.468  Write a Python function `fizzbuzz(n: int) -> str` returning 'Fizz' if n divisibl...
+   m12 (math   hard) score=0.439  The sum of three consecutive even integers is 78. What is the largest of them? R...
+   m15 (math   hard) score=0.414  In how many distinct ways can the letters of the word 'BALLOON' be arranged? Rep...
+    c7 (coding med ) score=0.411  Write a Python function `roman_to_int(s: str) -> int` converting a Roman numeral...
+   c15 (coding hard) score=0.403  Write a Python function `edit_distance(a: str, b: str) -> int` returning the Lev...
+
+== Live confirmation (running real API calls on selected items) ==
+    m1 (math  ) score=0.045 -> gpt-4o-mini  correct=True cost=$3.75e-06
+    m9 (math  ) score=0.490 -> gpt-4.1      correct=True cost=$7.80e-05
+    c1 (coding) score=0.286 -> gpt-4o-mini  correct=True cost=$2.10e-05
+
+== Final evaluation at τ=0.40 ==
+  accuracy: 0.956 (vs oracle 0.978, always-cheap 0.844)
+  cost: $0.00902 (vs oracle $0.00176, always-strong $0.02148)
+  cost ratio to oracle: 5.11×
+
+wrote /Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L1-heuristic-router/source/l1_summary.json

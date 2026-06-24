@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-06-22T03:49:37Z",
+  "gateway_port": 8770,
+  "cheap_model": "gpt-4o-mini",
+  "strong_model": "gpt-4.1",
+  "wire_tests": [
+    {
+      "test": "cheap route",
+      "model_served": "gpt-4o-mini",
+      "content_excerpt": "The capital of France is Paris.",
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 7,
+        "total_tokens": 21
+      },
+      "usd": 6.299999999999999e-06,
+      "latency_ms": 1010
+    },
+    {
+      "test": "strong route",
+      "model_served": "gpt-4.1",
+      "content_excerpt": "Let's solve the problem step by step:\n\n**Problem:**  \nIn how many ways can 8 dis",
+      "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 328,
+        "total_tokens": 359
+      },
+      "usd": 0.002686,
+      "latency_ms": 3042
+    },
+    {
+      "test": "passthrough",
+      "model_served": "gpt-4.1-nano",
+      "content_excerpt": "GATEWAY_OK",
+      "usage": {
+        "prompt_tokens": 15,
+        "completion_tokens": 4,
+        "total_tokens": 19
+      },
+      "usd": 3.1e-06,
+      "latency_ms": 957
+    }
+  ],
+  "openai_sdk_used": true,
+  "openai_sdk_result": "model=gpt-4o-mini content='The capital of France is Paris.'",
+  "unit_routing_passed": 4,
+  "unit_routing_failed": 0
+}

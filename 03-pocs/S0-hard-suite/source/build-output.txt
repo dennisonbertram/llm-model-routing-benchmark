@@ -1,0 +1,33 @@
+validation OK (math golds computed; coding refs pass 1.0)
+
+== gpt-5.5 solo over 21 candidates (temp 0, single attempt) ==
+  hm1   math    gpt5.5 score=1.00
+  hm2   math    gpt5.5 score=1.00
+  hm3   math    gpt5.5 score=1.00
+  hm4   math    gpt5.5 score=1.00
+  hm5   math    gpt5.5 score=1.00
+  hm6   math    gpt5.5 score=1.00
+  hm7   math    gpt5.5 score=1.00
+  hm8   math    gpt5.5 score=1.00
+  hm9   math    gpt5.5 score=1.00
+  hm10  math    gpt5.5 score=1.00
+  hm11  math    gpt5.5 score=1.00
+  hc1   coding  gpt5.5 score=1.00
+  hc2   coding  gpt5.5 score=1.00
+  hc3   coding  gpt5.5 score=1.00
+  hc5   coding  gpt5.5 score=1.00
+  hq1   qa      gpt5.5 score=1.00
+  hq2   qa      gpt5.5 score=1.00
+  hq3   qa      gpt5.5 score=1.00
+  hq4   qa      gpt5.5 score=1.00
+  hq5   qa      gpt5.5 score=1.00
+  hq6   qa      gpt5.5 score=1.00
+
+== gpt-5.5 solo accuracy by family (all candidates) ==
+  math    mean score=1.000  (11/11 fully solved)
+  coding  mean score=1.000  (4/4 fully solved)
+  qa      mean score=1.000  (6/6 fully solved)
+
+overall gpt-5.5 mean score over candidates: 1.000
+items with headroom (score<1.0): 0/21 -> []
+wrote labelset_hard.json | cache: {'hits': 0, 'misses': 21, 'entries': 21}

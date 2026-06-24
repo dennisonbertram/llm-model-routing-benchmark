@@ -1,0 +1,22 @@
+{
+  "_comment": "Model registry for the all-night benchmark. Prices = USD per 1M (in/out), from OpenRouter /models 2026-06-23 (verify with `python3 refresh_prices.py`). tier is informational. Set enabled=false to skip. 'reference' marks the frontier model used as the escalation target + the bar to beat.",
+  "models": [
+    {"id": "openrouter/qwen/qwen3-235b-a22b-thinking-2507", "in": 0.10, "out": 0.10, "tier": "cheap-reasoner", "enabled": true},
+    {"id": "openrouter/qwen/qwen3-235b-a22b-2507", "in": 0.09, "out": 0.10, "tier": "cheap", "enabled": true},
+    {"id": "openrouter/deepseek/deepseek-v4-flash", "in": 0.09, "out": 0.18, "tier": "cheap", "enabled": true},
+    {"id": "openrouter/deepseek/deepseek-v4-pro", "in": 0.435, "out": 0.87, "tier": "mid", "enabled": true},
+    {"id": "openrouter/z-ai/glm-4.7-flash", "in": 0.06, "out": 0.40, "tier": "cheap", "enabled": true},
+    {"id": "openrouter/z-ai/glm-5.2", "in": 0.98, "out": 3.08, "tier": "mid", "enabled": true},
+    {"id": "openrouter/minimax/minimax-m2.5", "in": 0.15, "out": 0.90, "tier": "cheap", "enabled": true},
+    {"id": "openrouter/moonshotai/kimi-k2.5", "in": 0.375, "out": 2.025, "tier": "mid", "enabled": true},
+    {"id": "openrouter/google/gemini-3.1-flash-lite", "in": 0.25, "out": 1.50, "tier": "cheap", "enabled": true},
+    {"id": "openrouter/meta-llama/llama-4-maverick", "in": 0.15, "out": 0.60, "tier": "cheap", "enabled": true},
+    {"id": "openrouter/amazon/nova-lite-v1", "in": 0.06, "out": 0.24, "tier": "ultra-cheap", "enabled": true},
+    {"id": "gpt-5-nano", "in": 0.05, "out": 0.40, "tier": "cheap", "enabled": true},
+    {"id": "gpt-4o-mini", "in": 0.15, "out": 0.60, "tier": "cheap", "enabled": true},
+    {"id": "gpt-4.1", "in": 2.00, "out": 8.00, "tier": "strong", "enabled": true},
+    {"id": "gpt-5.5", "in": 5.00, "out": 30.00, "tier": "frontier", "enabled": true, "reference": true},
+    {"id": "fugu", "in": 5.00, "out": 30.00, "tier": "orchestrator", "enabled": true},
+    {"id": "fugu-ultra", "in": 5.00, "out": 30.00, "tier": "orchestrator", "enabled": true}
+  ]
+}

@@ -1,0 +1,86 @@
+== X4 — AutoMix Verification Cascade ==
+
+
+== live confirmation: item m9 ==
+  prompt: Find the number of integers from 1 to 100 inclusive that are divisible by 3 or 5
+  cheap answer: '67'  (cached=True)
+  cheap correct: False
+  verifier votes: [0, 0, 0]  confidence=0.00  verifier_usd=$5.49e-05
+  threshold=0.67: escalate=True
+  strong answer: '47'  cost=$7.80e-05
+  strong correct: True
+
+== running verifier on all 45 items (k=3 samples each) ==
+  [  m1|easy] conf=0.00 ([0, 0, 0]) OK  cheap_correct=True
+  [  m2|easy] conf=0.00 ([0, 0, 0]) OK  cheap_correct=True
+  [  m3|easy] conf=0.00 ([0, 0, 0]) OK  cheap_correct=True
+  [  m4|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  m5|med ] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  m6|med ] conf=0.00 ([0, 0, 0]) OK  cheap_correct=True
+  [  m7|med ] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  m8|hard] conf=0.00 ([0, 0, 0]) XX  cheap_correct=False
+  [  m9|hard] conf=0.00 ([0, 0, 0]) XX  cheap_correct=False
+  [ m10|hard] conf=0.00 ([0, 0, 0]) XX  cheap_correct=False
+  [ m11|hard] conf=0.00 ([0, 0, 0]) OK  cheap_correct=True
+  [ m12|hard] conf=0.00 ([0, 0, 0]) XX  cheap_correct=False
+  [ m13|hard] conf=0.00 ([0, 0, 0]) XX  cheap_correct=False
+  [ m14|hard] conf=0.33 ([1, 0, 0]) XX  cheap_correct=False
+  [ m15|hard] conf=0.00 ([0, 0, 0]) XX  cheap_correct=False
+  [  q1|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  q2|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  q3|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  q4|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  q5|med ] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  q6|med ] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  q7|med ] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  q8|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  q9|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ q10|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ q11|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ q12|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c1|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c2|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c3|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c4|easy] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c5|med ] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c6|med ] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c7|med ] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c8|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [  c9|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c10|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c11|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c12|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c13|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c14|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c15|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c16|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c17|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+  [ c18|hard] conf=1.00 ([1, 1, 1]) OK  cheap_correct=True
+
+== calibration ==
+  low (0.0-0.33): n=11, cheap_correct_rate=0.455
+  mid (0.34-0.66): n=1, cheap_correct_rate=0.0
+  high (0.67-1.0): n=33, cheap_correct_rate=1.0
+
+== threshold sweep (cost-quality curve) ==
+  threshold    accuracy   total_usd    esc_rate  
+  ----------   --------   ----------   --------  
+    (baseline)
+  always-cheap                0.8444     $0.001660    0.000
+  always-strong               0.9778     $0.021480    1.000
+  oracle                      0.9778     $0.002140    0.133
+  T=0.00       0.8444     $0.005232    0.000     
+  T=0.34       0.9778     $0.006092    0.267     
+  T=0.67       0.9778     $0.006092    0.267     
+  T=1.00       0.9778     $0.006092    0.267     
+
+  best accuracy/cost ratio: T=0.0, acc=0.8444, usd=$0.005232
+
+== summary at T=0.67 ==
+  acc:   0.9778  (cheap=0.8444, strong=0.9778, oracle=0.9778)
+  cost:  $0.006092 vs cheap $0.001660 / strong $0.021480 / oracle $0.002140
+  escalation rate: 26.7%
+  cost is 28.4% of always-strong
+
+wrote /Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/X4-verification-cascade-automix/source/x4_summary.json
+cache stats: {'hits': 138, 'misses': 0, 'entries': 135}

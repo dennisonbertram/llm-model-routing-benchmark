@@ -1,0 +1,429 @@
+{
+ "gpt5.5": {
+  "acc": 0.8035714285714286,
+  "usd_task": 0.02994116071428573
+ },
+ "solo": {
+  "deepseek-v4-flash": {
+   "acc": 0.6607142857142857,
+   "usd_task": 0.0004580823214285714
+  },
+  "llama-3.3-70b": {
+   "acc": 0.16071428571428573,
+   "usd_task": 0.00025251214285714277
+  },
+  "gemma-4-31b": {
+   "acc": 0.14285714285714285,
+   "usd_task": 0.0001755076785714285
+  },
+  "mistral-small": {
+   "acc": 0.35714285714285715,
+   "usd_task": 0.0010296348214285712
+  },
+  "deepseek-v3.1": {
+   "acc": 0.7321428571428571,
+   "usd_task": 0.001649796428571428
+  },
+  "qwen-2.5-72b": {
+   "acc": 0.07142857142857142,
+   "usd_task": 2.3407142857142858e-05
+  }
+ },
+ "frontier": [
+  {
+   "members": [
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.07142857142857142,
+   "usd_task": 2.3407142857142858e-05,
+   "free": false
+  },
+  {
+   "members": [
+    "gemma-4-31b"
+   ],
+   "acc": 0.14285714285714285,
+   "usd_task": 0.0001755076785714285,
+   "free": true
+  },
+  {
+   "members": [
+    "llama-3.3-70b"
+   ],
+   "acc": 0.16071428571428573,
+   "usd_task": 0.00025251214285714277,
+   "free": true
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.17857142857142858,
+   "usd_task": 0.00045142696428571437,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash"
+   ],
+   "acc": 0.6607142857142857,
+   "usd_task": 0.0004580823214285714,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "gemma-4-31b",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.6785714285714286,
+   "usd_task": 0.0006569971428571428,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v3.1"
+   ],
+   "acc": 0.7321428571428571,
+   "usd_task": 0.001649796428571428,
+   "free": false
+  }
+ ],
+ "all": [
+  {
+   "members": [
+    "deepseek-v4-flash"
+   ],
+   "acc": 0.6607142857142857,
+   "usd_task": 0.0004580823214285714,
+   "free": false
+  },
+  {
+   "members": [
+    "llama-3.3-70b"
+   ],
+   "acc": 0.16071428571428573,
+   "usd_task": 0.00025251214285714277,
+   "free": true
+  },
+  {
+   "members": [
+    "gemma-4-31b"
+   ],
+   "acc": 0.14285714285714285,
+   "usd_task": 0.0001755076785714285,
+   "free": true
+  },
+  {
+   "members": [
+    "mistral-small"
+   ],
+   "acc": 0.35714285714285715,
+   "usd_task": 0.0010296348214285712,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v3.1"
+   ],
+   "acc": 0.7321428571428571,
+   "usd_task": 0.001649796428571428,
+   "free": false
+  },
+  {
+   "members": [
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.07142857142857142,
+   "usd_task": 2.3407142857142858e-05,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "gemma-4-31b"
+   ],
+   "acc": 0.625,
+   "usd_task": 0.0008861021428571427,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "mistral-small"
+   ],
+   "acc": 0.6428571428571429,
+   "usd_task": 0.0017402292857142856,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "deepseek-v3.1"
+   ],
+   "acc": 0.6785714285714286,
+   "usd_task": 0.002360390892857143,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.625,
+   "usd_task": 0.0007340016071428571,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "gemma-4-31b",
+    "mistral-small"
+   ],
+   "acc": 0.6964285714285714,
+   "usd_task": 0.0016632248214285713,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "gemma-4-31b",
+    "deepseek-v3.1"
+   ],
+   "acc": 0.7142857142857143,
+   "usd_task": 0.002283386428571429,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "gemma-4-31b",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.6785714285714286,
+   "usd_task": 0.0006569971428571428,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "mistral-small",
+    "deepseek-v3.1"
+   ],
+   "acc": 0.6964285714285714,
+   "usd_task": 0.0031375135714285713,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "mistral-small",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.6607142857142857,
+   "usd_task": 0.0015111242857142853,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.7321428571428571,
+   "usd_task": 0.0021312858928571425,
+   "free": false
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "mistral-small"
+   ],
+   "acc": 0.19642857142857142,
+   "usd_task": 0.0014576546428571422,
+   "free": false
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "deepseek-v3.1"
+   ],
+   "acc": 0.25,
+   "usd_task": 0.0020778162500000004,
+   "free": false
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.17857142857142858,
+   "usd_task": 0.00045142696428571437,
+   "free": false
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "mistral-small",
+    "deepseek-v3.1"
+   ],
+   "acc": 0.39285714285714285,
+   "usd_task": 0.0029319433928571424,
+   "free": false
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "mistral-small",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.17857142857142858,
+   "usd_task": 0.001305554107142857,
+   "free": false
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.19642857142857142,
+   "usd_task": 0.0019257157142857147,
+   "free": false
+  },
+  {
+   "members": [
+    "gemma-4-31b",
+    "mistral-small",
+    "deepseek-v3.1"
+   ],
+   "acc": 0.42857142857142855,
+   "usd_task": 0.002854938928571429,
+   "free": false
+  },
+  {
+   "members": [
+    "gemma-4-31b",
+    "mistral-small",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.125,
+   "usd_task": 0.0012285496428571432,
+   "free": false
+  },
+  {
+   "members": [
+    "gemma-4-31b",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.16071428571428573,
+   "usd_task": 0.0018487112499999997,
+   "free": false
+  },
+  {
+   "members": [
+    "mistral-small",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.4107142857142857,
+   "usd_task": 0.002702838392857144,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "mistral-small",
+    "deepseek-v3.1"
+   ],
+   "acc": 0.6964285714285714,
+   "usd_task": 0.003565533392857142,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "mistral-small",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.625,
+   "usd_task": 0.0019391441071428572,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.6964285714285714,
+   "usd_task": 0.0025593057142857148,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "mistral-small",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.6785714285714286,
+   "usd_task": 0.003413432857142858,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "gemma-4-31b",
+    "mistral-small",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.7142857142857143,
+   "usd_task": 0.003336428392857143,
+   "free": false
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "mistral-small",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.39285714285714285,
+   "usd_task": 0.003130858214285714,
+   "free": false
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "mistral-small",
+    "deepseek-v3.1",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.7142857142857143,
+   "usd_task": 0.0035889405357142847,
+   "free": false
+  }
+ ]
+}

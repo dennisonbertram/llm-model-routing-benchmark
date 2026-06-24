@@ -1,0 +1,30 @@
+test_fm1_fallback_to_valid_model_succeeds (test_l5.L5FailureModes)
+After an invalid-model failure the fallback to a valid model succeeds. ... ok
+test_fm1_invalid_model_slug_fails (test_l5.L5FailureModes)
+Calling a nonexistent model must raise ProviderError with HTTP error info. ... ok
+test_fm2_normal_timeout_succeeds (test_l5.L5FailureModes)
+The same model with a normal timeout must succeed. ... ok
+test_fm2_tiny_timeout_fails (test_l5.L5FailureModes)
+A 0.001s timeout must fail (no TCP connection completes in 1 ms). ... ok
+test_fm3_overlimit_handled (test_l5.L5FailureModes)
+max_tokens=999999 must either produce a real error OR be silently capped — never crash. ... ok
+test_fm4_budget_guard_refuses_when_exhausted (test_l5.L5FailureModes)
+After budget is spent the router must refuse further calls. ... ok
+test_fm5_cheap_model_answers_simple_math (test_l5.L5FailureModes)
+The cheap model answers simple math correctly (no escalation needed). ... ok
+test_fm5_verifier_escalation_logic (test_l5.L5FailureModes)
+Verifier correctly identifies correct vs wrong answers. ... ok
+test_observability_log_schema (test_l5.L5FailureModes)
+Every log entry must have ts, event, and must not contain raw API key material. ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 9.728s
+
+OK
+  LOG {"ts": "23:52:08", "event": "budget_guard", "task": "t0", "decision": "downgraded", "reason": "would_exceed_budget", "attempted_model": "gpt-4o-mini", "attempted_usd": 6.9e-06, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:08", "event": "budget_guard", "task": "t0", "decision": "refused", "reason": "no_model_fits_budget", "budget_usd": 5e-06, "spent_usd": 0.0, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:09", "event": "budget_guard", "task": "t1", "decision": "downgraded", "reason": "would_exceed_budget", "attempted_model": "gpt-4o-mini", "attempted_usd": 6.9e-06, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:09", "event": "budget_guard", "task": "t1", "decision": "refused", "reason": "no_model_fits_budget", "budget_usd": 5e-06, "spent_usd": 0.0, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:10", "event": "budget_guard", "task": "t2", "decision": "downgraded", "reason": "would_exceed_budget", "attempted_model": "gpt-4o-mini", "attempted_usd": 6.9e-06, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:10", "event": "budget_guard", "task": "t2", "decision": "refused", "reason": "no_model_fits_budget", "budget_usd": 5e-06, "spent_usd": 0.0, "remaining_usd": 5e-06}
+  LOG {"ts": "23:52:11", "event": "test_event", "model": "gpt-4o-mini", "outcome": "ok"}

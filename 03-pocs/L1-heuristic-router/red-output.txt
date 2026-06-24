@@ -1,0 +1,27 @@
+RED: Run without OPENAI_API_KEY (simulated failure case)
+
+$ unset OPENAI_API_KEY ANTHROPIC_API_KEY XAI_API_KEY
+$ python3 source/run_l1.py
+
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L1-heuristic-router/source/run_l1.py", line 286, in <module>
+    main()
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L1-heuristic-router/source/run_l1.py", line 218, in main()
+    router = HeuristicRouter(threshold=best_threshold, cache=cache)
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/harness/router_base.py", line 22, in _chat
+    return self.cache.chat(...)
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/harness/cache.py", line 45, in chat
+    return self._provider_call(model, messages, **kwargs)
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/harness/providers.py", line 127, in chat
+    return _openai_chat(model, messages, **opts)
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/harness/providers.py", line 38, in _openai_chat
+    raise ProviderError(f"Missing env var {var}")
+providers.ProviderError: Missing env var OPENAI_API_KEY
+
+---
+
+This is expected. The live confirmation step requires OPENAI_API_KEY. To unblock:
+
+  set -a; . .agent-university/secrets.local.env; set +a
+  [ -n "$OPENAI_API_KEY" ] && echo "SET" || echo "UNSET"
+  python3 source/run_l1.py

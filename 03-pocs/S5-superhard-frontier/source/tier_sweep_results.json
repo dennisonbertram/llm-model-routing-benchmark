@@ -1,0 +1,116 @@
+{
+ "solo": {
+  "deepseek-v4-flash": {
+   "acc": 0.6785714285714286,
+   "cost": 0.00046
+  },
+  "llama-3.3-70b": {
+   "acc": 0.16071428571428573,
+   "cost": 0.00025
+  },
+  "gemma-4-31b": {
+   "acc": 0.125,
+   "cost": 0.00018
+  },
+  "mistral-small": {
+   "acc": 0.39285714285714285,
+   "cost": 0.00103
+  },
+  "deepseek-v3.1": {
+   "acc": 0.2857142857142857,
+   "cost": 0.00165
+  },
+  "qwen-2.5-72b": {
+   "acc": 0.07142857142857142,
+   "cost": 2e-05
+  },
+  "glm-5.2": {
+   "acc": 0.625,
+   "cost": 0.00551
+  },
+  "deepseek-v4-pro": {
+   "acc": 0.6785714285714286,
+   "cost": 0.00212
+  },
+  "gemini-3.5-flash": {
+   "acc": 0.8035714285714286,
+   "cost": 0.02608
+  }
+ },
+ "gpt5.5": {
+  "acc": 0.8035714285714286,
+  "cost": 0.0299
+ },
+ "frontier": [
+  {
+   "members": [
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.07142857142857142,
+   "cost": 2e-05
+  },
+  {
+   "members": [
+    "gemma-4-31b"
+   ],
+   "acc": 0.125,
+   "cost": 0.00018
+  },
+  {
+   "members": [
+    "llama-3.3-70b"
+   ],
+   "acc": 0.16071428571428573,
+   "cost": 0.00025
+  },
+  {
+   "members": [
+    "llama-3.3-70b",
+    "gemma-4-31b",
+    "qwen-2.5-72b"
+   ],
+   "acc": 0.17857142857142858,
+   "cost": 0.00045000000000000004
+  },
+  {
+   "members": [
+    "deepseek-v4-flash"
+   ],
+   "acc": 0.6785714285714286,
+   "cost": 0.00046
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "deepseek-v3.1"
+   ],
+   "acc": 0.6964285714285714,
+   "cost": 0.00211
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "mistral-small",
+    "deepseek-v4-pro"
+   ],
+   "acc": 0.7142857142857143,
+   "cost": 0.00361
+  },
+  {
+   "members": [
+    "deepseek-v4-flash",
+    "glm-5.2",
+    "deepseek-v4-pro"
+   ],
+   "acc": 0.7678571428571429,
+   "cost": 0.00809
+  },
+  {
+   "members": [
+    "gemini-3.5-flash"
+   ],
+   "acc": 0.8035714285714286,
+   "cost": 0.02608
+  }
+ ]
+}

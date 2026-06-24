@@ -1,0 +1,20 @@
+
+m9: Find the number of integers from 1 to 100 inclusive that are divisible by 3 or 5. Reply with just the number.
+Gold: 47
+Samples at temperature 0.7:
+  Sample 0: '66'                                     -> 66  (cost $5.85e-06)
+  Sample 1: '67'                                     -> 67  (cost $5.85e-06)
+  Sample 2: '67'                                     -> 67  (cost $5.85e-06)
+  Sample 3: '67'                                     -> 67  (cost $5.85e-06)
+  Sample 4: '67'                                     -> 67  (cost $5.85e-06)
+Majority vote: 67, Correct: False
+
+m13: At a party every pair of the 9 guests shakes hands exactly once, EXCEPT two specific guests refuse to shake each other's hand. How many handshakes occur? Reply with just the number.
+Gold: 35
+Samples at temperature 0.7:
+  Sample 0: '28'                                     -> 28  (cost $7.65e-06)
+  Sample 1: '28'                                     -> 28  (cost $7.65e-06)
+  Sample 2: '28'                                     -> 28  (cost $7.65e-06)
+  Sample 3: '28'                                     -> 28  (cost $7.65e-06)
+  Sample 4: '28'                                     -> 28  (cost $7.65e-06)
+Majority vote: 28, Correct: False

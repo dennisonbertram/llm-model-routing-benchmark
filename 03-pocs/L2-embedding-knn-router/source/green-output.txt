@@ -1,0 +1,78 @@
+test_cosine_similarity_range (__main__.L2Test)
+Cosine similarity matrix values are in [-1, 1]. ... ok
+test_embeddings_live (__main__.L2Test)
+Embeddings are real 1536-dim vectors, not placeholders. ... ok
+test_knn_accuracy_bounded_by_oracle (__main__.L2Test)
+k-NN accuracy cannot exceed oracle (it doesn't have access to difficulty labels). ... ok
+test_knn_pareto_property (__main__.L2Test)
+Best k-NN result should be between always-cheap and always-strong in cost. ... ok
+test_knn_routes_some_strong (__main__.L2Test)
+With threshold=0.7 and k=3, at least some items should be routed to strong. ... ok
+test_no_oracle_leakage (__main__.L2Test)
+Verify router uses ONLY prompt text, not difficulty/discipline labels. ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.962s
+
+OK
+numpy available: 2.0.2
+  All 45 embeddings loaded from cache ($0.00 live spend)
+
+--- run_l2.py output (same run) ---
+numpy available: 2.0.2
+Loaded 45 items from labelset_export.json
+  Train: 23 items (even indices)
+  Test:  22 items (odd indices)
+
+== Embedding all prompts (LIVE) ==
+  All 45 embeddings loaded from cache ($0.00 live spend)
+  Embedding dimension: 1536
+
+== Baselines on TEST split (from labelset outcome matrix) ==
+  always-cheap:  acc=0.818  cost=$0.00088
+  always-strong: acc=0.955  cost=$0.01104  (12.5x cheap)
+  oracle:        acc=0.955  cost=$0.00122  (11% of strong cost)
+
+== k-NN Router Sweep (on TEST split) ==
+    k  thresh    acc       cost   %cheap   vs_cheap   vs_strong
+  ---  ------  -----  ---------  -------  ---------  ----------
+    1     0.4  0.909  $ 0.00118      82%      1.35x       0.11x
+    1     0.5  0.909  $ 0.00118      82%      1.35x       0.11x
+    1     0.6  0.909  $ 0.00118      82%      1.35x       0.11x
+    1     0.7  0.909  $ 0.00118      82%      1.35x       0.11x
+    3     0.4  0.818  $ 0.00098      95%      1.12x       0.09x
+    3     0.5  0.818  $ 0.00098      95%      1.12x       0.09x
+    3     0.6  0.818  $ 0.00098      95%      1.12x       0.09x
+    3     0.7  0.955  $ 0.00143      64%      1.62x       0.13x
+    5     0.4  0.818  $ 0.00098      95%      1.12x       0.09x
+    5     0.5  0.818  $ 0.00103      91%      1.17x       0.09x
+    5     0.6  0.909  $ 0.00123      77%      1.40x       0.11x
+    5     0.7  0.955  $ 0.00146      59%      1.66x       0.13x
+    7     0.4  0.818  $ 0.00088     100%      1.00x       0.08x
+    7     0.5  0.818  $ 0.00098      95%      1.12x       0.09x
+    7     0.6  0.909  $ 0.00118      82%      1.34x       0.11x
+    7     0.7  0.955  $ 0.00136      68%      1.55x       0.12x
+
+== Best configuration: k=7, threshold=0.7 ==
+  acc=0.955  cost=$0.00136  68% cheap
+
+== Live confirmation: calling 3 routed items via real APIs ==
+  m2    route=cheap   model=gpt-4o-mini           correct=True  cache=True  OK  $3.75e-06  cached=True
+  m4    route=strong  model=gpt-4.1               correct=True  cache=True  OK  $5.00e-05  cached=True
+  m6    route=cheap   model=gpt-4o-mini           correct=True  cache=True  OK  $4.80e-06  cached=True
+
+== Final summary (on 22-item TEST split) ==
+  Router                            acc        cost   vs cheap   %cheap
+  ------------------------------  -----  ----------  ---------  -------
+  always-cheap (gpt-4o-mini)      0.818  $  0.00088       1.0x     100%
+  always-strong (gpt-4.1)         0.955  $  0.01104      12.5x       0%
+  oracle                          0.955  $  0.00122       1.4x      N/A
+  kNN k=3 thresh=0.5              0.818  $  0.00098       1.1x      95%
+  kNN k=3 thresh=0.6              0.818  $  0.00098       1.1x      95%
+  kNN k=5 thresh=0.5              0.818  $  0.00103       1.2x      91%
+  kNN k=5 thresh=0.6              0.909  $  0.00123       1.4x      77%
+  kNN BEST k=7 t=0.7              0.955  $  0.00136       1.5x      68%
+
+Wrote /Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L2-embedding-knn-router/source/l2_results.json
+
+Embedding cost (live): $0.00000 (one-time; subsequent runs free from cache)

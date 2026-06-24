@@ -1,0 +1,46 @@
+=== L4 Routing Gateway Runtime — RED run (no API credentials in environment) ===
+
+The gateway process starts and serves /v1/health (no provider call needed).
+When credentials are absent, every real model call fails with HTTP 502 from
+the gateway (ProviderError: Missing env var OPENAI_API_KEY propagated to the client).
+
+test_01_health (test_l4.L4GatewayTests)
+Gateway health endpoint returns status ok. ... ok
+test_02_auto_simple_routes_cheap (test_l4.L4GatewayTests)
+Auto-routing of a simple factual question picks the cheap model. ... ERROR
+test_03_auto_hard_math_routes_strong (test_l4.L4GatewayTests)
+Auto-routing of a combinatorics question picks the strong model. ... ERROR
+test_04_forced_model_bypasses_routing (test_l4.L4GatewayTests)
+A forced model= request ignores routing and uses the specified model. ... ERROR
+test_05_ledger_written (test_l4.L4GatewayTests)
+The main ledger file has entries with required fields. ... FAIL
+
+======================================================================
+ERROR: test_02_auto_simple_routes_cheap (test_l4.L4GatewayTests)
+----------------------------------------------------------------------
+urllib.error.HTTPError: HTTP Error 502: Bad Gateway
+
+(The gateway returned: {"error": "openai network error for gpt-4o-mini: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env"})
+
+======================================================================
+ERROR: test_03_auto_hard_math_routes_strong (test_l4.L4GatewayTests)
+----------------------------------------------------------------------
+urllib.error.HTTPError: HTTP Error 502: Bad Gateway
+
+======================================================================
+ERROR: test_04_forced_model_bypasses_routing (test_l4.L4GatewayTests)
+----------------------------------------------------------------------
+urllib.error.HTTPError: HTTP Error 502: Bad Gateway
+
+======================================================================
+FAIL: test_05_ledger_written (test_l4.L4GatewayTests)
+----------------------------------------------------------------------
+AssertionError: False is not true : cost-ledger.jsonl must exist after requests to the gateway
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.516s
+
+FAILED (failures=1, errors=3)
+
+RED blocker: no API credentials → gateway returns 502 Bad Gateway on all real model calls.
+Fix: set -a; . .agent-university/secrets.local.env; set +a

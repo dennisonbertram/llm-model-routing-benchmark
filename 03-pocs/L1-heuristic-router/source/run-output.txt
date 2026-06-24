@@ -1,0 +1,32 @@
+L1 — Heuristic Router (prompt-text-only features)
+======================================================================
+
+== Baseline (from L0, measured live) ==
+  always-cheap  (gpt-4o-mini): acc=0.844  cost=$0.00166
+  always-strong (gpt-4.1     ): acc=0.978  cost=$0.02148  (12.9x cheap)
+  ORACLE (cheapest-correct)  : acc=0.978  cost=$0.00176  (8% of strong cost)
+  Items only strong solves (6): ['m9', 'm10', 'm12', 'm13', 'm14', 'm15']
+
+== Threshold sweep: cost-quality tradeoff ==
+  τ=0.200  acc=0.933  cost=$0.00771  cheap%=1%
+  τ=0.300  acc=0.933  cost=$0.00489  cheap%=1%
+  τ=0.400  acc=0.889  cost=$0.00182  cheap%=1%
+  τ=0.500  acc=0.867  cost=$0.00176  cheap%=1%
+  τ=0.600  acc=0.844  cost=$0.00166  cheap%=1%
+  τ=0.700  acc=0.844  cost=$0.00166  cheap%=1%
+  τ=0.800  acc=0.844  cost=$0.00166  cheap%=1%
+
+== Recommended operating point ==
+  Recommended threshold: τ=0.40
+  This balances accuracy match and cost near the oracle.
+
+== Items routed to strong at τ=0.40 (2 items) ==
+   m14 (math   hard) score=0.538  How many ways are there to make 100 cents using any number of pennies(1), nickel...
+   m12 (math   hard) score=0.438  The sum of three consecutive even integers is 78. What is the largest of them? R...
+
+== Live confirmation (running real API calls) ==
+    m1 (math  ) score=0.207 -> gpt-4o-mini  correct=True cost=$3.75e-06
+    m9 (math  ) score=0.398 -> gpt-4o-mini  correct=False cost=$5.85e-06
+    c1 (coding) score=0.108 -> gpt-4o-mini  correct=True cost=$2.10e-05
+
+wrote /Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L1-heuristic-router/source/l1_summary.json

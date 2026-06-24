@@ -1,0 +1,5 @@
+validation OK (math golds computed; coding refs pass 1.0)
+  done hm1   (math)
+  done hm2   (math)
+  done hm3   (math)
+  done hm4   (math)

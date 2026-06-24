@@ -1,0 +1,178 @@
+{
+ "n": 21,
+ "rows": [
+  {
+   "id": "hm1",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm2",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm3",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 0.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm4",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm5",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm6",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm7",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm8",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm9",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 0.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm10",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hm11",
+   "disc": "math",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hc1",
+   "disc": "coding",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hc2",
+   "disc": "coding",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hc3",
+   "disc": "coding",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hc5",
+   "disc": "coding",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hq1",
+   "disc": "qa",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hq2",
+   "disc": "qa",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hq3",
+   "disc": "qa",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hq4",
+   "disc": "qa",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hq5",
+   "disc": "qa",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  },
+  {
+   "id": "hq6",
+   "disc": "qa",
+   "gpt-5.5": 1.0,
+   "fugu": 1.0,
+   "fugu-ultra": 1.0
+  }
+ ],
+ "agg": {
+  "gpt-5.5": {
+   "score": 21.0,
+   "usd": 0.20459000000000005,
+   "lat": 170485,
+   "orch": 0,
+   "total_tok": 7623,
+   "n": 21
+  },
+  "fugu": {
+   "score": 19.0,
+   "usd": 0.81794,
+   "lat": 266447,
+   "orch": 0,
+   "total_tok": 28808,
+   "n": 21
+  },
+  "fugu-ultra": {
+   "score": 21.0,
+   "usd": 2.50113,
+   "lat": 953044,
+   "orch": 162118,
+   "total_tok": 173251,
+   "n": 21
+  }
+ }
+}

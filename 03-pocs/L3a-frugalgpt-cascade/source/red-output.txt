@@ -1,0 +1,13 @@
+$ python3 run_l3a.py   # WITHOUT credentials loaded
+
+Traceback (most recent call last):
+  File "run_l3a.py", line 69, in run_cascade
+    cheap_r = label_cache.chat(CHEAP, ...)
+  File ".../cache.py", line 47, in chat
+    r = _live_chat(model, messages, ...)
+  File ".../providers.py", line 31, in chat
+    raise ProviderError("Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+# Evidence: ProviderError on missing credentials — cascade cannot run without live keys.
+# Label: RED state before credentials loaded.

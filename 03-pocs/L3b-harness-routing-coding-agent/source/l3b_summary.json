@@ -1,0 +1,277 @@
+{
+  "harnesses": [
+    {
+      "name": "all-cheap",
+      "n": 18,
+      "accuracy": 1.0,
+      "total_usd": 0.001484,
+      "escalations": 0,
+      "escalated_ids": [],
+      "usd_per_correct": 8.2e-05
+    },
+    {
+      "name": "all-strong",
+      "n": 18,
+      "accuracy": 1.0,
+      "total_usd": 0.019666,
+      "escalations": 0,
+      "escalated_ids": [],
+      "usd_per_correct": 0.001093
+    },
+    {
+      "name": "routed",
+      "n": 18,
+      "accuracy": 1.0,
+      "total_usd": 0.001484,
+      "escalations": 0,
+      "escalated_ids": [],
+      "usd_per_correct": 8.2e-05
+    }
+  ],
+  "cheap_model": "gpt-4o-mini",
+  "strong_model": "gpt-4.1",
+  "max_repairs": 2,
+  "n_tasks": 18,
+  "elapsed_s": 0.8,
+  "cache_stats": {
+    "hits": 54,
+    "misses": 0,
+    "entries": 37
+  },
+  "per_item_routed": [
+    {
+      "id": "c1",
+      "difficulty": "easy",
+      "correct": true,
+      "usd": 2.1e-05,
+      "latency_ms": 941,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c2",
+      "difficulty": "easy",
+      "correct": true,
+      "usd": 5.4600000000000006e-05,
+      "latency_ms": 2165,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c3",
+      "difficulty": "easy",
+      "correct": true,
+      "usd": 4.4250000000000005e-05,
+      "latency_ms": 1209,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c4",
+      "difficulty": "easy",
+      "correct": true,
+      "usd": 3.06e-05,
+      "latency_ms": 998,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c5",
+      "difficulty": "med",
+      "correct": true,
+      "usd": 5.76e-05,
+      "latency_ms": 1703,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c6",
+      "difficulty": "med",
+      "correct": true,
+      "usd": 8.25e-05,
+      "latency_ms": 2343,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c7",
+      "difficulty": "med",
+      "correct": true,
+      "usd": 8.82e-05,
+      "latency_ms": 2810,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c8",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 7.095e-05,
+      "latency_ms": 1921,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c9",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 5.715e-05,
+      "latency_ms": 2522,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c10",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 6.525e-05,
+      "latency_ms": 1834,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c11",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 7.335000000000001e-05,
+      "latency_ms": 2120,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c12",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 7.935e-05,
+      "latency_ms": 2109,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c13",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 0.00018104999999999998,
+      "latency_ms": 4333,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c14",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 0.00015285,
+      "latency_ms": 3478,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c15",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 0.00014145,
+      "latency_ms": 3704,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c16",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 0.0001095,
+      "latency_ms": 2918,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c17",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 0.00012645,
+      "latency_ms": 2991,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    },
+    {
+      "id": "c18",
+      "difficulty": "hard",
+      "correct": true,
+      "usd": 4.785e-05,
+      "latency_ms": 1041,
+      "models_used": [
+        "gpt-4o-mini"
+      ],
+      "escalations": 0,
+      "attempts": 1,
+      "decision": "cheap_only"
+    }
+  ]
+}

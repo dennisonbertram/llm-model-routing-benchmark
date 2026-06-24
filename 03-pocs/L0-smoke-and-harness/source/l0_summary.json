@@ -1,0 +1,29 @@
+{
+  "always_cheap": {
+    "acc": 0.8444,
+    "usd": 0.001662
+  },
+  "always_strong": {
+    "acc": 0.9778,
+    "usd": 0.021482
+  },
+  "oracle": {
+    "acc": 0.9778,
+    "usd": 0.002143
+  },
+  "need_strong": [
+    "m9",
+    "m10",
+    "m12",
+    "m13",
+    "m14",
+    "m15"
+  ],
+  "both_wrong": [
+    "m8"
+  ],
+  "cheap_enough": 38,
+  "n": 45,
+  "cheap_model": "gpt-4o-mini",
+  "strong_model": "gpt-4.1"
+}

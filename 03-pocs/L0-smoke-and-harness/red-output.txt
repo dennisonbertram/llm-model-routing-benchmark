@@ -1,0 +1,20 @@
+test_oracle_headroom (__main__.L0) ... ok
+test_providers_live (__main__.L0) ... ERROR
+test_real_cost_quality_gap (__main__.L0) ... ok
+
+======================================================================
+ERROR: test_providers_live (__main__.L0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L0-smoke-and-harness/source/test_l0.py", line 41, in test_providers_live
+    r = chat(m, [{"role": "user", "content": "Reply with exactly: OK"}], max_tokens=16)
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L0-smoke-and-harness/source/../../../harness/providers.py", line 94, in chat
+    out = _chat_openai_compatible(OPENAI_BASE, _env("OPENAI_API_KEY"), model, messages,
+  File "/Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L0-smoke-and-harness/source/../../../harness/providers.py", line 66, in _env
+    raise ProviderError(f"Missing env var {name}; load .agent-university/secrets.local.env")
+providers.ProviderError: Missing env var OPENAI_API_KEY; load .agent-university/secrets.local.env
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.110s
+
+FAILED (errors=1)

@@ -1,0 +1,64 @@
+
+============================================================
+  Unit: heuristic_route() offline checks
+============================================================
+  [PASS] cheap — factual/short
+         expected='gpt-4o-mini'  got='gpt-4o-mini'
+  [PASS] cheap — coding task
+         expected='gpt-4o-mini'  got='gpt-4o-mini'
+  [PASS] strong — combinatorics
+         expected='gpt-4.1'  got='gpt-4.1'
+  [PASS] strong — proof/reasoning
+         expected='gpt-4.1'  got='gpt-4.1'
+
+Unit routing: 4 passed, 0 failed
+Gateway listening on http://127.0.0.1:8770/v1/chat/completions
+  cheap model : gpt-4o-mini
+  strong model: gpt-4.1
+
+Gateway started on port 8770
+
+============================================================
+  Wire: raw urllib POST -> gateway -> real model
+============================================================
+
+[1] cheap routing — capital of France
+  [heuristic] 'auto' -> 'gpt-4o-mini'  msg_len=30
+  model served   : gpt-4o-mini
+  content        : 'The capital of France is Paris.'
+  usage          : {'prompt_tokens': 14, 'completion_tokens': 7, 'total_tokens': 21}
+  routing meta   : {'routed_model': 'gpt-4o-mini', 'latency_ms': 1010, 'usd': 6.299999999999999e-06}
+
+[2] strong routing — combinatorics
+  [heuristic] 'auto' -> 'gpt-4.1'  msg_len=106
+  model served   : gpt-4.1
+  content (first 200): "Let's solve the problem step by step:\n\n**Problem:**  \nIn how many ways can 8 distinct books be arranged on a shelf so that 3 specific books are always together?\n\n---\n\n### Step 1: Treat the 3 specific "
+  usage          : {'prompt_tokens': 31, 'completion_tokens': 328, 'total_tokens': 359}
+  routing meta   : {'routed_model': 'gpt-4.1', 'latency_ms': 3042, 'usd': 0.002686}
+
+[3] explicit model passthrough — gpt-4.1-nano (bypass router)
+  [passthrough] 'gpt-4.1-nano' -> 'gpt-4.1-nano'  msg_len=30
+  model served   : gpt-4.1-nano
+  content        : 'GATEWAY_OK'
+
+============================================================
+  openai SDK integration (base_url override)
+============================================================
+  [heuristic] 'auto' -> 'gpt-4o-mini'  msg_len=30
+  model served   : gpt-4o-mini
+  content        : 'The capital of France is Paris.'
+  usage          : prompt=14 completion=7
+
+============================================================
+  Summary
+============================================================
+  cheap route                    model=gpt-4o-mini        $6.30e-06  1010ms
+  strong route                   model=gpt-4.1            $2.69e-03  3042ms
+  passthrough                    model=gpt-4.1-nano       $3.10e-06  957ms
+
+  openai SDK used: True  result: model=gpt-4o-mini content='The capital of France is Paris.'
+
+  Wire compat: ALL PASS
+
+Wrote evidence to /Users/dennison/conductor/workspaces/agent-university/nashville/model-routing/degrees/01-llm-model-routing/03-pocs/L3c-openai-compatible-gateway-integration/source/l3c_evidence.json
+Gateway stopped.

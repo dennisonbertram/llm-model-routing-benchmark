@@ -1,0 +1,419 @@
+{
+ "n": 56,
+ "gpt5.5": {
+  "acc": 0.8035714285714286,
+  "usd_task": 0.02994116071428573
+ },
+ "solo": {
+  "glm-5.2": {
+   "acc": 0.625,
+   "usd_task": 0.005505857500000001
+  },
+  "deepseek-v4-pro": {
+   "acc": 0.6785714285714286,
+   "usd_task": 0.0021179425
+  },
+  "gemini-3.5-flash": {
+   "acc": 0.8035714285714286,
+   "usd_task": 0.026077071428571436
+  }
+ },
+ "ensemble": {
+  "acc": 0.7678571428571429,
+  "usd_task": 0.03370087142857143
+ },
+ "per_task": {
+  "sh000": {
+   "gold": 10774,
+   "gpt5.5": 10774,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 10774,
+   "gemini-3.5-flash": 10774
+  },
+  "sh001": {
+   "gold": 2762,
+   "gpt5.5": 2762,
+   "glm-5.2": 2762,
+   "deepseek-v4-pro": 2762,
+   "gemini-3.5-flash": 2762
+  },
+  "sh002": {
+   "gold": 22101,
+   "gpt5.5": 21,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 22121,
+   "gemini-3.5-flash": 22101
+  },
+  "sh003": {
+   "gold": 2993,
+   "gpt5.5": 2993,
+   "glm-5.2": 2993,
+   "deepseek-v4-pro": 2993,
+   "gemini-3.5-flash": 2993
+  },
+  "sh004": {
+   "gold": 21099,
+   "gpt5.5": 21099,
+   "glm-5.2": 21099,
+   "deepseek-v4-pro": 21099,
+   "gemini-3.5-flash": 21099
+  },
+  "sh005": {
+   "gold": 7735,
+   "gpt5.5": 7735,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 7735,
+   "gemini-3.5-flash": 7735
+  },
+  "sh006": {
+   "gold": 25974,
+   "gpt5.5": 25974,
+   "glm-5.2": 25974,
+   "deepseek-v4-pro": 25974,
+   "gemini-3.5-flash": 25974
+  },
+  "sh007": {
+   "gold": 3206,
+   "gpt5.5": 3206,
+   "glm-5.2": 3206,
+   "deepseek-v4-pro": 3206,
+   "gemini-3.5-flash": 3206
+  },
+  "sh008": {
+   "gold": 909,
+   "gpt5.5": 909,
+   "glm-5.2": 909,
+   "deepseek-v4-pro": 909,
+   "gemini-3.5-flash": 909
+  },
+  "sh009": {
+   "gold": 1601,
+   "gpt5.5": 1601,
+   "glm-5.2": 1601,
+   "deepseek-v4-pro": 1601,
+   "gemini-3.5-flash": 1601
+  },
+  "sh010": {
+   "gold": 343,
+   "gpt5.5": 343,
+   "glm-5.2": 343,
+   "deepseek-v4-pro": 343,
+   "gemini-3.5-flash": 343
+  },
+  "sh011": {
+   "gold": 163,
+   "gpt5.5": 163,
+   "glm-5.2": 163,
+   "deepseek-v4-pro": 163,
+   "gemini-3.5-flash": 163
+  },
+  "sh012": {
+   "gold": 364,
+   "gpt5.5": 364,
+   "glm-5.2": 364,
+   "deepseek-v4-pro": 364,
+   "gemini-3.5-flash": 364
+  },
+  "sh013": {
+   "gold": 2400,
+   "gpt5.5": 2400,
+   "glm-5.2": 2400,
+   "deepseek-v4-pro": 2400,
+   "gemini-3.5-flash": 2400
+  },
+  "sh014": {
+   "gold": 432,
+   "gpt5.5": 432,
+   "glm-5.2": 432,
+   "deepseek-v4-pro": 432,
+   "gemini-3.5-flash": 432
+  },
+  "sh015": {
+   "gold": 2133,
+   "gpt5.5": 2133,
+   "glm-5.2": 2133,
+   "deepseek-v4-pro": 2133,
+   "gemini-3.5-flash": 2133
+  },
+  "sh016": {
+   "gold": 242,
+   "gpt5.5": 530,
+   "glm-5.2": 530,
+   "deepseek-v4-pro": 530,
+   "gemini-3.5-flash": 850
+  },
+  "sh017": {
+   "gold": 1748,
+   "gpt5.5": 148,
+   "glm-5.2": null,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 16
+  },
+  "sh018": {
+   "gold": 523,
+   "gpt5.5": 932,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 932,
+   "gemini-3.5-flash": 6
+  },
+  "sh019": {
+   "gold": 137,
+   "gpt5.5": 615,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 615,
+   "gemini-3.5-flash": 997
+  },
+  "sh020": {
+   "gold": 8991,
+   "gpt5.5": 4588,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 4471,
+   "gemini-3.5-flash": 7907
+  },
+  "sh021": {
+   "gold": 818,
+   "gpt5.5": 176,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 534,
+   "gemini-3.5-flash": -2
+  },
+  "sh022": {
+   "gold": 833,
+   "gpt5.5": 817,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 817,
+   "gemini-3.5-flash": 4
+  },
+  "sh023": {
+   "gold": 3913,
+   "gpt5.5": 4968,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 4968,
+   "gemini-3.5-flash": 10
+  },
+  "sh024": {
+   "gold": 686,
+   "gpt5.5": 605,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 605,
+   "gemini-3.5-flash": 2
+  },
+  "sh025": {
+   "gold": 612,
+   "gpt5.5": 39,
+   "glm-5.2": null,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 249
+  },
+  "sh026": {
+   "gold": 149800,
+   "gpt5.5": 149800,
+   "glm-5.2": null,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 149800
+  },
+  "sh027": {
+   "gold": 9364,
+   "gpt5.5": 9364,
+   "glm-5.2": null,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 12
+  },
+  "sh028": {
+   "gold": 599184,
+   "gpt5.5": 599184,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 599184,
+   "gemini-3.5-flash": 599184
+  },
+  "sh029": {
+   "gold": 13112,
+   "gpt5.5": 13112,
+   "glm-5.2": null,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 13112
+  },
+  "sh030": {
+   "gold": 131072,
+   "gpt5.5": 131072,
+   "glm-5.2": null,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 131072
+  },
+  "sh031": {
+   "gold": 524288,
+   "gpt5.5": 524288,
+   "glm-5.2": null,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 524288
+  },
+  "sh032": {
+   "gold": 13104,
+   "gpt5.5": 13104,
+   "glm-5.2": 13104,
+   "deepseek-v4-pro": 13104,
+   "gemini-3.5-flash": 13104
+  },
+  "sh033": {
+   "gold": 209712,
+   "gpt5.5": 209712,
+   "glm-5.2": 209712,
+   "deepseek-v4-pro": 209712,
+   "gemini-3.5-flash": 209712
+  },
+  "sh034": {
+   "gold": 2208,
+   "gpt5.5": 2208,
+   "glm-5.2": 2208,
+   "deepseek-v4-pro": 2208,
+   "gemini-3.5-flash": 2208
+  },
+  "sh035": {
+   "gold": 25200,
+   "gpt5.5": 25200,
+   "glm-5.2": 25200,
+   "deepseek-v4-pro": 25200,
+   "gemini-3.5-flash": 25200
+  },
+  "sh036": {
+   "gold": 2364,
+   "gpt5.5": 2364,
+   "glm-5.2": 2364,
+   "deepseek-v4-pro": 2364,
+   "gemini-3.5-flash": 2364
+  },
+  "sh037": {
+   "gold": 21600,
+   "gpt5.5": 21600,
+   "glm-5.2": 21600,
+   "deepseek-v4-pro": 21600,
+   "gemini-3.5-flash": 21600
+  },
+  "sh038": {
+   "gold": 20400,
+   "gpt5.5": 20400,
+   "glm-5.2": 20400,
+   "deepseek-v4-pro": 20400,
+   "gemini-3.5-flash": 20400
+  },
+  "sh039": {
+   "gold": 26640,
+   "gpt5.5": 26640,
+   "glm-5.2": 26640,
+   "deepseek-v4-pro": 26640,
+   "gemini-3.5-flash": 26640
+  },
+  "sh040": {
+   "gold": 92,
+   "gpt5.5": 92,
+   "glm-5.2": 92,
+   "deepseek-v4-pro": 92,
+   "gemini-3.5-flash": 92
+  },
+  "sh041": {
+   "gold": 219,
+   "gpt5.5": 219,
+   "glm-5.2": 219,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 219
+  },
+  "sh042": {
+   "gold": 126,
+   "gpt5.5": 126,
+   "glm-5.2": 126,
+   "deepseek-v4-pro": 126,
+   "gemini-3.5-flash": 126
+  },
+  "sh043": {
+   "gold": 87,
+   "gpt5.5": 87,
+   "glm-5.2": 15,
+   "deepseek-v4-pro": null,
+   "gemini-3.5-flash": 87
+  },
+  "sh044": {
+   "gold": 365,
+   "gpt5.5": 365,
+   "glm-5.2": 365,
+   "deepseek-v4-pro": 365,
+   "gemini-3.5-flash": 365
+  },
+  "sh045": {
+   "gold": 61,
+   "gpt5.5": 61,
+   "glm-5.2": 61,
+   "deepseek-v4-pro": 61,
+   "gemini-3.5-flash": 61
+  },
+  "sh046": {
+   "gold": 198,
+   "gpt5.5": 198,
+   "glm-5.2": 198,
+   "deepseek-v4-pro": 198,
+   "gemini-3.5-flash": 198
+  },
+  "sh047": {
+   "gold": 13,
+   "gpt5.5": 13,
+   "glm-5.2": 13,
+   "deepseek-v4-pro": 13,
+   "gemini-3.5-flash": 13
+  },
+  "sh048": {
+   "gold": 13,
+   "gpt5.5": 13,
+   "glm-5.2": 13,
+   "deepseek-v4-pro": 13,
+   "gemini-3.5-flash": 13
+  },
+  "sh049": {
+   "gold": 18,
+   "gpt5.5": 18,
+   "glm-5.2": 18,
+   "deepseek-v4-pro": 18,
+   "gemini-3.5-flash": 18
+  },
+  "sh050": {
+   "gold": 92,
+   "gpt5.5": 92,
+   "glm-5.2": 92,
+   "deepseek-v4-pro": 92,
+   "gemini-3.5-flash": 92
+  },
+  "sh051": {
+   "gold": 0,
+   "gpt5.5": 0,
+   "glm-5.2": 0,
+   "deepseek-v4-pro": 0,
+   "gemini-3.5-flash": 0
+  },
+  "sh052": {
+   "gold": 1,
+   "gpt5.5": 1,
+   "glm-5.2": null,
+   "deepseek-v4-pro": 1,
+   "gemini-3.5-flash": 1
+  },
+  "sh053": {
+   "gold": 1,
+   "gpt5.5": 1,
+   "glm-5.2": 1,
+   "deepseek-v4-pro": 1,
+   "gemini-3.5-flash": 1
+  },
+  "sh054": {
+   "gold": 2,
+   "gpt5.5": 2,
+   "glm-5.2": 2,
+   "deepseek-v4-pro": 2,
+   "gemini-3.5-flash": 2
+  },
+  "sh055": {
+   "gold": 2,
+   "gpt5.5": 2,
+   "glm-5.2": 2,
+   "deepseek-v4-pro": 2,
+   "gemini-3.5-flash": 2
+  }
+ }
+}

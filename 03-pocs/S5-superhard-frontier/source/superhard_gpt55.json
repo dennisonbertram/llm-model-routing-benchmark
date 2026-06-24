@@ -1,0 +1,394 @@
+[
+ {
+  "id": "sh000",
+  "gold": 10774,
+  "gpt55_ok": true,
+  "usd": 0.015380000000000001,
+  "prompt": "How many integers from 1 to 34567 inclusive are divisible by NONE of 2, 5, 7, 11? Reply with just the number."
+ },
+ {
+  "id": "sh001",
+  "gold": 2762,
+  "gpt55_ok": true,
+  "usd": 0.040175,
+  "prompt": "How many integers from 1 to 12345 inclusive are divisible by NONE of 2, 3, 5, 11, 13? Reply with just the number."
+ },
+ {
+  "id": "sh002",
+  "gold": 22101,
+  "gpt55_ok": false,
+  "usd": 0.015875,
+  "prompt": "How many integers from 1 to 98765 inclusive are divisible by NONE of 2, 3, 5, 11, 13? Reply with just the number."
+ },
+ {
+  "id": "sh003",
+  "gold": 2993,
+  "gpt55_ok": true,
+  "usd": 0.01235,
+  "prompt": "How many integers from 1 to 12345 inclusive are divisible by NONE of 2, 3, 5, 11? Reply with just the number."
+ },
+ {
+  "id": "sh004",
+  "gold": 21099,
+  "gpt55_ok": true,
+  "usd": 0.022085,
+  "prompt": "How many integers from 1 to 100000 inclusive are divisible by NONE of 2, 3, 5, 7, 13? Reply with just the number."
+ },
+ {
+  "id": "sh005",
+  "gold": 7735,
+  "gpt55_ok": true,
+  "usd": 0.018995,
+  "prompt": "How many integers from 1 to 34567 inclusive are divisible by NONE of 2, 3, 5, 11, 13? Reply with just the number."
+ },
+ {
+  "id": "sh006",
+  "gold": 25974,
+  "gpt55_ok": true,
+  "usd": 0.021079999999999998,
+  "prompt": "How many integers from 1 to 100000 inclusive are divisible by NONE of 2, 3, 7, 11? Reply with just the number."
+ },
+ {
+  "id": "sh007",
+  "gold": 3206,
+  "gpt55_ok": true,
+  "usd": 0.00881,
+  "prompt": "How many integers from 1 to 12345 inclusive are divisible by NONE of 2, 3, 7, 11? Reply with just the number."
+ },
+ {
+  "id": "sh008",
+  "gold": 909,
+  "gpt55_ok": true,
+  "usd": 0.006475,
+  "prompt": "How many integers from 1 to 20000 inclusive are divisible by all of [3, 5] but by none of [4, 8, 11]? Reply with just the number."
+ },
+ {
+  "id": "sh009",
+  "gold": 1601,
+  "gpt55_ok": true,
+  "usd": 0.007749999999999999,
+  "prompt": "How many integers from 1 to 5000 inclusive are divisible by all of [2] but by none of [8, 9, 25]? Reply with just the number."
+ },
+ {
+  "id": "sh010",
+  "gold": 343,
+  "gpt55_ok": true,
+  "usd": 0.00649,
+  "prompt": "How many integers from 1 to 20000 inclusive are divisible by all of [5, 7] but by none of [4, 25]? Reply with just the number."
+ },
+ {
+  "id": "sh011",
+  "gold": 163,
+  "gpt55_ok": true,
+  "usd": 0.006744999999999999,
+  "prompt": "How many integers from 1 to 5000 inclusive are divisible by all of [3, 7] but by none of [4, 8, 11]? Reply with just the number."
+ },
+ {
+  "id": "sh012",
+  "gold": 364,
+  "gpt55_ok": true,
+  "usd": 0.011425000000000001,
+  "prompt": "How many integers from 1 to 20000 inclusive are divisible by all of [5, 7] but by none of [8, 11, 25]? Reply with just the number."
+ },
+ {
+  "id": "sh013",
+  "gold": 2400,
+  "gpt55_ok": true,
+  "usd": 0.00883,
+  "prompt": "How many integers from 1 to 9999 inclusive are divisible by all of [2] but by none of [4, 8, 25]? Reply with just the number."
+ },
+ {
+  "id": "sh014",
+  "gold": 432,
+  "gpt55_ok": true,
+  "usd": 0.015895,
+  "prompt": "How many integers from 1 to 20000 inclusive are divisible by all of [3, 7] but by none of [4, 9, 11]? Reply with just the number."
+ },
+ {
+  "id": "sh015",
+  "gold": 2133,
+  "gpt55_ok": true,
+  "usd": 0.01315,
+  "prompt": "How many integers from 1 to 9999 inclusive are divisible by all of [2] but by none of [4, 9, 25]? Reply with just the number."
+ },
+ {
+  "id": "sh016",
+  "gold": 242,
+  "gpt55_ok": false,
+  "usd": 0.031545,
+  "prompt": "Define a sequence by x_1=7, x_2=8, and for n>=3 x_n = (2*x_(n-1)^2 + 2*x_(n-2) + 6) mod 1000. What is x_25? Reply with just the number."
+ },
+ {
+  "id": "sh017",
+  "gold": 1748,
+  "gpt55_ok": false,
+  "usd": 0.111255,
+  "prompt": "Define a sequence by x_1=3, x_2=7, and for n>=3 x_n = (4*x_(n-1)^2 + 4*x_(n-2) + 4) mod 10000. What is x_60? Reply with just the number."
+ },
+ {
+  "id": "sh018",
+  "gold": 523,
+  "gpt55_ok": false,
+  "usd": 0.055815,
+  "prompt": "Define a sequence by x_1=4, x_2=3, and for n>=3 x_n = (4*x_(n-1)^2 + 3*x_(n-2) + 6) mod 1000. What is x_25? Reply with just the number."
+ },
+ {
+  "id": "sh019",
+  "gold": 137,
+  "gpt55_ok": false,
+  "usd": 0.10158999999999999,
+  "prompt": "Define a sequence by x_1=1, x_2=8, and for n>=3 x_n = (2*x_(n-1)^2 + 2*x_(n-2) + 3) mod 997. What is x_40? Reply with just the number."
+ },
+ {
+  "id": "sh020",
+  "gold": 8991,
+  "gpt55_ok": false,
+  "usd": 0.15313500000000002,
+  "prompt": "Define a sequence by x_1=7, x_2=9, and for n>=3 x_n = (3*x_(n-1)^2 + 1*x_(n-2) + 2) mod 10000. What is x_60? Reply with just the number."
+ },
+ {
+  "id": "sh021",
+  "gold": 818,
+  "gpt55_ok": false,
+  "usd": 0.18082,
+  "prompt": "Define a sequence by x_1=8, x_2=9, and for n>=3 x_n = (3*x_(n-1)^2 + 2*x_(n-2) + 0) mod 997. What is x_80? Reply with just the number."
+ },
+ {
+  "id": "sh022",
+  "gold": 833,
+  "gpt55_ok": false,
+  "usd": 0.031545,
+  "prompt": "Define a sequence by x_1=8, x_2=7, and for n>=3 x_n = (4*x_(n-1)^2 + 4*x_(n-2) + 1) mod 1000. What is x_25? Reply with just the number."
+ },
+ {
+  "id": "sh023",
+  "gold": 3913,
+  "gpt55_ok": false,
+  "usd": 0.136305,
+  "prompt": "Define a sequence by x_1=3, x_2=2, and for n>=3 x_n = (1*x_(n-1)^2 + 2*x_(n-2) + 7) mod 10000. What is x_60? Reply with just the number."
+ },
+ {
+  "id": "sh024",
+  "gold": 686,
+  "gpt55_ok": false,
+  "usd": 0.03418,
+  "prompt": "Define a sequence by x_1=3, x_2=9, and for n>=3 x_n = (1*x_(n-1)^2 + 1*x_(n-2) + 0) mod 997. What is x_25? Reply with just the number."
+ },
+ {
+  "id": "sh025",
+  "gold": 612,
+  "gpt55_ok": false,
+  "usd": 0.12325,
+  "prompt": "Define a sequence by x_1=7, x_2=3, and for n>=3 x_n = (1*x_(n-1)^2 + 1*x_(n-2) + 3) mod 997. What is x_60? Reply with just the number."
+ },
+ {
+  "id": "sh026",
+  "gold": 149800,
+  "gpt55_ok": true,
+  "usd": 0.0153,
+  "prompt": "How many subsets (including the empty set) of {1,2,...,20} have a sum congruent to 0 modulo 7? Reply with just the number."
+ },
+ {
+  "id": "sh027",
+  "gold": 9364,
+  "gpt55_ok": true,
+  "usd": 0.059730000000000005,
+  "prompt": "How many subsets (including the empty set) of {1,2,...,16} have a sum congruent to 3 modulo 7? Reply with just the number."
+ },
+ {
+  "id": "sh028",
+  "gold": 599184,
+  "gpt55_ok": true,
+  "usd": 0.027899999999999998,
+  "prompt": "How many subsets (including the empty set) of {1,2,...,22} have a sum congruent to 2 modulo 7? Reply with just the number."
+ },
+ {
+  "id": "sh029",
+  "gold": 13112,
+  "gpt55_ok": true,
+  "usd": 0.044520000000000004,
+  "prompt": "How many subsets (including the empty set) of {1,2,...,16} have a sum congruent to 0 modulo 5? Reply with just the number."
+ },
+ {
+  "id": "sh030",
+  "gold": 131072,
+  "gpt55_ok": true,
+  "usd": 0.0159,
+  "prompt": "How many subsets (including the empty set) of {1,2,...,20} have a sum congruent to 4 modulo 8? Reply with just the number."
+ },
+ {
+  "id": "sh031",
+  "gold": 524288,
+  "gpt55_ok": true,
+  "usd": 0.0159,
+  "prompt": "How many subsets (including the empty set) of {1,2,...,22} have a sum congruent to 2 modulo 8? Reply with just the number."
+ },
+ {
+  "id": "sh032",
+  "gold": 13104,
+  "gpt55_ok": true,
+  "usd": 0.03051,
+  "prompt": "How many subsets (including the empty set) of {1,2,...,16} have a sum congruent to 4 modulo 5? Reply with just the number."
+ },
+ {
+  "id": "sh033",
+  "gold": 209712,
+  "gpt55_ok": true,
+  "usd": 0.01422,
+  "prompt": "How many subsets (including the empty set) of {1,2,...,20} have a sum congruent to 4 modulo 5? Reply with just the number."
+ },
+ {
+  "id": "sh034",
+  "gold": 2208,
+  "gpt55_ok": true,
+  "usd": 0.009405,
+  "prompt": "In how many ways can 7 people be seated in 7 numbered seats subject to: person 3 not in seat 2, person 3 not in seat 5, person 3 not in seat 6, person 6 not in seat 7, person 7 not in seat 1? Reply with just the number."
+ },
+ {
+  "id": "sh035",
+  "gold": 25200,
+  "gpt55_ok": true,
+  "usd": 0.003375,
+  "prompt": "In how many ways can 8 people be seated in 8 numbered seats subject to: person 4 not in seat 4, person 6 not in seat 4, person 7 not in seat 4? Reply with just the number."
+ },
+ {
+  "id": "sh036",
+  "gold": 2364,
+  "gpt55_ok": true,
+  "usd": 0.010935,
+  "prompt": "In how many ways can 7 people be seated in 7 numbered seats subject to: person 1 not in seat 7, person 3 not in seat 2, person 3 not in seat 4, person 4 not in seat 3, person 6 not in seat 1? Reply with just the number."
+ },
+ {
+  "id": "sh037",
+  "gold": 21600,
+  "gpt55_ok": true,
+  "usd": 0.01194,
+  "prompt": "In how many ways can 8 people be seated in 8 numbered seats subject to: person 2 not in seat 4, person 6 not in seat 4, person 6 not in seat 6, person 8 not in seat 4? Reply with just the number."
+ },
+ {
+  "id": "sh038",
+  "gold": 20400,
+  "gpt55_ok": true,
+  "usd": 0.010995,
+  "prompt": "In how many ways can 8 people be seated in 8 numbered seats subject to: person 1 not in seat 8, person 2 not in seat 7, person 3 not in seat 7, person 4 not in seat 8, person 6 not in seat 2? Reply with just the number."
+ },
+ {
+  "id": "sh039",
+  "gold": 26640,
+  "gpt55_ok": true,
+  "usd": 0.010455,
+  "prompt": "In how many ways can 8 people be seated in 8 numbered seats subject to: person 3 not in seat 3, person 7 not in seat 2, person 7 not in seat 8? Reply with just the number."
+ },
+ {
+  "id": "sh040",
+  "gold": 92,
+  "gpt55_ok": true,
+  "usd": 0.010284999999999999,
+  "prompt": "On a grid you move from corner (0,0) to (5,5) taking unit steps only right (+1 in second coord) or down (+1 in first coord). The cells [(2, 4), (3, 2)] are blocked and cannot be entered. How many distinct paths are there? Reply with just the number."
+ },
+ {
+  "id": "sh041",
+  "gold": 219,
+  "gpt55_ok": true,
+  "usd": 0.029515000000000003,
+  "prompt": "On a grid you move from corner (0,0) to (6,6) taking unit steps only right (+1 in second coord) or down (+1 in first coord). The cells [(1, 1), (2, 1), (4, 2), (5, 2)] are blocked and cannot be entered. How many distinct paths are there? Reply with just the number."
+ },
+ {
+  "id": "sh042",
+  "gold": 126,
+  "gpt55_ok": true,
+  "usd": 0.008575000000000001,
+  "prompt": "On a grid you move from corner (0,0) to (5,5) taking unit steps only right (+1 in second coord) or down (+1 in first coord). The cells [(3, 2), (5, 3)] are blocked and cannot be entered. How many distinct paths are there? Reply with just the number."
+ },
+ {
+  "id": "sh043",
+  "gold": 87,
+  "gpt55_ok": true,
+  "usd": 0.016105,
+  "prompt": "On a grid you move from corner (0,0) to (6,5) taking unit steps only right (+1 in second coord) or down (+1 in first coord). The cells [(1, 3), (4, 2), (4, 4), (5, 2)] are blocked and cannot be entered. How many distinct paths are there? Reply with just the number."
+ },
+ {
+  "id": "sh044",
+  "gold": 365,
+  "gpt55_ok": true,
+  "usd": 0.008635,
+  "prompt": "On a grid you move from corner (0,0) to (6,6) taking unit steps only right (+1 in second coord) or down (+1 in first coord). The cells [(1, 4), (5, 5)] are blocked and cannot be entered. How many distinct paths are there? Reply with just the number."
+ },
+ {
+  "id": "sh045",
+  "gold": 61,
+  "gpt55_ok": true,
+  "usd": 0.016105,
+  "prompt": "On a grid you move from corner (0,0) to (5,5) taking unit steps only right (+1 in second coord) or down (+1 in first coord). The cells [(1, 2), (2, 2), (4, 1), (5, 1)] are blocked and cannot be entered. How many distinct paths are there? Reply with just the number."
+ },
+ {
+  "id": "sh046",
+  "gold": 198,
+  "gpt55_ok": true,
+  "usd": 0.0048200000000000005,
+  "prompt": "How many distinct necklaces of 7 beads using 3 colors are there, where two necklaces are the same if one can be obtained from the other by rotation OR reflection? Reply with just the number."
+ },
+ {
+  "id": "sh047",
+  "gold": 13,
+  "gpt55_ok": true,
+  "usd": 0.00611,
+  "prompt": "How many distinct necklaces of 6 beads using 2 colors are there, where two necklaces are the same if one can be obtained from the other by rotation OR reflection? Reply with just the number."
+ },
+ {
+  "id": "sh048",
+  "gold": 13,
+  "gpt55_ok": true,
+  "usd": 0.00611,
+  "prompt": "How many distinct necklaces of 6 beads using 2 colors are there, where two necklaces are the same if one can be obtained from the other by rotation OR reflection? Reply with just the number."
+ },
+ {
+  "id": "sh049",
+  "gold": 18,
+  "gpt55_ok": true,
+  "usd": 0.0040999999999999995,
+  "prompt": "How many distinct necklaces of 7 beads using 2 colors are there, where two necklaces are the same if one can be obtained from the other by rotation OR reflection? Reply with just the number."
+ },
+ {
+  "id": "sh050",
+  "gold": 92,
+  "gpt55_ok": true,
+  "usd": 0.0062900000000000005,
+  "prompt": "How many distinct necklaces of 6 beads using 3 colors are there, where two necklaces are the same if one can be obtained from the other by rotation OR reflection? Reply with just the number."
+ },
+ {
+  "id": "sh051",
+  "gold": 0,
+  "gpt55_ok": true,
+  "usd": 0.01599,
+  "prompt": "In a subtraction game two players alternately remove [1, 4, 6] stones from a single pile of 60 stones; a player who cannot move loses. What is the Grundy value (nimber) of the starting position of 60 stones? Reply with just the number."
+ },
+ {
+  "id": "sh052",
+  "gold": 1,
+  "gpt55_ok": true,
+  "usd": 0.03516,
+  "prompt": "In a subtraction game two players alternately remove [2, 5, 6] stones from a single pile of 47 stones; a player who cannot move loses. What is the Grundy value (nimber) of the starting position of 47 stones? Reply with just the number."
+ },
+ {
+  "id": "sh053",
+  "gold": 1,
+  "gpt55_ok": true,
+  "usd": 0.014400000000000001,
+  "prompt": "In a subtraction game two players alternately remove [3, 4, 5] stones from a single pile of 60 stones; a player who cannot move loses. What is the Grundy value (nimber) of the starting position of 60 stones? Reply with just the number."
+ },
+ {
+  "id": "sh054",
+  "gold": 2,
+  "gpt55_ok": true,
+  "usd": 0.01467,
+  "prompt": "In a subtraction game two players alternately remove [2, 3, 5] stones from a single pile of 60 stones; a player who cannot move loses. What is the Grundy value (nimber) of the starting position of 60 stones? Reply with just the number."
+ },
+ {
+  "id": "sh055",
+  "gold": 2,
+  "gpt55_ok": true,
+  "usd": 0.0078,
+  "prompt": "In a subtraction game two players alternately remove [2, 4, 6] stones from a single pile of 60 stones; a player who cannot move loses. What is the Grundy value (nimber) of the starting position of 60 stones? Reply with just the number."
+ }
+]

@@ -1,0 +1,15 @@
+== provider liveness ==
+  gpt-4o-mini                    -> 'OK'     516ms  $2.40e-06
+  claude-haiku-4-5-20251001      -> 'OK'     1906ms  $3.20e-05
+  grok-4.3                       -> 'OK'     5232ms  $1.06e-03
+
+== baseline over 45 tasks ==
+  always-cheap  (gpt-4o-mini): acc=0.844  cost=$0.00166
+  always-strong (gpt-4.1    ): acc=0.978  cost=$0.02148  (12.9x cheap)
+  ORACLE (cheapest-correct)   : acc=0.978  cost=$0.00214  (10% of strong cost at strong-level accuracy)
+
+  items only strong solves (6): ['m9', 'm10', 'm12', 'm13', 'm14', 'm15']
+  items neither solves (1): ['m8']
+  cheap is enough for 38/45 tasks
+
+wrote l0_summary.json

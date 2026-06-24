@@ -1,0 +1,452 @@
+[
+{
+"id": "m1",
+"discipline": "math",
+"difficulty": "easy",
+"prompt": "What is 17 + 25? Reply with just the number.",
+"cheap_correct": true,
+"cheap_usd": 3.7499999999999997e-06,
+"strong_correct": true,
+"strong_usd": 4.9999999999999996e-05
+},
+{
+"id": "m2",
+"discipline": "math",
+"difficulty": "easy",
+"prompt": "What is 144 / 12? Reply with just the number.",
+"cheap_correct": true,
+"cheap_usd": 3.7499999999999997e-06,
+"strong_correct": true,
+"strong_usd": 4.9999999999999996e-05
+},
+{
+"id": "m3",
+"discipline": "math",
+"difficulty": "easy",
+"prompt": "A shirt costs $20 and is 25% off. What is the sale price in dollars? Reply with just the number.",
+"cheap_correct": true,
+"cheap_usd": 5.55e-06,
+"strong_correct": true,
+"strong_usd": 7.400000000000001e-05
+},
+{
+"id": "m4",
+"discipline": "math",
+"difficulty": "easy",
+"prompt": "What is 7 * 8? Reply with just the number.",
+"cheap_correct": true,
+"cheap_usd": 3.7499999999999997e-06,
+"strong_correct": true,
+"strong_usd": 4.9999999999999996e-05
+},
+{
+"id": "m5",
+"discipline": "math",
+"difficulty": "med",
+"prompt": "A train travels 60 km in 45 minutes. How many km does it travel in 3 hours at the same speed? Reply with just the number.",
+"cheap_correct": true,
+"cheap_usd": 6.45e-06,
+"strong_correct": true,
+"strong_usd": 8.6e-05
+},
+{
+"id": "m6",
+"discipline": "math",
+"difficulty": "med",
+"prompt": "If 3x + 7 = 28, what is x? Reply with just the number.",
+"cheap_correct": true,
+"cheap_usd": 4.8e-06,
+"strong_correct": true,
+"strong_usd": 6.4e-05
+},
+{
+"id": "m7",
+"discipline": "math",
+"difficulty": "med",
+"prompt": "A rectangle has area 48 and width 6. What is its perimeter? Reply with just the number.",
+"cheap_correct": true,
+"cheap_usd": 4.95e-06,
+"strong_correct": true,
+"strong_usd": 6.6e-05
+},
+{
+"id": "m8",
+"discipline": "math",
+"difficulty": "hard",
+"prompt": "There are 5 red, 3 blue and 2 green balls. You draw 2 without replacement. In how many of the C(10,2)=45 equally likely pairs are both balls the same color? Reply with just the number.",
+"cheap_correct": false,
+"cheap_usd": 1.875e-05,
+"strong_correct": false,
+"strong_usd": 0.00012200000000000001
+},
+{
+"id": "m9",
+"discipline": "math",
+"difficulty": "hard",
+"prompt": "Find the number of integers from 1 to 100 inclusive that are divisible by 3 or 5. Reply with just the number.",
+"cheap_correct": false,
+"cheap_usd": 5.85e-06,
+"strong_correct": true,
+"strong_usd": 7.8e-05
+},
+{
+"id": "m10",
+"discipline": "math",
+"difficulty": "hard",
+"prompt": "A number is doubled, then 6 is added, then the result is halved, giving 19. What was the original number? Reply with just the number.",
+"cheap_correct": false,
+"cheap_usd": 6.75e-06,
+"strong_correct": true,
+"strong_usd": 9e-05
+},
+{
+"id": "m11",
+"discipline": "math",
+"difficulty": "hard",
+"prompt": "How many trailing zeros are in 25! (25 factorial)? Reply with just the number.",
+"cheap_correct": true,
+"cheap_usd": 4.5e-06,
+"strong_correct": true,
+"strong_usd": 5.9999999999999995e-05
+},
+{
+"id": "m12",
+"discipline": "math",
+"difficulty": "hard",
+"prompt": "The sum of three consecutive even integers is 78. What is the largest of them? Reply with just the number.",
+"cheap_correct": false,
+"cheap_usd": 5.2500000000000006e-06,
+"strong_correct": true,
+"strong_usd": 7.000000000000001e-05
+},
+{
+"id": "m13",
+"discipline": "math",
+"difficulty": "hard",
+"prompt": "At a party every pair of the 9 guests shakes hands exactly once, EXCEPT two specific guests refuse to shake each other's hand. How many handshakes occur? Reply with just the number.",
+"cheap_correct": false,
+"cheap_usd": 7.65e-06,
+"strong_correct": true,
+"strong_usd": 0.000102
+},
+{
+"id": "m14",
+"discipline": "math",
+"difficulty": "hard",
+"prompt": "How many ways are there to make 100 cents using any number of pennies(1), nickels(5), dimes(10), and quarters(25)? Reply with just the number.",
+"cheap_correct": false,
+"cheap_usd": 8.1e-06,
+"strong_correct": true,
+"strong_usd": 0.0001
+},
+{
+"id": "m15",
+"discipline": "math",
+"difficulty": "hard",
+"prompt": "In how many distinct ways can the letters of the word 'BALLOON' be arranged? Reply with just the number.",
+"cheap_correct": false,
+"cheap_usd": 5.4e-06,
+"strong_correct": true,
+"strong_usd": 7.999999999999999e-05
+},
+{
+"id": "q1",
+"discipline": "qa",
+"difficulty": "easy",
+"prompt": "What is the capital of France? Answer with just the city name.",
+"cheap_correct": true,
+"cheap_usd": 3.7499999999999997e-06,
+"strong_correct": true,
+"strong_usd": 4.9999999999999996e-05
+},
+{
+"id": "q2",
+"discipline": "qa",
+"difficulty": "easy",
+"prompt": "What chemical element has the symbol 'O'? Answer with one word.",
+"cheap_correct": true,
+"cheap_usd": 4.95e-06,
+"strong_correct": true,
+"strong_usd": 5.8e-05
+},
+{
+"id": "q3",
+"discipline": "qa",
+"difficulty": "easy",
+"prompt": "How many continents are there on Earth? Answer with just the number.",
+"cheap_correct": true,
+"cheap_usd": 3.7499999999999997e-06,
+"strong_correct": true,
+"strong_usd": 4.9999999999999996e-05
+},
+{
+"id": "q4",
+"discipline": "qa",
+"difficulty": "easy",
+"prompt": "What planet is known as the Red Planet? One word.",
+"cheap_correct": true,
+"cheap_usd": 4.05e-06,
+"strong_correct": true,
+"strong_usd": 4.6e-05
+},
+{
+"id": "q5",
+"discipline": "qa",
+"difficulty": "med",
+"prompt": "Who wrote the play 'Romeo and Juliet'? Answer with the surname.",
+"cheap_correct": true,
+"cheap_usd": 5.0999999999999995e-06,
+"strong_correct": true,
+"strong_usd": 5.9999999999999995e-05
+},
+{
+"id": "q6",
+"discipline": "qa",
+"difficulty": "med",
+"prompt": "In what year did the Apollo 11 mission first land humans on the Moon? Just the year.",
+"cheap_correct": true,
+"cheap_usd": 5.249999999999999e-06,
+"strong_correct": true,
+"strong_usd": 7e-05
+},
+{
+"id": "q7",
+"discipline": "qa",
+"difficulty": "med",
+"prompt": "What is the largest internal organ of the human body? One or two words.",
+"cheap_correct": true,
+"cheap_usd": 5.25e-06,
+"strong_correct": true,
+"strong_usd": 6.2e-05
+},
+{
+"id": "q8",
+"discipline": "qa",
+"difficulty": "hard",
+"prompt": "What is the time complexity of binary search on a sorted array of n elements, in Big-O? Answer like O(...).",
+"cheap_correct": true,
+"cheap_usd": 1.98e-05,
+"strong_correct": true,
+"strong_usd": 9.6e-05
+},
+{
+"id": "q9",
+"discipline": "qa",
+"difficulty": "hard",
+"prompt": "Which data structure uses FIFO (first-in, first-out) ordering? One word.",
+"cheap_correct": true,
+"cheap_usd": 4.8e-06,
+"strong_correct": true,
+"strong_usd": 5.6e-05
+},
+{
+"id": "q10",
+"discipline": "qa",
+"difficulty": "hard",
+"prompt": "In Python, which built-in function returns the number of items in a list? One word.",
+"cheap_correct": true,
+"cheap_usd": 4.5e-06,
+"strong_correct": true,
+"strong_usd": 7.6e-05
+},
+{
+"id": "q11",
+"discipline": "qa",
+"difficulty": "hard",
+"prompt": "What HTTP status code means 'Not Found'? Just the number.",
+"cheap_correct": true,
+"cheap_usd": 3.6000000000000003e-06,
+"strong_correct": true,
+"strong_usd": 4.8e-05
+},
+{
+"id": "q12",
+"discipline": "qa",
+"difficulty": "hard",
+"prompt": "What is the name of the consensus algorithm used by Raft's competitor that uses leader election and is known for being hard to understand? One word.",
+"cheap_correct": true,
+"cheap_usd": 7.349999999999999e-06,
+"strong_correct": true,
+"strong_usd": 9.8e-05
+},
+{
+"id": "c1",
+"discipline": "coding",
+"difficulty": "easy",
+"prompt": "Write a Python function `is_palindrome(s: str) -> bool` that returns True iff s reads the same forwards and backwards (consider the string exactly as given). Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 2.1e-05,
+"strong_correct": true,
+"strong_usd": 0.00028
+},
+{
+"id": "c2",
+"discipline": "coding",
+"difficulty": "easy",
+"prompt": "Write a Python function `fizzbuzz(n: int) -> str` returning 'Fizz' if n divisible by 3, 'Buzz' if by 5, 'FizzBuzz' if by both, else str(n). Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 5.4600000000000006e-05,
+"strong_correct": true,
+"strong_usd": 0.000664
+},
+{
+"id": "c3",
+"discipline": "coding",
+"difficulty": "easy",
+"prompt": "Write a Python function `two_sum(nums, target)` returning a list of two indices i<j such that nums[i]+nums[j]==target, or None. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 4.4250000000000005e-05,
+"strong_correct": true,
+"strong_usd": 0.000622
+},
+{
+"id": "c4",
+"discipline": "coding",
+"difficulty": "easy",
+"prompt": "Write a Python function `count_vowels(s: str) -> int` returning the number of vowels (a,e,i,o,u, case-insensitive) in s. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 3.06e-05,
+"strong_correct": true,
+"strong_usd": 0.00036
+},
+{
+"id": "c5",
+"discipline": "coding",
+"difficulty": "med",
+"prompt": "Write a Python function `valid_parentheses(s: str) -> bool` that returns True iff the brackets in s (containing only '()[]{}') are balanced and correctly nested. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 5.76e-05,
+"strong_correct": true,
+"strong_usd": 0.0007920000000000001
+},
+{
+"id": "c6",
+"discipline": "coding",
+"difficulty": "med",
+"prompt": "Write a Python function `merge_intervals(intervals)` that merges overlapping [start,end] intervals and returns the merged list sorted by start. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 8.25e-05,
+"strong_correct": true,
+"strong_usd": 0.00098
+},
+{
+"id": "c7",
+"discipline": "coding",
+"difficulty": "med",
+"prompt": "Write a Python function `roman_to_int(s: str) -> int` converting a Roman numeral string (I,V,X,L,C,D,M) to its integer value. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 8.82e-05,
+"strong_correct": true,
+"strong_usd": 0.001008
+},
+{
+"id": "c8",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `length_of_longest_substring(s: str) -> int` returning the length of the longest substring of s without repeating characters. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 6.855e-05,
+"strong_correct": true,
+"strong_usd": 0.000866
+},
+{
+"id": "c9",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `longest_increasing_subsequence(nums) -> int` returning the length of the longest strictly increasing subsequence. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 5.715e-05,
+"strong_correct": true,
+"strong_usd": 0.0007220000000000001
+},
+{
+"id": "c10",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `coin_change(coins, amount) -> int` returning the fewest number of coins to make `amount`, or -1 if impossible. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 6.525e-05,
+"strong_correct": true,
+"strong_usd": 0.000862
+},
+{
+"id": "c11",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `word_break(s: str, wordDict) -> bool` returning True iff s can be segmented into a space-separated sequence of words from wordDict. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 7.335000000000001e-05,
+"strong_correct": true,
+"strong_usd": 0.000938
+},
+{
+"id": "c12",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `eval_rpn(tokens) -> int` evaluating Reverse Polish Notation (operators +,-,*,/ with truncation toward zero). Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 7.935e-05,
+"strong_correct": true,
+"strong_usd": 0.0010659999999999999
+},
+{
+"id": "c13",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `is_match(s: str, p: str) -> bool` implementing regular-expression matching where '.' matches any single char and '*' matches zero or more of the preceding element; the match must cover the ENTIRE string s. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 0.00019364999999999996,
+"strong_correct": true,
+"strong_usd": 0.0026539999999999997
+},
+{
+"id": "c14",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `min_window(s: str, t: str) -> str` returning the minimum-length substring of s containing every character of t (with multiplicity), or '' if none exists. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 0.00015285,
+"strong_correct": true,
+"strong_usd": 0.002134
+},
+{
+"id": "c15",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `edit_distance(a: str, b: str) -> int` returning the Levenshtein edit distance (insert/delete/replace each cost 1) between a and b. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 0.00014145,
+"strong_correct": true,
+"strong_usd": 0.001822
+},
+{
+"id": "c16",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `trap(height) -> int` returning how much rain water is trapped between the bars given by the list `height`. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 0.0001095,
+"strong_correct": true,
+"strong_usd": 0.0012120000000000002
+},
+{
+"id": "c17",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `decode_ways(s: str) -> int` returning the number of ways to decode a digit string where '1'->'A' ... '26'->'Z' (a leading zero or invalid pair contributes 0 ways). Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 0.00012645,
+"strong_correct": true,
+"strong_usd": 0.001326
+},
+{
+"id": "c18",
+"discipline": "coding",
+"difficulty": "hard",
+"prompt": "Write a Python function `is_number(s: str) -> bool` returning True iff s is a valid number: an optional leading sign, an integer or decimal (a decimal point with digits on at least one side), and an optional exponent 'e'/'E' followed by an optional sign and an integer. No surrounding whitespace is allowed. Return only a python code block.",
+"cheap_correct": true,
+"cheap_usd": 4.785e-05,
+"strong_correct": true,
+"strong_usd": 0.0012619999999999999
+}
+]

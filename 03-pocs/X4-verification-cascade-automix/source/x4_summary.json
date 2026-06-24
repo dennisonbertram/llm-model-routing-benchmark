@@ -1,0 +1,123 @@
+{
+  "thresholds": {
+    "0.0": {
+      "threshold": 0.0,
+      "accuracy": 0.8444,
+      "total_usd": 0.005232,
+      "escalation_rate": 0.0,
+      "n": 45
+    },
+    "0.34": {
+      "threshold": 0.34,
+      "accuracy": 0.9778,
+      "total_usd": 0.006092,
+      "escalation_rate": 0.267,
+      "n": 45
+    },
+    "0.67": {
+      "threshold": 0.67,
+      "accuracy": 0.9778,
+      "total_usd": 0.006092,
+      "escalation_rate": 0.267,
+      "n": 45
+    },
+    "1.0": {
+      "threshold": 1.0,
+      "accuracy": 0.9778,
+      "total_usd": 0.006092,
+      "escalation_rate": 0.267,
+      "n": 45
+    }
+  },
+  "calibration": {
+    "low (0.0-0.33)": {
+      "n": 11,
+      "cheap_correct_rate": 0.455
+    },
+    "mid (0.34-0.66)": {
+      "n": 1,
+      "cheap_correct_rate": 0.0
+    },
+    "high (0.67-1.0)": {
+      "n": 33,
+      "cheap_correct_rate": 1.0
+    }
+  },
+  "per_item_sample": {
+    "m1": {
+      "cheap_correct": true,
+      "strong_correct": true,
+      "cheap_usd": 3.7499999999999997e-06,
+      "strong_usd": 4.9999999999999996e-05,
+      "verifier_conf": 0.0,
+      "verifier_usd": 4.86e-05,
+      "discipline": "math",
+      "difficulty": "easy"
+    },
+    "m2": {
+      "cheap_correct": true,
+      "strong_correct": true,
+      "cheap_usd": 3.7499999999999997e-06,
+      "strong_usd": 4.9999999999999996e-05,
+      "verifier_conf": 0.0,
+      "verifier_usd": 4.86e-05,
+      "discipline": "math",
+      "difficulty": "easy"
+    },
+    "m3": {
+      "cheap_correct": true,
+      "strong_correct": true,
+      "cheap_usd": 5.55e-06,
+      "strong_usd": 7.400000000000001e-05,
+      "verifier_conf": 0.0,
+      "verifier_usd": 5.4e-05,
+      "discipline": "math",
+      "difficulty": "easy"
+    },
+    "m4": {
+      "cheap_correct": true,
+      "strong_correct": true,
+      "cheap_usd": 3.7499999999999997e-06,
+      "strong_usd": 4.9999999999999996e-05,
+      "verifier_conf": 1.0,
+      "verifier_usd": 4.86e-05,
+      "discipline": "math",
+      "difficulty": "easy"
+    },
+    "m5": {
+      "cheap_correct": true,
+      "strong_correct": true,
+      "cheap_usd": 6.45e-06,
+      "strong_usd": 8.6e-05,
+      "verifier_conf": 1.0,
+      "verifier_usd": 5.6699999999999996e-05,
+      "discipline": "math",
+      "difficulty": "med"
+    }
+  },
+  "baselines": {
+    "always_cheap": {
+      "acc": 0.8444,
+      "usd": 0.00166
+    },
+    "always_strong": {
+      "acc": 0.9778,
+      "usd": 0.02148
+    },
+    "oracle": {
+      "acc": 0.9778,
+      "usd": 0.00214
+    }
+  },
+  "live_confirmation": {
+    "item": "m9",
+    "verifier_conf": 0.0,
+    "verifier_votes": [
+      0,
+      0,
+      0
+    ],
+    "verifier_usd": 5.49e-05
+  },
+  "k_verifier": 3
+}

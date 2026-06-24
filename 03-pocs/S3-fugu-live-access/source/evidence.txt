@@ -1,0 +1,15 @@
+# Sakana Fugu live-access evidence (2026-06-22), key redacted
+
+$ curl -s https://api.sakana.ai/v1/models -H "Authorization: Bearer fish_***"
+{"object":"list","data":[
+  {"id":"fugu","object":"model","owned_by":"sakana-ai-team","description":"Fast mini model optimized for low latency yet high quality responses"},
+  {"id":"fugu-ultra","object":"model","owned_by":"sakana-ai-team","description":"Multi-agent conductor system for complex reasoning tasks"},
+  {"id":"fugu-ultra-20260615",...}
+]}
+
+$ curl -s https://api.sakana.ai/v1/chat/completions -H "Authorization: Bearer fish_***" \
+   -d '{"model":"fugu-ultra","messages":[{"role":"user","content":"..."}]}'
+{"error":{"message":"No active subscription","type":"usage_limit_reached","param":null,"code":null}}
+
+# Same error for model "fugu". /v1/usage,/v1/subscription,/v1/credits,/v1/me -> 404.
+# Verdict: auth + metadata read OK; inference entitlement gated.
